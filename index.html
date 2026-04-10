@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CODEXINE by Oscar</title>
+    <meta
+      name="description"
+      content="CODEXINE by Oscar : decouvre une approche premium de l'automatisation IA, accede a la video d'introduction et debloque la formation gratuite."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Oscar Sander" />
+    <meta name="theme-color" content="#050505" />
+    <link rel="canonical" href="https://codexine.fr/" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CODEXINE" />
+    <meta property="og:title" content="CODEXINE by Oscar" />
+    <meta
+      property="og:description"
+      content="Decouvre l'univers CODEXINE, la video d'introduction et la formation gratuite pour comprendre l'automatisation IA."
+    />
+    <meta property="og:url" content="https://codexine.fr/" />
+    <meta property="og:image" content="https://codexine.fr/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CODEXINE by Oscar" />
+    <meta
+      name="twitter:description"
+      content="Video d'introduction, formation gratuite et acces rapide a l'univers CODEXINE."
+    />
+    <meta name="twitter:image" content="https://codexine.fr/logo.png" />
+    <link rel="icon" type="image/png" href="./icon.png?v=20260410" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --panel: rgba(12, 12, 12, 0.92);
+        --panel-deep: rgba(15, 8, 9, 0.98);
+        --line: rgba(255, 255, 255, 0.08);
+        --line-red: rgba(255, 88, 99, 0.32);
+        --text: #faf5f5;
+        --muted: #a78f93;
+        --red: #ff5863;
+        --red-soft: #ff8b93;
+        --shadow: 0 34px 100px rgba(0, 0, 0, 0.44);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Outfit", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 88, 99, 0.2), transparent 28%),
+          radial-gradient(circle at 18% 18%, rgba(107, 17, 25, 0.34), transparent 32%),
+          radial-gradient(circle at 82% 18%, rgba(255, 88, 99, 0.12), transparent 24%),
+          linear-gradient(180deg, #080808 0%, #040404 52%, #060304 100%);
+        overflow-x: hidden;
+      }
+
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.42;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 52px 52px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 96%);
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(circle at center, transparent 42%, rgba(0, 0, 0, 0.56) 100%);
+      }
+
+      main {
+        position: relative;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 72px 0 72px;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 8px 0 0;
+      }
+
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.24);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd9dc;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-tag::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--red);
+        box-shadow: 0 0 18px var(--red);
+      }
+
+      h1 {
+        margin: 22px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(6rem, 15vw, 12rem);
+        line-height: 0.86;
+        letter-spacing: 0.05em;
+        color: #fff4f4;
+        text-shadow:
+          0 0 20px rgba(255, 88, 99, 0.08),
+          0 0 48px rgba(255, 88, 99, 0.14);
+      }
+
+      .signature {
+        margin: 6px 0 18px;
+        font-size: clamp(1rem, 2vw, 1.18rem);
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.74);
+      }
+
+      .lead {
+        width: min(760px, 100%);
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.12rem);
+        line-height: 1.76;
+      }
+
+      .video-section {
+        width: min(980px, 100%);
+        margin: 48px auto 0;
+      }
+
+      .video-card,
+      .blog-card,
+      .legal-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 16, 16, 0.94), rgba(8, 8, 8, 0.98)),
+          linear-gradient(135deg, rgba(255, 88, 99, 0.08), transparent 40%);
+        box-shadow: 0 24px 54px rgba(0, 0, 0, 0.28);
+      }
+
+      .video-card {
+        padding: 8px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 102, 112, 0.18);
+        background:
+          linear-gradient(145deg, #2a0608 0%, #7c1119 18%, #ff5d69 44%, #781018 70%, #220507 100%);
+        box-shadow:
+          0 10px 22px rgba(0, 0, 0, 0.22),
+          0 0 14px rgba(255, 88, 99, 0.08);
+      }
+
+      .video-card::before {
+        inset: 3px;
+        width: auto;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 214, 216, 0.14);
+        background: none;
+        box-shadow:
+          inset 0 0 0 1px rgba(83, 11, 17, 0.85),
+          inset 0 0 0 2px rgba(255, 88, 99, 0.06);
+      }
+
+      .video-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.06)),
+          linear-gradient(180deg, rgba(255, 150, 156, 0.08), transparent 28%);
+      }
+
+      .blog-card::before,
+      .legal-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 4px;
+        background: linear-gradient(180deg, rgba(255, 88, 99, 0.08), var(--red), rgba(255, 88, 99, 0.08));
+      }
+
+      .panel-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .panel-index {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      .panel-pill {
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd8db;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .video-frame {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        min-height: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid rgba(34, 5, 7, 0.9);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 214, 216, 0.08),
+          0 4px 12px rgba(0, 0, 0, 0.16);
+        background:
+          radial-gradient(circle at 50% 15%, rgba(255, 88, 99, 0.28), transparent 30%),
+          linear-gradient(180deg, rgba(18, 9, 10, 0.98), rgba(6, 6, 6, 1));
+      }
+
+      .video-frame video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .cta-zone {
+        width: min(760px, 100%);
+        margin: 2px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .cta-arrow {
+        width: 132px;
+        height: 124px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+      }
+
+      .cta-arrow span {
+        width: 42px;
+        height: 42px;
+        border-right: 4px solid var(--red-soft);
+        border-bottom: 4px solid var(--red-soft);
+        transform: rotate(45deg);
+        filter: drop-shadow(0 0 16px rgba(255, 88, 99, 0.45));
+        animation: arrowChevron 1.8s ease-in-out infinite;
+      }
+
+      .cta-arrow span:nth-child(1) {
+        animation-delay: 0s;
+        opacity: 0.45;
+      }
+
+      .cta-arrow span:nth-child(2) {
+        animation-delay: 0.16s;
+        margin-top: -10px;
+        opacity: 0.9;
+      }
+
+      @keyframes arrowChevron {
+        0%,
+        100% {
+          transform: translateY(0) rotate(45deg);
+          opacity: 0.36;
+        }
+        50% {
+          transform: translateY(10px) rotate(45deg);
+          opacity: 1;
+        }
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 20px 34px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        color: #fff6f6;
+        background: linear-gradient(135deg, var(--red), #ff737d);
+        box-shadow: 0 18px 40px rgba(255, 88, 99, 0.3);
+        transition: transform 220ms ease, box-shadow 220ms ease;
+      }
+
+      .cta-button::after,
+      .card-link::after {
+        content: "\2192";
+        font-size: 1.04rem;
+        transition: transform 220ms ease;
+      }
+
+      .cta-button:hover,
+      .blog-card:hover,
+      .legal-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .cta-button:hover {
+        box-shadow: 0 24px 48px rgba(255, 88, 99, 0.34);
+      }
+
+      .cta-button:hover::after,
+      .blog-card:hover .card-link::after,
+      .legal-card:hover .card-link::after {
+        transform: translateX(5px);
+      }
+
+      .content-stack {
+        width: min(1080px, 100%);
+        margin: 74px auto 0;
+      }
+
+      .blog-card,
+      .legal-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          transform 220ms ease,
+          border-color 220ms ease,
+          box-shadow 220ms ease;
+      }
+
+      .blog-card:hover,
+      .legal-card:hover {
+        border-color: var(--line-red);
+        box-shadow: 0 28px 60px rgba(0, 0, 0, 0.34);
+      }
+
+      .blog-card {
+        padding: 42px;
+        background:
+          radial-gradient(circle at 88% 12%, rgba(255, 88, 99, 0.16), transparent 24%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 42%),
+          linear-gradient(180deg, rgba(17, 12, 13, 0.96), rgba(9, 9, 9, 0.98));
+      }
+
+      .blog-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+        gap: 34px;
+        align-items: stretch;
+      }
+
+      .blog-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .card-kicker {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd8dc;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .card-kicker::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--red);
+        box-shadow: 0 0 16px rgba(255, 88, 99, 0.8);
+      }
+
+      .blog-mark {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 240px;
+        padding: 26px;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 20% 20%, rgba(255, 88, 99, 0.16), transparent 24%),
+          linear-gradient(180deg, rgba(14, 14, 14, 0.96), rgba(9, 9, 9, 0.98));
+      }
+
+      .blog-mark::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 4px;
+        background: linear-gradient(180deg, rgba(255, 88, 99, 0.12), var(--red), rgba(255, 88, 99, 0.12));
+      }
+
+      .preview-title {
+        margin: 0 0 18px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.1rem;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .preview-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .preview-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.02);
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .preview-item::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--red), var(--red-soft));
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.5);
+      }
+
+      .blog-card h2,
+      .legal-card h2 {
+        margin: 0 0 12px;
+        font-family: "Bebas Neue", sans-serif;
+        line-height: 1;
+        letter-spacing: 0.04em;
+        color: #fff5f5;
+      }
+
+      .blog-card h2 {
+        font-size: 3rem;
+      }
+
+      .legal-card h2 {
+        font-size: 2.2rem;
+      }
+
+      .blog-card p,
+      .legal-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.78;
+        font-size: 1.02rem;
+      }
+
+      .card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 22px;
+        font-weight: 700;
+        color: #fff3f3;
+      }
+
+      .legal-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 24px;
+      }
+
+      .legal-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 290px;
+        padding: 34px;
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.14), transparent 28%),
+          linear-gradient(180deg, rgba(16, 12, 13, 0.96), rgba(9, 9, 9, 0.98));
+      }
+
+      .legal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 30px;
+      }
+
+      .legal-number {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.1rem;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.28);
+      }
+
+      .legal-tag {
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd9dc;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .legal-copy {
+        max-width: 420px;
+      }
+
+      .legal-link-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 28px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .legal-link-row .card-link {
+        margin-top: 0;
+      }
+
+      .legal-mini {
+        color: rgba(255, 255, 255, 0.44);
+        font-size: 0.78rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .site-footer {
+        margin-top: 52px;
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 10% 20%, rgba(255, 88, 99, 0.16), transparent 24%),
+          radial-gradient(circle at 90% 15%, rgba(255, 88, 99, 0.1), transparent 22%),
+          linear-gradient(180deg, rgba(16, 8, 9, 0.98), rgba(8, 8, 8, 1));
+        border-top: 1px solid rgba(255, 88, 99, 0.18);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.04),
+          0 -20px 60px rgba(0, 0, 0, 0.24);
+      }
+
+      .site-footer::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--red), transparent);
+      }
+
+      .footer-inner {
+        width: min(1600px, calc(100% - 56px));
+        margin: 0 auto;
+        padding: 36px 14px 38px;
+        display: grid;
+        grid-template-columns:
+          minmax(220px, 1.15fr)
+          minmax(140px, 0.72fr)
+          minmax(200px, 0.96fr)
+          minmax(220px, 0.98fr)
+          minmax(180px, 0.92fr)
+          minmax(180px, 1.02fr);
+        gap: 24px;
+        align-items: center;
+      }
+
+      .footer-brand {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .footer-logo {
+        display: block;
+        width: min(190px, 100%);
+        height: auto;
+        object-fit: contain;
+        filter:
+          drop-shadow(0 8px 18px rgba(255, 88, 99, 0.22))
+          saturate(1.05);
+      }
+
+      .footer-link,
+      .footer-copy {
+        font-size: 0.9rem;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 226, 228, 0.74);
+      }
+
+      .footer-link {
+        text-decoration: none;
+        transition: color 220ms ease, transform 220ms ease;
+      }
+
+      .footer-link:hover {
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+
+      .footer-copy {
+        margin: 0;
+        min-width: 0;
+        justify-self: end;
+        text-align: right;
+        letter-spacing: 0.14em;
+        overflow-wrap: anywhere;
+      }
+
+      .cookie-banner {
+        position: fixed;
+        left: 50%;
+        bottom: 18px;
+        z-index: 40;
+        width: min(980px, calc(100% - 24px));
+        transform: translate(-50%, 24px);
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 220ms ease,
+          transform 220ms ease;
+      }
+
+      .cookie-banner.is-visible {
+        transform: translate(-50%, 0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .cookie-banner__panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) auto;
+        gap: 18px;
+        align-items: center;
+        padding: 18px 20px;
+        border-radius: 26px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.14), transparent 30%),
+          linear-gradient(180deg, rgba(16, 12, 13, 0.98), rgba(8, 8, 8, 0.98));
+        box-shadow:
+          0 26px 70px rgba(0, 0, 0, 0.42),
+          0 0 24px rgba(255, 88, 99, 0.08);
+      }
+
+      .cookie-banner__title {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(1.7rem, 3vw, 2.3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .cookie-banner__text {
+        margin: 10px 0 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .cookie-banner__text a {
+        color: #fff5f5;
+        text-underline-offset: 4px;
+      }
+
+      .cookie-banner__actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .cookie-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        padding: 14px 18px;
+        border-radius: 16px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease;
+      }
+
+      .cookie-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .cookie-button--secondary {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #fff2f2;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .cookie-button--primary {
+        border: 0;
+        color: #fff6f6;
+        background: linear-gradient(135deg, var(--red), #ff737d);
+        box-shadow: 0 16px 36px rgba(255, 88, 99, 0.24);
+      }
+
+      .email-modal {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 180ms ease;
+        z-index: 50;
+      }
+
+      .email-modal.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .email-modal__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(2, 2, 2, 0.78);
+        backdrop-filter: blur(14px);
+      }
+
+      .email-modal__panel {
+        position: relative;
+        width: min(100%, 520px);
+        padding: 30px;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.16), transparent 30%),
+          linear-gradient(180deg, rgba(16, 12, 13, 0.98), rgba(8, 8, 8, 0.98));
+        box-shadow:
+          0 26px 70px rgba(0, 0, 0, 0.42),
+          0 0 24px rgba(255, 88, 99, 0.1);
+      }
+
+      .email-modal__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+        color: rgba(255, 244, 244, 0.9);
+        background: rgba(255, 255, 255, 0.06);
+        transition: background 180ms ease, transform 180ms ease;
+      }
+
+      .email-modal__close:hover {
+        background: rgba(255, 88, 99, 0.18);
+        transform: translateY(-2px);
+      }
+
+      .email-modal__eyebrow {
+        margin: 0 0 12px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #ffd6d9;
+      }
+
+      .email-modal__title {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.4rem, 8vw, 4rem);
+        line-height: 0.92;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .email-modal__text {
+        margin: 14px 0 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .email-form {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .email-input {
+        width: 100%;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        outline: none;
+        background: rgba(255, 255, 255, 0.04);
+        color: #fff6f6;
+        font: inherit;
+        transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .email-input::placeholder {
+        color: rgba(255, 244, 244, 0.4);
+      }
+
+      .email-input:focus {
+        border-color: rgba(255, 88, 99, 0.36);
+        box-shadow: 0 0 0 3px rgba(255, 88, 99, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .email-submit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 16px 18px;
+        border: 0;
+        border-radius: 18px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        color: #fff6f6;
+        background: linear-gradient(135deg, var(--red), #ff737d);
+        box-shadow: 0 16px 36px rgba(255, 88, 99, 0.24);
+        transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+      }
+
+      .email-submit:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 22px 44px rgba(255, 88, 99, 0.3);
+      }
+
+      .email-submit:disabled {
+        cursor: wait;
+        opacity: 0.72;
+      }
+
+      .email-status {
+        min-height: 1.4em;
+        margin: 2px 0 0;
+        font-size: 0.92rem;
+        color: #ffd9dc;
+      }
+
+      .email-status.is-error {
+        color: #ff9aa1;
+      }
+
+      .email-note {
+        margin: 2px 0 0;
+        font-size: 0.84rem;
+        line-height: 1.6;
+        color: rgba(255, 244, 244, 0.54);
+      }
+
+      @media (max-width: 980px) {
+        main {
+          width: min(100%, calc(100% - 20px));
+          padding: 30px 0 28px;
+        }
+
+        .video-section,
+        .cta-zone,
+        .content-stack {
+          width: 100%;
+        }
+
+        .video-frame {
+          aspect-ratio: 16 / 9;
+        }
+
+        .cta-arrow {
+          width: 108px;
+          height: 104px;
+        }
+
+        .blog-layout,
+        .legal-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .blog-card {
+          padding: 24px;
+        }
+
+        .blog-mark {
+          min-height: 0;
+        }
+
+        .legal-card {
+          min-height: 0;
+        }
+
+        .site-footer {
+          margin-top: 34px;
+        }
+
+        .footer-inner {
+          width: min(100%, calc(100% - 28px));
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 22px 28px;
+          padding: 28px 0 30px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .video-card,
+        .blog-card,
+        .legal-card {
+          border-radius: 24px;
+        }
+
+        .video-card {
+          padding: 7px;
+          border-radius: 18px;
+        }
+
+        .blog-card,
+        .legal-card {
+          padding: 20px;
+        }
+
+        .video-frame {
+          aspect-ratio: 16 / 10;
+          border-radius: 7px;
+        }
+
+        .cta-zone {
+          margin-top: 2px;
+          gap: 18px;
+        }
+
+        .cta-arrow {
+          width: 86px;
+          height: 84px;
+        }
+
+        .cta-arrow span {
+          width: 30px;
+          height: 30px;
+          border-right-width: 3px;
+          border-bottom-width: 3px;
+        }
+
+        .cta-button {
+          width: min(100%, 320px);
+          padding: 18px 20px;
+        }
+
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+
+        .footer-logo {
+          width: 150px;
+        }
+
+        .cookie-banner {
+          width: min(100%, calc(100% - 20px));
+          bottom: 10px;
+        }
+
+        .cookie-banner__panel {
+          grid-template-columns: 1fr;
+          padding: 16px;
+          border-radius: 22px;
+        }
+
+        .cookie-banner__actions {
+          justify-content: stretch;
+        }
+
+        .cookie-button {
+          width: 100%;
+        }
+
+        .email-modal__panel {
+          padding: 24px 18px 18px;
+          border-radius: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <span class="hero-tag">Expert IA</span>
+        <h1>CODEXINE</h1>
+        <p class="signature">By Oscar</p>
+        <p class="lead">
+          Decouvre comment utiliser l'IA pour automatiser plus vite, structurer un vrai
+          systeme et acceder en quelques secondes a la video, a la formation gratuite et
+          aux informations essentielles.
+        </p>
+      </section>
+
+      <section class="video-section" aria-label="Video principale">
+        <div class="video-card">
+          <div class="video-frame">
+            <video src="videopage.mp4" autoplay muted loop playsinline controls></video>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-zone" aria-label="Acces formation">
+        <div class="cta-arrow" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </div>
+        <a
+          class="cta-button"
+          href="formationgratuite.html"
+          id="open-email-gate"
+          aria-haspopup="dialog"
+          aria-controls="email-modal"
+        >
+          Regarder la formation gratuite
+        </a>
+      </section>
+    </main>
+
+    <div class="email-modal" id="email-modal" aria-hidden="true">
+      <div class="email-modal__backdrop" data-close-email-modal></div>
+      <div
+        class="email-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="email-modal-title"
+      >
+        <button class="email-modal__close" type="button" aria-label="Fermer" data-close-email-modal>
+          ×
+        </button>
+        <p class="email-modal__eyebrow">Acces formation</p>
+        <h2 class="email-modal__title" id="email-modal-title">Entre ton mail</h2>
+        <p class="email-modal__text">
+          On t'envoie dans la formation gratuite juste apres la validation de ton email.
+        </p>
+        <form class="email-form" id="email-gate-form">
+          <input
+            class="email-input"
+            id="lead-email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="tonmail@exemple.com"
+            required
+          />
+          <button class="email-submit" type="submit" id="email-submit-button">
+            Continuer vers la formation
+          </button>
+          <p class="email-status" id="email-status" aria-live="polite"></p>
+          <p class="email-note">
+            En validant, ton email est transmis a CODEXINE puis tu es redirige vers la page.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="index.html" aria-label="CODEXINE by Oscar">
+          <img class="footer-logo" src="./logo.png?v=20260410" alt="CODEXINE" />
+        </a>
+
+        <a class="footer-link" href="./infos.html?v=20260410">Infos</a>
+        <a class="footer-link" href="./conditions-utilisation.html?v=20260410">Conditions d'utilisation</a>
+        <a class="footer-link" href="./politique-confidentialite.html?v=20260410">Politique de confidentialite</a>
+        <a class="footer-link" href="./mentions-legales.html?v=20260410">Mentions legales</a>
+        <p class="footer-copy">© 2026 CODEXINE by Oscar.</p>
+      </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookie-banner" aria-live="polite" aria-hidden="true">
+      <div class="cookie-banner__panel">
+        <div>
+          <h2 class="cookie-banner__title">Gestion des cookies</h2>
+          <p class="cookie-banner__text">
+            Ce site utilise des cookies et traceurs techniques pour memoriser ton choix
+            de consentement et faciliter certaines interactions. Tu peux accepter ou
+            refuser les cookies non essentiels. Details dans la
+            <a href="./politique-confidentialite.html?v=20260410">Politique de confidentialite</a>.
+          </p>
+        </div>
+        <div class="cookie-banner__actions">
+          <button class="cookie-button cookie-button--secondary" type="button" id="cookie-reject">
+            Refuser
+          </button>
+          <button class="cookie-button cookie-button--primary" type="button" id="cookie-accept">
+            Accepter
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const TELEGRAM_BOT_TOKEN = "8781312268:AAEWod2wkAD6o7792WQuRdC6DDqbz2aV-O8";
+        const TELEGRAM_CHAT_ID = "8253411443";
+        const REDIRECT_URL = "formationgratuite.html";
+
+        const openButton = document.getElementById("open-email-gate");
+        const modal = document.getElementById("email-modal");
+        const closeButtons = document.querySelectorAll("[data-close-email-modal]");
+        const form = document.getElementById("email-gate-form");
+        const emailInput = document.getElementById("lead-email");
+        const submitButton = document.getElementById("email-submit-button");
+        const statusNode = document.getElementById("email-status");
+
+        if (!openButton || !modal || !form || !emailInput || !submitButton || !statusNode) {
+          return;
+        }
+
+        const setStatus = (message, type = "") => {
+          statusNode.textContent = message;
+          statusNode.className = type ? `email-status ${type}` : "email-status";
+        };
+
+        const openModal = () => {
+          const savedEmail = window.localStorage.getItem("codexine_lead_email") || "";
+          if (savedEmail && !emailInput.value) {
+            emailInput.value = savedEmail;
+          }
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.classList.add("modal-open");
+          setStatus("");
+          window.setTimeout(() => emailInput.focus(), 20);
+        };
+
+        const closeModal = () => {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("modal-open");
+          setStatus("");
+        };
+
+        openButton.addEventListener("click", (event) => {
+          event.preventDefault();
+          openModal();
+        });
+
+        closeButtons.forEach((button) => {
+          button.addEventListener("click", closeModal);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          if (!form.reportValidity()) {
+            return;
+          }
+
+          const email = emailInput.value.trim().toLowerCase();
+          const message = [
+            "Nouveau mail CODEXINE",
+            `Email: ${email}`,
+            "Source: accueil",
+            `Date: ${new Date().toLocaleString("fr-FR")}`,
+          ].join("\n");
+
+          submitButton.disabled = true;
+          setStatus("Envoi en cours...");
+
+          try {
+            const response = await fetch(
+              `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                },
+                body: new URLSearchParams({
+                  chat_id: TELEGRAM_CHAT_ID,
+                  text: message,
+                }),
+              }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok || !data.ok) {
+              throw new Error("Echec d'envoi Telegram");
+            }
+
+            window.localStorage.setItem("codexine_lead_email", email);
+            setStatus("Mail enregistre. Redirection...");
+            window.setTimeout(() => {
+              window.location.href = REDIRECT_URL;
+            }, 220);
+          } catch (error) {
+            console.error(error);
+            setStatus("Impossible d'envoyer le mail. Reessaie.", "is-error");
+            submitButton.disabled = false;
+          }
+        });
+      })();
+
+      (() => {
+        const COOKIE_NAME = "codexine_cookie_choice";
+        const COOKIE_MAX_AGE = 60 * 60 * 24 * 180;
+        const banner = document.getElementById("cookie-banner");
+        const acceptButton = document.getElementById("cookie-accept");
+        const rejectButton = document.getElementById("cookie-reject");
+
+        if (!banner || !acceptButton || !rejectButton) {
+          return;
+        }
+
+        const readCookie = (name) => {
+          const prefix = `${name}=`;
+          const parts = document.cookie.split(";").map((item) => item.trim());
+          const found = parts.find((item) => item.startsWith(prefix));
+          return found ? decodeURIComponent(found.slice(prefix.length)) : "";
+        };
+
+        const saveChoice = (value) => {
+          document.cookie =
+            `${COOKIE_NAME}=${encodeURIComponent(value)}; Max-Age=${COOKIE_MAX_AGE}; Path=/; SameSite=Lax`;
+          banner.classList.remove("is-visible");
+          banner.setAttribute("aria-hidden", "true");
+        };
+
+        if (!readCookie(COOKIE_NAME)) {
+          banner.classList.add("is-visible");
+          banner.setAttribute("aria-hidden", "false");
+        }
+
+        acceptButton.addEventListener("click", () => saveChoice("accepted"));
+        rejectButton.addEventListener("click", () => saveChoice("refused"));
+      })();
+    </script>
+  </body>
+</html>

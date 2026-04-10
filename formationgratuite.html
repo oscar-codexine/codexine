@@ -1,0 +1,3460 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation Gratuite | CODEXINE</title>
+    <meta
+      name="description"
+      content="Accede a la formation gratuite CODEXINE : 3 videos pour comprendre l'automatisation, le contenu IA en continu et la creation video automatisee."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Oscar Sander" />
+    <meta name="theme-color" content="#050505" />
+    <link rel="canonical" href="https://codexine.fr/formationgratuite.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CODEXINE" />
+    <meta property="og:title" content="Formation Gratuite | CODEXINE" />
+    <meta
+      property="og:description"
+      content="3 videos pour comprendre l'automatisation, le blog automatise et la creation video continue avec CODEXINE."
+    />
+    <meta property="og:url" content="https://codexine.fr/formationgratuite.html" />
+    <meta property="og:image" content="https://codexine.fr/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Formation Gratuite | CODEXINE" />
+    <meta
+      name="twitter:description"
+      content="Decouvre la formation gratuite CODEXINE et les bases de l'automatisation IA."
+    />
+    <meta name="twitter:image" content="https://codexine.fr/logo.png" />
+    <link rel="icon" type="image/png" href="./icon.png?v=20260410" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --text: #faf5f5;
+        --muted: #aa9699;
+        --red: #ff5863;
+        --red-soft: #ff8a92;
+        --line: rgba(255, 255, 255, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Outfit", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 88, 99, 0.2), transparent 26%),
+          radial-gradient(circle at 16% 12%, rgba(122, 15, 25, 0.3), transparent 28%),
+          radial-gradient(circle at 84% 18%, rgba(255, 88, 99, 0.1), transparent 24%),
+          linear-gradient(180deg, #080808 0%, #040404 54%, #060304 100%);
+        overflow-x: hidden;
+      }
+
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.35;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 95%);
+      }
+
+      main {
+        width: min(1200px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 42px 0 64px;
+      }
+
+      .hero {
+        width: min(920px, 100%);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 18px 0 20px;
+      }
+
+      .logo {
+        display: block;
+        width: min(280px, 100%);
+        height: auto;
+        margin: 0 auto 26px;
+        filter: drop-shadow(0 14px 28px rgba(255, 88, 99, 0.16));
+      }
+
+      h1 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(4rem, 10vw, 7rem);
+        line-height: 0.9;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+        text-shadow:
+          0 0 20px rgba(255, 88, 99, 0.08),
+          0 0 44px rgba(255, 88, 99, 0.12);
+      }
+
+      .hero-divider {
+        width: min(180px, 36vw);
+        height: 2px;
+        margin: 22px auto 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, transparent, var(--red), transparent);
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.24);
+      }
+
+      .hero-text {
+        width: min(720px, 100%);
+        margin: 22px auto 0;
+        line-height: 1.76;
+        color: var(--muted);
+      }
+
+      .lessons {
+        margin-top: 56px;
+        display: grid;
+        gap: 42px;
+      }
+
+      .lesson {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+        gap: 42px;
+        align-items: center;
+        padding: 34px;
+        border-radius: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(11, 11, 11, 0.94), rgba(7, 7, 7, 0.98)),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 46%);
+        box-shadow: 0 26px 60px rgba(0, 0, 0, 0.28);
+      }
+
+      .lesson::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 8% 18%, rgba(255, 88, 99, 0.12), transparent 24%),
+          radial-gradient(circle at 92% 80%, rgba(255, 88, 99, 0.08), transparent 24%);
+        z-index: -1;
+      }
+
+      .lesson::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 88, 99, 0.46), transparent);
+      }
+
+      .lesson--reverse {
+        grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1.15fr);
+      }
+
+      .lesson--reverse .lesson-copy {
+        order: -1;
+      }
+
+      .lesson-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding-left: 22px;
+      }
+
+      .lesson-copy::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        bottom: 8px;
+        width: 3px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(255, 88, 99, 0.16), var(--red), rgba(255, 88, 99, 0.16));
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.22);
+      }
+
+      .lesson-copy h2 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.8rem, 7vw, 4.6rem);
+        line-height: 0.94;
+        letter-spacing: 0.04em;
+        color: #fff5f5;
+      }
+
+      .lesson-copy p {
+        margin: 16px 0 0;
+        color: var(--muted);
+        line-height: 1.78;
+        max-width: 500px;
+      }
+
+      .video-shell {
+        position: relative;
+        padding: 10px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          linear-gradient(145deg, #2a0608 0%, #7c1119 18%, #ff5d69 44%, #781018 70%, #220507 100%);
+        box-shadow:
+          0 12px 28px rgba(0, 0, 0, 0.24),
+          0 0 18px rgba(255, 88, 99, 0.08);
+      }
+
+      .video-shell::before {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        border-radius: 19px;
+        border: 1px solid rgba(255, 214, 216, 0.14);
+        box-shadow:
+          inset 0 0 0 1px rgba(83, 11, 17, 0.85),
+          inset 0 0 0 2px rgba(255, 88, 99, 0.06);
+        pointer-events: none;
+      }
+
+      .video-frame {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 8px;
+        border: 1px solid rgba(34, 5, 7, 0.9);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 214, 216, 0.08),
+          0 4px 12px rgba(0, 0, 0, 0.16);
+        background:
+          radial-gradient(circle at 50% 15%, rgba(255, 88, 99, 0.28), transparent 30%),
+          linear-gradient(180deg, rgba(18, 9, 10, 0.98), rgba(6, 6, 6, 1));
+      }
+
+      .video-frame video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .offer-arrow-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+      }
+
+      .offer-arrow {
+        width: 112px;
+        height: 92px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+      }
+
+      .offer-arrow span {
+        width: 34px;
+        height: 34px;
+        border-right: 4px solid var(--red-soft);
+        border-bottom: 4px solid var(--red-soft);
+        transform: rotate(45deg);
+        filter: drop-shadow(0 0 16px rgba(255, 88, 99, 0.45));
+        animation: offerArrowChevron 1.8s ease-in-out infinite;
+      }
+
+      .offer-arrow span:nth-child(1) {
+        opacity: 0.45;
+      }
+
+      .offer-arrow span:nth-child(2) {
+        margin-top: -8px;
+        animation-delay: 0.16s;
+        opacity: 0.9;
+      }
+
+      @keyframes offerArrowChevron {
+        0%,
+        100% {
+          transform: translateY(0) rotate(45deg);
+          opacity: 0.36;
+        }
+        50% {
+          transform: translateY(10px) rotate(45deg);
+          opacity: 1;
+        }
+      }
+
+      .offer {
+        width: min(900px, 100%);
+        margin: 18px auto 0;
+        padding: 24px;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 86% 12%, rgba(255, 88, 99, 0.14), transparent 22%),
+          linear-gradient(180deg, rgba(11, 11, 11, 0.95), rgba(8, 8, 8, 0.98));
+        box-shadow: 0 22px 54px rgba(0, 0, 0, 0.28);
+        overflow: visible;
+      }
+
+      .offer-title {
+        margin: 0;
+        text-align: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.6rem, 7vw, 4.2rem);
+        line-height: 0.94;
+        letter-spacing: 0.04em;
+        color: #fff5f5;
+      }
+
+      .offer-text {
+        width: min(620px, 100%);
+        margin: 12px auto 0;
+        text-align: center;
+        line-height: 1.68;
+        color: var(--muted);
+      }
+
+      .offer-grid {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+        gap: 18px;
+        align-items: center;
+        margin-top: 22px;
+      }
+
+      .offer-media {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        border: 0;
+        background: none;
+        box-shadow: none;
+        margin-block: -42px;
+      }
+
+      .offer-media::before {
+        content: none;
+      }
+
+      .offer-gif {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 18px;
+        border: 0;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+      }
+
+      .offer-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding-top: 12px;
+      }
+
+      .offer-copy.is-compact {
+        padding-top: 12px;
+      }
+
+      .offer-copy h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff5f5;
+      }
+
+      .offer-list {
+        margin: 14px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .offer-list li {
+        position: relative;
+        padding-left: 26px;
+        line-height: 1.58;
+        color: var(--muted);
+      }
+
+      .offer-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.7em;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--red), var(--red-soft));
+        box-shadow: 0 0 16px rgba(255, 88, 99, 0.5);
+        transform: translateY(-50%);
+      }
+
+      .offer-price {
+        margin: 16px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.4rem, 6vw, 3.4rem);
+        line-height: 1;
+        letter-spacing: 0.04em;
+        color: #fff5f5;
+      }
+
+      .offer-price span {
+        font-size: 0.5em;
+        color: #ffd7da;
+      }
+
+      .countdown-note {
+        position: relative;
+        padding: 14px 16px 14px;
+        border: 2px solid rgba(255, 88, 99, 0.76);
+        border-radius: 20px 24px 18px 26px;
+        background:
+          linear-gradient(180deg, rgba(16, 10, 11, 0.96), rgba(8, 8, 8, 0.98));
+        box-shadow:
+          0 18px 38px rgba(0, 0, 0, 0.26),
+          0 0 24px rgba(255, 88, 99, 0.08);
+        transform: rotate(-1.8deg);
+        z-index: 2;
+      }
+
+      .countdown-note[hidden] {
+        display: none !important;
+      }
+
+      .countdown-note::before,
+      .countdown-note::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .countdown-note::before {
+        inset: -5px 2px 3px -6px;
+        border: 1.5px solid rgba(255, 157, 163, 0.5);
+        border-radius: 24px 20px 26px 18px;
+        transform: rotate(1.8deg);
+      }
+
+      .countdown-note::after {
+        inset: 4px -3px -5px 5px;
+        border: 1px dashed rgba(255, 221, 223, 0.22);
+        border-radius: 18px 24px 16px 22px;
+        transform: rotate(-1deg);
+      }
+
+      .countdown-note__eyebrow {
+        margin: 0;
+        color: #ffadb3;
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .countdown-note__title {
+        margin: 8px 0 0;
+        color: #fff3f4;
+        font-size: 0.98rem;
+        font-weight: 700;
+        line-height: 1.45;
+      }
+
+      .countdown-note__value {
+        margin: 8px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4.2vw, 2.7rem);
+        line-height: 0.94;
+        letter-spacing: 0.08em;
+        color: #fff6f6;
+        white-space: nowrap;
+      }
+
+      .countdown-note__subline {
+        margin: 8px 0 0;
+        color: rgba(255, 226, 228, 0.72);
+        font-size: 0.84rem;
+        line-height: 1.58;
+      }
+
+      .countdown-note--offer {
+        position: relative;
+        top: auto;
+        right: auto;
+        align-self: flex-end;
+        width: min(100%, 292px);
+        margin: -6px 0 18px;
+      }
+
+      .countdown-note--roadmap {
+        width: min(100%, 410px);
+        margin: 18px auto 0;
+      }
+
+      .offer-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: fit-content;
+        margin-top: 14px;
+        padding: 15px 22px;
+        border: 0;
+        border-radius: 18px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        color: #fff6f6;
+        background: linear-gradient(135deg, var(--red), #ff737d);
+        box-shadow: 0 16px 36px rgba(255, 88, 99, 0.24);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .offer-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 22px 44px rgba(255, 88, 99, 0.3);
+      }
+
+      .buy-modal {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 180ms ease;
+        z-index: 60;
+      }
+
+      .buy-modal.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .buy-modal__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(2, 2, 2, 0.8);
+        backdrop-filter: blur(14px);
+      }
+
+      .buy-modal__panel {
+        position: relative;
+        width: min(100%, 560px);
+        padding: 30px;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.16), transparent 30%),
+          linear-gradient(180deg, rgba(16, 12, 13, 0.98), rgba(8, 8, 8, 0.98));
+        box-shadow:
+          0 26px 70px rgba(0, 0, 0, 0.42),
+          0 0 24px rgba(255, 88, 99, 0.1);
+      }
+
+      .buy-modal__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+        color: rgba(255, 244, 244, 0.9);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .buy-modal__title {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.4rem, 8vw, 4rem);
+        line-height: 0.92;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .buy-modal__text {
+        margin: 14px 0 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .buy-form {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .buy-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .buy-input {
+        width: 100%;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        outline: none;
+        background: rgba(255, 255, 255, 0.04);
+        color: #fff6f6;
+        font: inherit;
+      }
+
+      .buy-input::placeholder {
+        color: rgba(255, 244, 244, 0.4);
+      }
+
+      .buy-input:focus {
+        border-color: rgba(255, 88, 99, 0.36);
+        box-shadow: 0 0 0 3px rgba(255, 88, 99, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .buy-submit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 16px 18px;
+        border: 0;
+        border-radius: 18px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        color: #fff6f6;
+        background: linear-gradient(135deg, var(--red), #ff737d);
+        box-shadow: 0 16px 36px rgba(255, 88, 99, 0.24);
+      }
+
+      .buy-submit:disabled {
+        cursor: wait;
+        opacity: 0.72;
+      }
+
+      .buy-status {
+        min-height: 1.4em;
+        margin: 2px 0 0;
+        font-size: 0.92rem;
+        color: #ffd9dc;
+      }
+
+      .buy-status.is-error {
+        color: #ff9aa1;
+      }
+
+      .buy-check {
+        display: grid;
+        grid-template-columns: 18px minmax(0, 1fr);
+        gap: 12px;
+        align-items: start;
+        padding: 14px 14px 0;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 88, 99, 0.14);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .buy-check__input {
+        width: 18px;
+        height: 18px;
+        margin: 2px 0 0;
+        accent-color: var(--red);
+      }
+
+      .buy-check__text {
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.62;
+      }
+
+      .buy-check__text a {
+        color: #fff5f5;
+        text-underline-offset: 4px;
+      }
+
+      .review-bands {
+        margin: 32px auto 0;
+        width: min(1120px, 100%);
+      }
+
+      .review-summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+
+      .review-summary__value {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.4rem, 5vw, 3.4rem);
+        line-height: 0.94;
+        letter-spacing: 0.04em;
+        color: #fff5f5;
+      }
+
+      .review-marquee {
+        position: relative;
+        overflow: hidden;
+        margin-top: 12px;
+        mask-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, transparent);
+      }
+
+      .review-marquee:first-child {
+        margin-top: 0;
+      }
+
+      .review-track {
+        display: flex;
+        align-items: stretch;
+        gap: 16px;
+        width: max-content;
+        padding: 6px 0;
+        animation: reviewMarqueeLeft 38s linear infinite;
+      }
+
+      .review-track--reverse {
+        animation-name: reviewMarqueeRight;
+        animation-duration: 42s;
+      }
+
+      .review-card {
+        width: 320px;
+        min-height: 164px;
+        padding: 18px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.14), transparent 28%),
+          linear-gradient(180deg, rgba(15, 15, 15, 0.96), rgba(8, 8, 8, 0.98));
+        box-shadow:
+          0 18px 40px rgba(0, 0, 0, 0.22),
+          inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      }
+
+      .review-card__top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .review-card__profile {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .review-card__avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        object-fit: cover;
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        flex: 0 0 auto;
+      }
+
+      .review-card__meta {
+        min-width: 0;
+      }
+
+      .review-card__name {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff3f4;
+      }
+
+      .review-card__role {
+        margin: 4px 0 0;
+        color: rgba(255, 226, 228, 0.66);
+        font-size: 0.84rem;
+        line-height: 1.4;
+      }
+
+      .review-card__rating {
+        margin-top: 8px;
+      }
+
+      .review-stars {
+        --rating: 5;
+        --star-size: 14px;
+        position: relative;
+        display: inline-block;
+        font-size: var(--star-size);
+        line-height: 1;
+        letter-spacing: 0.18em;
+      }
+
+      .review-stars::before,
+      .review-stars::after {
+        content: "★★★★★";
+        white-space: nowrap;
+      }
+
+      .review-stars::before {
+        color: rgba(255, 255, 255, 0.2);
+      }
+
+      .review-stars::after {
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: calc(var(--rating) / 5 * 100%);
+        overflow: hidden;
+        color: var(--red);
+      }
+
+      .review-stars--large {
+        --star-size: 24px;
+      }
+
+      .review-card__quote {
+        margin: 14px 0 0;
+        color: #f1dfe1;
+        line-height: 1.72;
+        font-size: 0.95rem;
+      }
+
+      .review-action {
+        display: flex;
+        justify-content: center;
+        margin-top: 22px;
+      }
+
+      .review-action__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 22px;
+        border: 0;
+        border-radius: 18px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        color: #fff6f6;
+        background: linear-gradient(135deg, var(--red), #ff737d);
+        box-shadow: 0 16px 36px rgba(255, 88, 99, 0.24);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .review-action__button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 22px 44px rgba(255, 88, 99, 0.3);
+      }
+
+      .faq-section {
+        position: relative;
+        width: min(1120px, 100%);
+        margin: 62px auto 0;
+        padding: 34px;
+        border-radius: 34px;
+        border: 1px solid rgba(255, 88, 99, 0.14);
+        background:
+          radial-gradient(circle at 0% 0%, rgba(255, 88, 99, 0.12), transparent 24%),
+          radial-gradient(circle at 100% 100%, rgba(255, 88, 99, 0.1), transparent 28%),
+          linear-gradient(180deg, rgba(14, 12, 13, 0.96), rgba(7, 7, 7, 0.98));
+        box-shadow:
+          0 28px 70px rgba(0, 0, 0, 0.3),
+          inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        overflow: hidden;
+      }
+
+      .faq-section::before,
+      .faq-section::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .faq-section::before {
+        inset: 0;
+        border-radius: inherit;
+        border: 1px solid rgba(255, 88, 99, 0.06);
+      }
+
+      .faq-section::after {
+        top: -130px;
+        right: -90px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 88, 99, 0.14), transparent 68%);
+      }
+
+      .faq-header {
+        position: relative;
+        z-index: 1;
+        max-width: 720px;
+        margin: 0 auto 24px;
+        text-align: center;
+      }
+
+      .faq-kicker {
+        margin: 0;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(255, 150, 157, 0.86);
+      }
+
+      .faq-title {
+        margin: 14px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.7rem, 5vw, 4.1rem);
+        line-height: 0.94;
+        letter-spacing: 0.05em;
+        color: #fff4f4;
+      }
+
+      .faq-text {
+        margin: 14px auto 0;
+        max-width: 620px;
+        color: rgba(255, 226, 228, 0.74);
+        font-size: 1rem;
+        line-height: 1.74;
+      }
+
+      .faq-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .faq-item {
+        position: relative;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(18, 18, 18, 0.92), rgba(10, 10, 10, 0.98));
+        box-shadow:
+          0 18px 44px rgba(0, 0, 0, 0.18),
+          inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        overflow: hidden;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .faq-item::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255, 88, 99, 0.1), transparent 46%, transparent 100%);
+        opacity: 0;
+        transition: opacity 180ms ease;
+        pointer-events: none;
+      }
+
+      .faq-item[open] {
+        transform: translateY(-2px);
+        border-color: rgba(255, 88, 99, 0.22);
+        box-shadow:
+          0 22px 52px rgba(0, 0, 0, 0.22),
+          0 0 0 1px rgba(255, 88, 99, 0.08);
+      }
+
+      .faq-item[open]::before {
+        opacity: 1;
+      }
+
+      .faq-question {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 14px;
+        padding: 18px 58px 18px 18px;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .faq-question::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-question::after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        right: 18px;
+        transform: translateY(-50%);
+        color: rgba(255, 245, 245, 0.84);
+        font-size: 1.65rem;
+        font-weight: 300;
+        line-height: 1;
+      }
+
+      .faq-item[open] .faq-question::after {
+        content: "-";
+        color: #fff0f1;
+      }
+
+      .faq-index {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.08rem;
+        letter-spacing: 0.08em;
+        color: #ff9aa1;
+      }
+
+      .faq-question__text {
+        color: #fff4f4;
+        font-size: 1.02rem;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+
+      .faq-answer {
+        padding: 0 18px 20px 70px;
+      }
+
+      .faq-answer p {
+        margin: 0;
+        color: rgba(255, 226, 228, 0.74);
+        line-height: 1.74;
+      }
+
+      .price-roadmap {
+        width: min(1120px, 100%);
+        margin: 42px auto 0;
+      }
+
+      .price-roadmap__header {
+        max-width: 760px;
+        margin: 0 auto 22px;
+        text-align: center;
+      }
+
+      .price-roadmap__kicker {
+        margin: 0;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: rgba(255, 150, 157, 0.86);
+      }
+
+      .price-roadmap__title {
+        margin: 14px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.7rem, 5vw, 4.1rem);
+        line-height: 0.94;
+        letter-spacing: 0.05em;
+        color: #fff4f4;
+      }
+
+      .price-roadmap__status {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 16px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.16);
+        background: rgba(255, 88, 99, 0.07);
+        color: #ffe3e5;
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .price-roadmap__status::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--red);
+        box-shadow: 0 0 14px rgba(255, 88, 99, 0.6);
+      }
+
+      .price-roadmap__swipe {
+        display: none;
+        margin: 12px 0 0;
+        color: rgba(255, 226, 228, 0.56);
+        font-size: 0.84rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .price-roadmap__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+      }
+
+      .price-roadmap__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 22px;
+        border: 0;
+        border-radius: 18px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        color: #fff6f6;
+        background: linear-gradient(135deg, var(--red), #ff737d);
+        box-shadow: 0 16px 36px rgba(255, 88, 99, 0.24);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .price-roadmap__button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 22px 44px rgba(255, 88, 99, 0.3);
+      }
+
+      .price-roadmap__track {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .price-step {
+        position: relative;
+        padding: 22px 20px 20px;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.1), transparent 30%),
+          linear-gradient(180deg, rgba(15, 15, 15, 0.96), rgba(8, 8, 8, 0.98));
+        box-shadow:
+          0 20px 48px rgba(0, 0, 0, 0.24),
+          inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        overflow: hidden;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .price-step::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255, 88, 99, 0.12), transparent 44%);
+        opacity: 0;
+        transition: opacity 180ms ease;
+        pointer-events: none;
+      }
+
+      .price-step.is-active,
+      .price-step.is-next {
+        transform: translateY(-3px);
+      }
+
+      .price-step.is-active {
+        border-color: rgba(255, 88, 99, 0.24);
+        box-shadow:
+          0 26px 58px rgba(0, 0, 0, 0.3),
+          0 0 0 1px rgba(255, 88, 99, 0.08);
+      }
+
+      .price-step.is-active::before {
+        opacity: 1;
+      }
+
+      .price-step.is-next {
+        border-color: rgba(255, 196, 200, 0.16);
+      }
+
+      .price-step.is-next::before {
+        opacity: 0.65;
+      }
+
+      .price-step__tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 30px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 235, 236, 0.88);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .price-step.is-active .price-step__tag {
+        border-color: rgba(255, 88, 99, 0.24);
+        background: rgba(255, 88, 99, 0.1);
+        color: #fff0f1;
+      }
+
+      .price-step__period {
+        margin: 16px 0 0;
+        color: rgba(255, 226, 228, 0.66);
+        font-size: 0.84rem;
+        line-height: 1.55;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .price-step__title {
+        margin: 10px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4vw, 2.9rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .price-step__amount {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 6px;
+        margin-top: 12px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.4rem, 5vw, 3.5rem);
+        line-height: 1;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .price-step__amount span {
+        font-size: 0.42em;
+        color: #ffd7da;
+      }
+
+      .price-step__desc {
+        margin: 14px 0 0;
+        color: rgba(255, 226, 228, 0.74);
+        line-height: 1.7;
+      }
+
+      .review-modal {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 180ms ease;
+        z-index: 60;
+      }
+
+      .review-modal.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .review-modal__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(2, 2, 2, 0.78);
+        backdrop-filter: blur(14px);
+      }
+
+      .review-modal__panel {
+        position: relative;
+        width: min(100%, 560px);
+        padding: 30px;
+        border-radius: 28px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.16), transparent 30%),
+          linear-gradient(180deg, rgba(16, 12, 13, 0.98), rgba(8, 8, 8, 0.98));
+        box-shadow:
+          0 26px 70px rgba(0, 0, 0, 0.42),
+          0 0 24px rgba(255, 88, 99, 0.1);
+      }
+
+      .review-modal__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+        color: rgba(255, 244, 244, 0.9);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .review-modal__title {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.2rem, 8vw, 3.6rem);
+        line-height: 0.92;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .review-modal__text {
+        margin: 14px 0 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .review-form {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .review-input,
+      .review-textarea {
+        width: 100%;
+        padding: 16px 18px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        outline: none;
+        background: rgba(255, 255, 255, 0.04);
+        color: #fff6f6;
+        font: inherit;
+      }
+
+      .review-textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .review-input::placeholder,
+      .review-textarea::placeholder {
+        color: rgba(255, 244, 244, 0.4);
+      }
+
+      .review-input:focus,
+      .review-textarea:focus {
+        border-color: rgba(255, 88, 99, 0.36);
+        box-shadow: 0 0 0 3px rgba(255, 88, 99, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .review-submit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 16px 18px;
+        border: 0;
+        border-radius: 18px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        color: #fff6f6;
+        background: linear-gradient(135deg, var(--red), #ff737d);
+        box-shadow: 0 16px 36px rgba(255, 88, 99, 0.24);
+      }
+
+      .review-submit:disabled {
+        cursor: wait;
+        opacity: 0.72;
+      }
+
+      .review-status {
+        min-height: 1.4em;
+        margin: 2px 0 0;
+        font-size: 0.92rem;
+        color: #ffd9dc;
+      }
+
+      .review-status.is-error {
+        color: #ff9aa1;
+      }
+
+      .review-note {
+        margin: 0;
+        color: rgba(255, 226, 228, 0.66);
+        font-size: 0.84rem;
+        line-height: 1.62;
+      }
+
+      @keyframes reviewMarqueeLeft {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(calc(-50% - 8px));
+        }
+      }
+
+      @keyframes reviewMarqueeRight {
+        from {
+          transform: translateX(calc(-50% - 8px));
+        }
+
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      .site-footer {
+        position: relative;
+        z-index: 1;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto 32px;
+        padding: 18px 0 0;
+      }
+
+      .site-footer::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 22px;
+        background: linear-gradient(90deg, transparent, rgba(255, 88, 99, 0.32), transparent);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .footer-logo {
+        width: min(176px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .footer-link,
+      .footer-copy {
+        color: rgba(255, 255, 255, 0.74);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.88rem;
+      }
+
+      .footer-link:hover {
+        color: #fff4f4;
+      }
+
+      @media (max-width: 980px) {
+        .lesson,
+        .lesson--reverse {
+          grid-template-columns: 1fr;
+          gap: 26px;
+          padding: 24px;
+        }
+
+        .lesson--reverse .lesson-copy {
+          order: 0;
+        }
+
+        .offer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .offer-copy {
+          padding-top: 12px;
+        }
+
+        .countdown-note--offer {
+          position: relative;
+          top: auto;
+          right: auto;
+          width: min(100%, 340px);
+          margin: -10px auto 16px;
+        }
+
+        .offer-media {
+          width: min(100%, 360px);
+          margin: -18px auto 4px;
+        }
+
+        .offer-arrow {
+          width: 96px;
+          height: 80px;
+        }
+
+        .review-card {
+          width: 286px;
+        }
+
+        .faq-section {
+          padding: 28px;
+        }
+
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .price-roadmap__track {
+          display: flex;
+          gap: 16px;
+          overflow-x: auto;
+          padding: 4px 4px 14px;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .price-roadmap__track::-webkit-scrollbar {
+          display: none;
+        }
+
+        .price-roadmap__swipe {
+          display: block;
+        }
+
+        .price-step {
+          flex: 0 0 min(86vw, 360px);
+          scroll-snap-align: start;
+        }
+
+        .countdown-note--roadmap {
+          width: min(100%, 420px);
+        }
+
+        .site-footer {
+          width: min(100%, calc(100% - 24px));
+        }
+
+        .footer-inner {
+          justify-content: center;
+        }
+
+        .footer-copy {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 560px) {
+        body {
+          padding: 0;
+        }
+
+        main {
+          width: min(100%, calc(100% - 20px));
+          padding: 24px 0 40px;
+        }
+
+        h1 {
+          font-size: clamp(2.8rem, 10.5vw, 4rem);
+          line-height: 0.94;
+          letter-spacing: 0.035em;
+        }
+
+        .lesson {
+          padding: 16px;
+          border-radius: 22px;
+        }
+
+        .lesson-copy {
+          padding-left: 16px;
+        }
+
+        .lesson-copy::before {
+          width: 2px;
+        }
+
+        .video-shell {
+          padding: 7px;
+          border-radius: 18px;
+        }
+
+        .video-shell::before {
+          inset: 2px;
+          border-radius: 14px;
+        }
+
+        .video-frame {
+          aspect-ratio: 16 / 10;
+          border-radius: 7px;
+        }
+
+        .offer {
+          padding: 16px;
+          border-radius: 22px;
+        }
+
+        .offer-grid {
+          margin-top: 10px;
+          gap: 0;
+        }
+
+        .offer-media {
+          position: relative;
+          z-index: 2;
+          width: min(100%, 312px);
+          margin: -34px auto -58px;
+        }
+
+        .offer-gif {
+          aspect-ratio: 4 / 5;
+          border-radius: 16px;
+        }
+
+        .offer-copy {
+          position: relative;
+          z-index: 1;
+          padding-top: 8px;
+        }
+
+        .offer-arrow {
+          width: 78px;
+          height: 68px;
+        }
+
+        .offer-arrow span {
+          width: 26px;
+          height: 26px;
+          border-right-width: 3px;
+          border-bottom-width: 3px;
+        }
+
+        .review-marquee {
+          margin-top: 12px;
+        }
+
+        .review-summary {
+          margin-bottom: 14px;
+        }
+
+        .review-card {
+          width: 252px;
+          min-height: 150px;
+          padding: 16px;
+          border-radius: 20px;
+        }
+
+        .review-card__avatar {
+          width: 46px;
+          height: 46px;
+        }
+
+        .review-card__quote {
+          font-size: 0.9rem;
+        }
+
+        .review-modal__panel {
+          padding: 24px 18px 18px;
+          border-radius: 22px;
+        }
+
+        .buy-row {
+          grid-template-columns: 1fr;
+        }
+
+        .buy-modal__panel {
+          padding: 24px 18px 18px;
+          border-radius: 22px;
+        }
+
+        .buy-check {
+          padding: 12px 12px 0;
+        }
+
+        .footer-inner {
+          gap: 14px 18px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .faq-section {
+          margin-top: 50px;
+          padding: 18px 14px 16px;
+          border-radius: 26px;
+        }
+
+        .faq-header {
+          margin-bottom: 18px;
+        }
+
+        .faq-kicker {
+          font-size: 0.72rem;
+          letter-spacing: 0.26em;
+        }
+
+        .faq-title {
+          margin-top: 12px;
+          font-size: clamp(2.2rem, 10vw, 3rem);
+        }
+
+        .faq-text {
+          margin-top: 12px;
+          font-size: 0.92rem;
+          line-height: 1.66;
+        }
+
+        .faq-grid {
+          gap: 12px;
+        }
+
+        .faq-item {
+          border-radius: 20px;
+        }
+
+        .faq-question {
+          gap: 12px;
+          padding: 16px 48px 16px 14px;
+        }
+
+        .faq-question::after {
+          right: 14px;
+          font-size: 1.45rem;
+        }
+
+        .faq-index {
+          width: 34px;
+          height: 34px;
+          font-size: 0.98rem;
+        }
+
+        .faq-question__text {
+          font-size: 0.94rem;
+          line-height: 1.45;
+        }
+
+        .faq-answer {
+          padding: 0 14px 16px 60px;
+        }
+
+        .faq-answer p {
+          font-size: 0.9rem;
+          line-height: 1.66;
+        }
+
+        .countdown-note {
+          padding: 12px 12px 12px;
+        }
+
+        .countdown-note__eyebrow {
+          font-size: 0.64rem;
+          letter-spacing: 0.13em;
+        }
+
+        .countdown-note__title {
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+
+        .countdown-note__value {
+          font-size: 2.15rem;
+          letter-spacing: 0.06em;
+        }
+
+        .countdown-note__subline {
+          font-size: 0.78rem;
+          line-height: 1.5;
+        }
+
+        .countdown-note--offer {
+          width: min(100%, 100%);
+          margin: -6px auto 14px;
+        }
+
+        .countdown-note--roadmap {
+          width: 100%;
+          margin-top: 16px;
+        }
+
+        .price-roadmap {
+          margin-top: 34px;
+        }
+
+        .price-roadmap__kicker {
+          font-size: 0.72rem;
+          letter-spacing: 0.26em;
+        }
+
+        .price-roadmap__title {
+          margin-top: 12px;
+          font-size: clamp(2.2rem, 10vw, 3rem);
+        }
+
+        .price-roadmap__status {
+          margin-top: 14px;
+          padding: 9px 12px;
+          font-size: 0.72rem;
+          letter-spacing: 0.07em;
+        }
+
+        .price-roadmap__swipe {
+          margin-top: 10px;
+          font-size: 0.76rem;
+          letter-spacing: 0.06em;
+        }
+
+        .price-roadmap__actions {
+          margin-top: 14px;
+        }
+
+        .price-roadmap__button {
+          width: 100%;
+          max-width: 320px;
+          padding: 14px 18px;
+        }
+
+        .price-step {
+          flex-basis: min(88vw, 300px);
+          padding: 18px 16px 16px;
+          border-radius: 22px;
+        }
+
+        .price-step__tag {
+          min-height: 28px;
+          padding: 6px 10px;
+          font-size: 0.68rem;
+        }
+
+        .price-step__period {
+          margin-top: 14px;
+          font-size: 0.72rem;
+          line-height: 1.5;
+        }
+
+        .price-step__title {
+          margin-top: 8px;
+          font-size: 1.8rem;
+        }
+
+        .price-step__amount {
+          margin-top: 10px;
+          font-size: 2.8rem;
+        }
+
+        .price-step__desc {
+          margin-top: 12px;
+          font-size: 0.9rem;
+          line-height: 1.62;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <img class="logo" src="./logo.png?v=20260410" alt="CODEXINE" />
+        <h1>3 videos pour comprendre l'automatisation</h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <p class="hero-text">
+          Une page de formation courte, directe et claire pour poser les bases de
+          l'automatisation, du blog automatisé et de la creation video en continu.
+        </p>
+      </section>
+
+      <section class="lessons" aria-label="Modules video">
+        <article class="lesson">
+          <div class="video-shell">
+            <div class="video-frame">
+              <video src="./video1.mp4" controls preload="metadata"></video>
+            </div>
+          </div>
+          <div class="lesson-copy">
+            <h2>Video qui parle de l'automatisation de CODEXINE</h2>
+            <p>
+              Une premiere video pour presenter la logique globale, les gains de temps,
+              les flux automatiques et la vision derriere l'ecosysteme CODEXINE.
+            </p>
+          </div>
+        </article>
+
+        <article class="lesson lesson--reverse">
+          <div class="video-shell">
+            <div class="video-frame">
+              <video src="./video2.mp4" controls preload="metadata"></video>
+            </div>
+          </div>
+          <div class="lesson-copy">
+            <h2>Comment cree un employer qui code et publie des blog 24H/24</h2>
+            <p>
+              Une video dediee au systeme de production de contenu en continu: generation,
+              ecriture, publication et rythme de travail automatise sans interruption.
+            </p>
+          </div>
+        </article>
+
+        <article class="lesson">
+          <div class="video-shell">
+            <div class="video-frame">
+              <video src="./video3.mp4" controls preload="metadata"></video>
+            </div>
+          </div>
+          <div class="lesson-copy">
+            <h2>Comment cree un createur de video youtube 24/24</h2>
+            <p>
+              Une troisieme video pour montrer comment mettre en place un createur de
+              videos capable d'alimenter YouTube en continu avec un vrai systeme.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <div class="offer-arrow-wrap" aria-hidden="true">
+        <div class="offer-arrow">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <section class="offer" id="offer-section" aria-label="Offre privee">
+        <h2 class="offer-title">Passe de la decouverte a l'action</h2>
+        <p class="offer-text" id="offer-text">
+          Tu debloques un acces premium pense pour aller plus vite, poser tes
+          questions au bon endroit et avancer avec un cadre beaucoup plus clair.
+        </p>
+
+        <div class="offer-grid">
+          <div class="offer-media">
+            <img
+              class="offer-gif"
+              src="./gif.gif"
+              alt="Apercu de l'offre premium CODEXINE"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="offer-copy">
+            <div class="countdown-note countdown-note--offer" id="offer-countdown-card">
+              <p class="countdown-note__eyebrow">Prochaine hausse</p>
+              <p class="countdown-note__title" data-countdown-title>Le prix monte dans</p>
+              <p class="countdown-note__value" data-countdown-value>00J 00H 00M 00S</p>
+              <p class="countdown-note__subline" data-countdown-subline>
+                Le 15 mai 2026, l'offre passe a 149.99EUR.
+              </p>
+            </div>
+            <h3>Tout ce qu'il faut pour avancer des aujourd'hui</h3>
+            <ul class="offer-list">
+              <li>1H d'appel prive avec moi pour debloquer ta situation</li>
+              <li>Acces durable a l'offre au tarif actif affiche sur cette page</li>
+              <li>Coaching en groupe dans le WhatsApp prive CODEXINE</li>
+              <li>Acces a la video : Les 12 techniques supremes de l'automatisation</li>
+              <li>Acces a la video bonus : trouver des clients</li>
+              <li>Acces a une plateforme d'aide pour ne pas rester bloque seul</li>
+              <li>Garantie commerciale 30 jours sous conditions</li>
+            </ul>
+            <p class="offer-price" id="offer-price">9.99<span>EUR</span></p>
+            <button class="offer-button" type="button" id="open-buy-modal">
+              Acheter pour 9.99EUR
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="review-bands" aria-label="Avis">
+        <div class="review-summary">
+          <p class="review-summary__value">4,15 / 5</p>
+          <div class="review-stars review-stars--large" style="--rating: 4.15" aria-label="Note globale 4,15 sur 5"></div>
+        </div>
+
+        <div class="review-marquee">
+          <div class="review-track">
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=LauraM" alt="Laura M." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Laura M.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Franchement, pour 9,99EUR, j'osais pas y croire. Mais l'appel d'1h avec lui m'a debloque en 20 minutes. J'avais un projet qui stagnait depuis 6 mois, la j'ai un plan d'action clair. La video sur l'automatisation est une tuerie.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=ThomasD" alt="Thomas D." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Thomas D.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Achete un peu par hasard en voyant la promo. L'appel prive vaut a lui seul le prix. Par contre, la plateforme d'aide, je l'ai pas trop utilisee, mais c'est pas grave. Pour 10 balles, j'ai eu plus de valeur que sur des formations a 500EUR.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=SofiaK" alt="Sofia K." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Sofia K.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Putain, enfin quelqu'un qui dit pas juste passe a l'action mais qui te montre comment. La video trouver des clients m'a file 3 idees que j'ai appliquees tout de suite. J'ai signe une presta 2 jours apres. Merci.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=JulienR" alt="Julien R." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Julien R.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 3" aria-label="3 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Offre correcte, mais attention : la garantie 30 jours sous conditions, faut lire les petites lignes. Moi j'ai voulu me faire rembourser car j'ai pas eu le temps de faire l'appel, refus. Du coup je garde l'acces aux videos, c'est deja bien pour le prix.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=CamilleL" alt="Camille L." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Camille L.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'ai pris l'appel en etant hyper sceptique. Le gars est direct, il m'a pas vendu de reve. Il m'a juste dit ou je perdais mon temps. Resultat : j'ai automatise mon process de prospection en 2 jours. Meilleur rapport qualite-prix de l'annee.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=NabilH" alt="Nabil H." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Nabil H.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Les 12 techniques d'automatisation, certaines sont basiques, mais y a 2 ou 3 pepites que j'avais jamais vues nul part. L'appel d'1h m'a surtout servi a prioriser. Je mets 4 etoiles parce que la plateforme d'aide est un peu vide pour l'instant.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=ElodieP" alt="Elodie P." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Elodie P.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'etais bloquee, je passais des heures a faire des trucs manuels. Sa video m'a fait gagner 10h par semaine. Et le bonus trouver des clients m'a donne une methode simple, sans etre relou. 9,99EUR a vie, c'est du vol en bien.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=MaximeT" alt="Maxime T." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Maxime T.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 2" aria-label="2 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Decu. L'appel prive, j'ai attendu 5 jours pour avoir une dispo. Le mec etait sympa mais trop generique. Les videos, je les avais deja vues ailleurs sur YouTube. La plateforme d'aide, personne m'a repondu. Heureusement que ca coute pas cher.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=ClaraB" alt="Clara B." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Clara B.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Putain de vrai avis : si t'as la flemme de te bouger, meme a 10EUR ca servira a rien. Mais si t'es pret a passer 1h au telephone avec lui pour qu'il te secoue, ca change tout. Moi j'ai lance mon truc en 3 jours. Je recommande.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=AntoineV" alt="Antoine V." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Antoine V.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                L'offre est ridiculement peu chere, du coup je m'attendais a un truc cheap. Finalement l'appel etait de qualite, pas chronometre a la seconde. Les videos sont courtes et efficaces. Je mets pas 5 etoiles parce que le site est moche sur mobile.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=LauraM" alt="Laura M." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Laura M.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Franchement, pour 9,99EUR, j'osais pas y croire. Mais l'appel d'1h avec lui m'a debloque en 20 minutes. J'avais un projet qui stagnait depuis 6 mois, la j'ai un plan d'action clair. La video sur l'automatisation est une tuerie.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=ThomasD" alt="Thomas D." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Thomas D.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Achete un peu par hasard en voyant la promo. L'appel prive vaut a lui seul le prix. Par contre, la plateforme d'aide, je l'ai pas trop utilisee, mais c'est pas grave. Pour 10 balles, j'ai eu plus de valeur que sur des formations a 500EUR.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=SofiaK" alt="Sofia K." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Sofia K.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Putain, enfin quelqu'un qui dit pas juste passe a l'action mais qui te montre comment. La video trouver des clients m'a file 3 idees que j'ai appliquees tout de suite. J'ai signe une presta 2 jours apres. Merci.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=JulienR" alt="Julien R." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Julien R.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 3" aria-label="3 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Offre correcte, mais attention : la garantie 30 jours sous conditions, faut lire les petites lignes. Moi j'ai voulu me faire rembourser car j'ai pas eu le temps de faire l'appel, refus. Du coup je garde l'acces aux videos, c'est deja bien pour le prix.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=CamilleL" alt="Camille L." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Camille L.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'ai pris l'appel en etant hyper sceptique. Le gars est direct, il m'a pas vendu de reve. Il m'a juste dit ou je perdais mon temps. Resultat : j'ai automatise mon process de prospection en 2 jours. Meilleur rapport qualite-prix de l'annee.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=NabilH" alt="Nabil H." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Nabil H.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Les 12 techniques d'automatisation, certaines sont basiques, mais y a 2 ou 3 pepites que j'avais jamais vues nul part. L'appel d'1h m'a surtout servi a prioriser. Je mets 4 etoiles parce que la plateforme d'aide est un peu vide pour l'instant.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=ElodieP" alt="Elodie P." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Elodie P.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'etais bloquee, je passais des heures a faire des trucs manuels. Sa video m'a fait gagner 10h par semaine. Et le bonus trouver des clients m'a donne une methode simple, sans etre relou. 9,99EUR a vie, c'est du vol en bien.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=MaximeT" alt="Maxime T." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Maxime T.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 2" aria-label="2 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Decu. L'appel prive, j'ai attendu 5 jours pour avoir une dispo. Le mec etait sympa mais trop generique. Les videos, je les avais deja vues ailleurs sur YouTube. La plateforme d'aide, personne m'a repondu. Heureusement que ca coute pas cher.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=ClaraB" alt="Clara B." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Clara B.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Putain de vrai avis : si t'as la flemme de te bouger, meme a 10EUR ca servira a rien. Mais si t'es pret a passer 1h au telephone avec lui pour qu'il te secoue, ca change tout. Moi j'ai lance mon truc en 3 jours. Je recommande.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=AntoineV" alt="Antoine V." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Antoine V.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                L'offre est ridiculement peu chere, du coup je m'attendais a un truc cheap. Finalement l'appel etait de qualite, pas chronometre a la seconde. Les videos sont courtes et efficaces. Je mets pas 5 etoiles parce que le site est moche sur mobile.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="review-marquee">
+          <div class="review-track review-track--reverse">
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=SarahG" alt="Sarah G." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Sarah G.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'ai achete pour les videos, finalement c'est l'appel qui m'a tout debloque. Il m'a pose 3 questions que personne ne m'avait jamais posees. Je me suis rendue compte que je faisais du bruit au lieu de faire du resultat. 9,99EUR, je les aurais donnes 10 fois.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=KevinJ" alt="Kevin J." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Kevin J.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 3" aria-label="3 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Alors c'est bien, mais faut pas s'attendre a un truc ultra personnalise. L'appel d'1h c'est cool, mais j'ai senti qu'il avait un peu son petit discours rode. Ca m'a aide quand meme. Pour le prix, ca va.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=ManonR" alt="Manon R." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Manon R.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Je cherchais juste a gagner du temps sur mes taches repetitives. Les 12 techniques, j'en ai applique 2 et j'ai deja automatise mes relances clients. La plateforme d'aide m'a servi une fois pour un bug. Le mec a repondu en 2h. Carre.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=GregoryS" alt="Gregory S." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Gregory S.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Offre simple, pas de blabla. L'appel etait cool mais j'aurais aime un support ecrit apres. Les videos sont bien foutues. Je conseille surtout a ceux qui n'ont jamais rien automatise. Les pros trouveront ca basique.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=OceaneF" alt="Oceane F." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Oceane F.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'ai pris l'offre en mode je tente, c'est moins cher qu'un Uber. Resultat : l'appel m'a evite de faire une connerie sur mon positionnement. Et la video clients m'a donne un script que j'ai teste hier. Ca a marche. 10EUR les mieux investis.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=JeremyL" alt="Jeremy L." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Jeremy L.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 2" aria-label="2 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Avis mitige. J'ai fait l'appel, le mec etait sympa mais pas de revolution. Les videos sont sur un drive, c'est pas tres pro. La garantie sous conditions m'a refroidi. Au final j'ai demande remboursement, ils ont traine 2 semaines. Non.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=AurelieC" alt="Aurelie C." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Aurelie C.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Tu veux un avis cash ? Arrete de reflechir et prends-le. L'appel d'1h m'a sauve de 3 semaines de tatonnements. La plateforme d'aide est un groupe WhatsApp, du coup c'est reactif. J'ai pose une question le soir, reponse le lendemain matin.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=PierreYvesB" alt="Pierre-Yves B." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Pierre-Yves B.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Bon rapport qualite-prix. La video sur l'automatisation est vraiment concrete avec des exemples Zapier, Make, etc. L'appel, je l'ai utilise pour valider ma strategie. J'enleve une etoile car j'aurais aime un petit PDF recapitulatif.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=LeaM" alt="Lea M." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Lea M.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'avais achete une formation a 800EUR avant. Rien a voir. Lui il va droit au but, sans fioritures. En 1h d'appel, j'avais ma feuille de route. 9,99EUR a vie, c'est une anomalie. Je lui ai dit qu'il devrait le vendre plus cher. Il m'a dit non, c'est voulu.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=HakimA" alt="Hakim A." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Hakim A.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 3" aria-label="3 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Plutot bien mais attention : l'appel prive, faut etre pret a recevoir des verites. J'ai vu des gens se braquer. Moi ca m'a aide. Par contre le bonus trouver des clients est trop court a mon gout. Je reste sur 3 etoiles, pas plus, pas moins.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=SarahG" alt="Sarah G." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Sarah G.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'ai achete pour les videos, finalement c'est l'appel qui m'a tout debloque. Il m'a pose 3 questions que personne ne m'avait jamais posees. Je me suis rendue compte que je faisais du bruit au lieu de faire du resultat. 9,99EUR, je les aurais donnes 10 fois.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=KevinJ" alt="Kevin J." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Kevin J.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 3" aria-label="3 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Alors c'est bien, mais faut pas s'attendre a un truc ultra personnalise. L'appel d'1h c'est cool, mais j'ai senti qu'il avait un peu son petit discours rode. Ca m'a aide quand meme. Pour le prix, ca va.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=ManonR" alt="Manon R." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Manon R.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Je cherchais juste a gagner du temps sur mes taches repetitives. Les 12 techniques, j'en ai applique 2 et j'ai deja automatise mes relances clients. La plateforme d'aide m'a servi une fois pour un bug. Le mec a repondu en 2h. Carre.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=GregoryS" alt="Gregory S." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Gregory S.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Offre simple, pas de blabla. L'appel etait cool mais j'aurais aime un support ecrit apres. Les videos sont bien foutues. Je conseille surtout a ceux qui n'ont jamais rien automatise. Les pros trouveront ca basique.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=OceaneF" alt="Oceane F." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Oceane F.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'ai pris l'offre en mode je tente, c'est moins cher qu'un Uber. Resultat : l'appel m'a evite de faire une connerie sur mon positionnement. Et la video clients m'a donne un script que j'ai teste hier. Ca a marche. 10EUR les mieux investis.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=JeremyL" alt="Jeremy L." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Jeremy L.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 2" aria-label="2 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Avis mitige. J'ai fait l'appel, le mec etait sympa mais pas de revolution. Les videos sont sur un drive, c'est pas tres pro. La garantie sous conditions m'a refroidi. Au final j'ai demande remboursement, ils ont traine 2 semaines. Non.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=AurelieC" alt="Aurelie C." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Aurelie C.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Tu veux un avis cash ? Arrete de reflechir et prends-le. L'appel d'1h m'a sauve de 3 semaines de tatonnements. La plateforme d'aide est un groupe WhatsApp, du coup c'est reactif. J'ai pose une question le soir, reponse le lendemain matin.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=PierreYvesB" alt="Pierre-Yves B." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Pierre-Yves B.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 4" aria-label="4 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Bon rapport qualite-prix. La video sur l'automatisation est vraiment concrete avec des exemples Zapier, Make, etc. L'appel, je l'ai utilise pour valider ma strategie. J'enleve une etoile car j'aurais aime un petit PDF recapitulatif.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=LeaM" alt="Lea M." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Lea M.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 5" aria-label="5 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                J'avais achete une formation a 800EUR avant. Rien a voir. Lui il va droit au but, sans fioritures. En 1h d'appel, j'avais ma feuille de route. 9,99EUR a vie, c'est une anomalie. Je lui ai dit qu'il devrait le vendre plus cher. Il m'a dit non, c'est voulu.
+              </p>
+            </article>
+
+            <article class="review-card">
+              <div class="review-card__top">
+                <div class="review-card__profile">
+                  <img class="review-card__avatar" src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=HakimA" alt="Hakim A." loading="lazy" />
+                  <div class="review-card__meta">
+                    <p class="review-card__name">Hakim A.</p>
+                    <p class="review-card__role">Avis verifie</p>
+                    <div class="review-card__rating">
+                      <div class="review-stars" style="--rating: 3" aria-label="3 sur 5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="review-card__quote">
+                Plutot bien mais attention : l'appel prive, faut etre pret a recevoir des verites. J'ai vu des gens se braquer. Moi ca m'a aide. Par contre le bonus trouver des clients est trop court a mon gout. Je reste sur 3 etoiles, pas plus, pas moins.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="review-action">
+          <button class="review-action__button" type="button" id="open-review-modal">
+            Ajouter un avis
+          </button>
+        </div>
+      </section>
+
+      <section class="faq-section" aria-label="FAQ">
+        <div class="faq-header">
+          <p class="faq-kicker">FAQ</p>
+          <h2 class="faq-title">5 questions essentielles avant de rejoindre CODEXINE</h2>
+          <p class="faq-text">
+            L'essentiel, sans blabla : ce que tu reçois, comment ça se passe et
+            ce qu'il faut comprendre avant de passer au premium.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span class="faq-index">01</span>
+              <span class="faq-question__text">A qui s'adressent les 3 videos gratuites ?</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Elles sont faites pour les independants, createurs, freelances et
+                porteurs de projet qui veulent comprendre comment automatiser
+                intelligemment sans perdre du temps dans des explications floues.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-index">02</span>
+              <span class="faq-question__text">Que comprend exactement l'offre premium ?</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Tu recuperes un appel prive avec Oscar, l'acces au groupe WhatsApp
+                CODEXINE, la video Les 12 techniques supremes de l'automatisation,
+                la video bonus Trouver des clients et l'acces a la plateforme d'aide.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-index">03</span>
+              <span class="faq-question__text">Comment se passent l'appel prive et les acces apres l'achat ?</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Une fois le paiement valide, tu recuperes les indications pour la
+                suite. Le contenu numerique est pense pour etre accessible vite, puis
+                l'equipe CODEXINE te guide pour la prise de contact et l'organisation
+                de l'appel selon les disponibilites.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-index">04</span>
+              <span class="faq-question__text">Que veut dire la garantie 30 jours sous conditions ?</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Cela signifie qu'il existe une garantie commerciale, mais qu'elle ne
+                s'applique pas automatiquement a tous les cas. Comme il s'agit d'un
+                contenu numerique avec acces rapide, les conditions exactes sont
+                precisees dans les Conditions d'utilisation.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span class="faq-index">05</span>
+              <span class="faq-question__text">Quelle est la difference entre la partie gratuite et l'offre complete ?</span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                La partie gratuite te montre la logique et les bases. L'offre complete
+                ajoute l'accompagnement, des ressources supplementaires, un cadre plus
+                concret pour passer a l'action et un acces plus direct a l'ecosysteme
+                CODEXINE.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="price-roadmap" aria-label="Evolution du prix">
+        <div class="price-roadmap__header">
+          <p class="price-roadmap__kicker">Evolution du prix</p>
+          <h2 class="price-roadmap__title">Le prix augmente au fil du temps</h2>
+          <div class="price-roadmap__status" id="price-roadmap-status">
+            Tarif actuel : 9.99EUR jusqu'au 14 mai 2026 inclus
+          </div>
+          <div class="countdown-note countdown-note--roadmap" id="roadmap-countdown-card">
+            <p class="countdown-note__eyebrow">Prochaine hausse</p>
+            <p class="countdown-note__title" data-countdown-title>Le prix monte dans</p>
+            <p class="countdown-note__value" data-countdown-value>00J 00H 00M 00S</p>
+            <p class="countdown-note__subline" data-countdown-subline>
+              Le 15 mai 2026, l'offre passe a 149.99EUR.
+            </p>
+          </div>
+          <p class="price-roadmap__swipe">Fais glisser la frise pour voir les prochains paliers</p>
+        </div>
+
+        <div class="price-roadmap__track" id="price-roadmap-track">
+          <article class="price-step" data-price-phase="launch">
+            <div class="price-step__tag">Prix de lancement</div>
+            <p class="price-step__period">Avant le 15 mai 2026</p>
+            <h3 class="price-step__title">Entree prioritaire</h3>
+            <div class="price-step__amount">9.99<span>EUR</span></div>
+            <p class="price-step__desc">
+              Le meilleur moment pour rejoindre CODEXINE avant la premiere hausse.
+            </p>
+          </article>
+
+          <article class="price-step" data-price-phase="growth">
+            <div class="price-step__tag">Deuxieme palier</div>
+            <p class="price-step__period">Du 15 mai 2026 au 16 septembre 2026</p>
+            <h3 class="price-step__title">Tarif intermediaire</h3>
+            <div class="price-step__amount">149.99<span>EUR</span></div>
+            <p class="price-step__desc">
+              Le prix monte une premiere fois quand la phase de lancement se termine.
+            </p>
+          </article>
+
+          <article class="price-step" data-price-phase="final">
+            <div class="price-step__tag">Palier final</div>
+            <p class="price-step__period">A partir du 17 septembre 2026</p>
+            <h3 class="price-step__title">Tarif definitif</h3>
+            <div class="price-step__amount">249.99<span>EUR</span></div>
+            <p class="price-step__desc">
+              A partir de cette date, tu arrives sur le tarif final de l'offre.
+            </p>
+          </article>
+        </div>
+
+        <div class="price-roadmap__actions">
+          <button class="price-roadmap__button" type="button" id="roadmap-buy-button">
+            Acheter maintenant
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="./index.html" aria-label="Accueil CODEXINE">
+          <img class="footer-logo" src="./logo.png?v=20260410" alt="CODEXINE" />
+        </a>
+        <a class="footer-link" href="./infos.html?v=20260410">Infos</a>
+        <a class="footer-link" href="./conditions-utilisation.html?v=20260410">Conditions d'utilisation</a>
+        <a class="footer-link" href="./politique-confidentialite.html?v=20260410">Politique de confidentialite</a>
+        <a class="footer-link" href="./mentions-legales.html?v=20260410">Mentions legales</a>
+        <p class="footer-copy">© 2026 CODEXINE by Oscar.</p>
+      </div>
+    </footer>
+
+    <div class="buy-modal" id="buy-modal" aria-hidden="true">
+      <div class="buy-modal__backdrop" data-close-buy-modal></div>
+      <div
+        class="buy-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="buy-modal-title"
+      >
+        <button class="buy-modal__close" type="button" aria-label="Fermer" data-close-buy-modal>
+          ×
+        </button>
+        <h2 class="buy-modal__title" id="buy-modal-title">Valide ton acces</h2>
+        <p class="buy-modal__text" id="buy-modal-text">
+          Renseigne tes informations puis on t'envoie directement vers le paiement Revolut.
+        </p>
+        <form class="buy-form" id="buy-form">
+          <div class="buy-row">
+            <input
+              class="buy-input"
+              id="buyer-firstname"
+              name="firstname"
+              type="text"
+              autocomplete="given-name"
+              placeholder="Prenom"
+              required
+            />
+            <input
+              class="buy-input"
+              id="buyer-lastname"
+              name="lastname"
+              type="text"
+              autocomplete="family-name"
+              placeholder="Nom"
+              required
+            />
+          </div>
+          <input
+            class="buy-input"
+            id="buyer-email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="tonmail@exemple.com"
+            required
+          />
+          <label class="buy-check" for="buyer-legal-consent">
+            <input
+              class="buy-check__input"
+              id="buyer-legal-consent"
+              name="legal_consent"
+              type="checkbox"
+              required
+            />
+            <span class="buy-check__text">
+              Je demande l'acces immediat au contenu numerique, j'accepte les
+              <a href="./conditions-utilisation.html?v=20260410" target="_blank" rel="noopener">
+                Conditions d'utilisation
+              </a>
+              et je reconnais la perte du droit de retractation lorsque la loi
+              l'autorise.
+            </span>
+          </label>
+          <button class="buy-submit" type="submit" id="buy-submit-button">Valider et payer 9.99EUR</button>
+          <p class="buy-status" id="buy-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="review-modal" id="review-modal" aria-hidden="true">
+      <div class="review-modal__backdrop" data-close-review-modal></div>
+      <div
+        class="review-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="review-modal-title"
+      >
+        <button class="review-modal__close" type="button" aria-label="Fermer" data-close-review-modal>
+          ×
+        </button>
+        <h2 class="review-modal__title" id="review-modal-title">Ajouter un avis</h2>
+        <p class="review-modal__text">
+          Ecris ton prenom suivi de la premiere lettre du nom de famille, puis ton avis.
+        </p>
+        <form class="review-form" id="review-form">
+          <input
+            class="review-input"
+            id="review-identity"
+            name="identity"
+            type="text"
+            autocomplete="name"
+            placeholder="Camille M."
+            required
+          />
+          <textarea
+            class="review-textarea"
+            id="review-message"
+            name="message"
+            placeholder="Ton avis"
+            required
+          ></textarea>
+          <button class="review-submit" type="submit" id="review-submit-button">Envoyer mon avis</button>
+          <p class="review-status" id="review-status" aria-live="polite"></p>
+          <p class="review-note">
+            Ton avis sera transmis a CODEXINE puis passe en verification avant publication.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const TELEGRAM_BOT_TOKEN = "8781312268:AAEWod2wkAD6o7792WQuRdC6DDqbz2aV-O8";
+        const TELEGRAM_CHAT_ID = "8253411443";
+        const PRICING_PHASES = [
+          {
+            key: "launch",
+            price: "9.99",
+            priceLabel: "9.99EUR",
+            checkoutUrl: "https://checkout.revolut.com/pay/4f265d9b-71c9-4915-a123-2d944a420715",
+            offerText:
+              "Tu arrives pendant la phase de lancement. C'est le meilleur moment pour debloquer l'offre premium avant la premiere hausse de prix.",
+            modalText:
+              "Renseigne tes informations puis on t'envoie directement vers le paiement Revolut au tarif actif de 9.99EUR.",
+            roadmapStatus: "Tarif actuel : 9.99EUR jusqu'au 14 mai 2026 inclus",
+            offerLine: "Acces premium CODEXINE au prix de lancement",
+            phaseLabel: "Prix de lancement",
+            nextChangeAt: "2026-05-15T00:00:00+02:00",
+            countdownTitle: "Le prix passe a 149.99EUR dans",
+            countdownSubline:
+              "A 00:00 le 15 mai 2026, l'offre bascule sur le deuxieme palier.",
+            nextKey: "growth",
+          },
+          {
+            key: "growth",
+            price: "149.99",
+            priceLabel: "149.99EUR",
+            checkoutUrl: "https://checkout.revolut.com/pay/43822bc9-2745-4dd5-848f-f1d4d72bcf7f",
+            offerText:
+              "Tu arrives apres la phase de lancement. L'offre reste disponible, mais le tarif actuel est deja sur le deuxieme palier.",
+            modalText:
+              "Renseigne tes informations puis on t'envoie directement vers le paiement Revolut au tarif actif de 149.99EUR.",
+            roadmapStatus: "Tarif actuel : 149.99EUR jusqu'au 16 septembre 2026 inclus",
+            offerLine: "Acces premium CODEXINE au deuxieme palier",
+            phaseLabel: "Tarif intermediaire",
+            nextChangeAt: "2026-09-17T00:00:00+02:00",
+            countdownTitle: "Le prix passe a 249.99EUR dans",
+            countdownSubline:
+              "A 00:00 le 17 septembre 2026, l'offre bascule sur le tarif final.",
+            nextKey: "final",
+          },
+          {
+            key: "final",
+            price: "249.99",
+            priceLabel: "249.99EUR",
+            checkoutUrl: "https://checkout.revolut.com/pay/43822bc9-2745-4dd5-848f-f1d4d72bcf7f",
+            offerText:
+              "Tu arrives sur le tarif final. L'offre est toujours accessible, mais le prix de lancement et le palier intermediaire sont termines.",
+            modalText:
+              "Renseigne tes informations puis on t'envoie directement vers le paiement Revolut au tarif actif de 249.99EUR.",
+            roadmapStatus: "Tarif actuel : 249.99EUR depuis le 17 septembre 2026",
+            offerLine: "Acces premium CODEXINE au tarif final",
+            phaseLabel: "Tarif final",
+            nextChangeAt: "",
+            countdownTitle: "",
+            countdownSubline: "",
+            nextKey: "",
+          },
+        ];
+
+        const openButton = document.getElementById("open-buy-modal");
+        const modal = document.getElementById("buy-modal");
+        const closeButtons = document.querySelectorAll("[data-close-buy-modal]");
+        const form = document.getElementById("buy-form");
+        const firstnameInput = document.getElementById("buyer-firstname");
+        const lastnameInput = document.getElementById("buyer-lastname");
+        const emailInput = document.getElementById("buyer-email");
+        const legalConsentInput = document.getElementById("buyer-legal-consent");
+        const submitButton = document.getElementById("buy-submit-button");
+        const statusNode = document.getElementById("buy-status");
+        const offerTextNode = document.getElementById("offer-text");
+        const offerCopyNode = document.querySelector(".offer-copy");
+        const offerPriceNode = document.getElementById("offer-price");
+        const buyModalTextNode = document.getElementById("buy-modal-text");
+        const roadmapStatusNode = document.getElementById("price-roadmap-status");
+        const roadmapSteps = Array.from(document.querySelectorAll("[data-price-phase]"));
+        const countdownCards = Array.from(
+          document.querySelectorAll("#offer-countdown-card, #roadmap-countdown-card")
+        )
+          .map((card) => ({
+            card,
+            titleNode: card.querySelector("[data-countdown-title]"),
+            valueNode: card.querySelector("[data-countdown-value]"),
+            sublineNode: card.querySelector("[data-countdown-subline]"),
+          }))
+          .filter((entry) => entry.titleNode && entry.valueNode && entry.sublineNode);
+        const offerSection = document.getElementById("offer-section");
+        const roadmapBuyButton = document.getElementById("roadmap-buy-button");
+
+        if (
+          !openButton ||
+          !modal ||
+          !form ||
+          !firstnameInput ||
+          !lastnameInput ||
+          !emailInput ||
+          !legalConsentInput ||
+          !submitButton ||
+          !statusNode ||
+          !offerTextNode ||
+          !offerCopyNode ||
+          !offerPriceNode ||
+          !buyModalTextNode ||
+          !roadmapStatusNode ||
+          !roadmapSteps.length ||
+          !countdownCards.length
+        ) {
+          return;
+        }
+
+        let currentPricing = PRICING_PHASES[0];
+
+        const getParisDateKey = () => {
+          const parts = new Intl.DateTimeFormat("en-CA", {
+            timeZone: "Europe/Paris",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+          }).formatToParts(new Date());
+
+          const values = {};
+          parts.forEach((part) => {
+            if (part.type !== "literal") {
+              values[part.type] = part.value;
+            }
+          });
+
+          return `${values.year}-${values.month}-${values.day}`;
+        };
+
+        const getPricingForDate = (dateKey) => {
+          if (dateKey < "2026-05-15") {
+            return PRICING_PHASES[0];
+          }
+
+          if (dateKey < "2026-09-17") {
+            return PRICING_PHASES[1];
+          }
+
+          return PRICING_PHASES[2];
+        };
+
+        const pad = (value) => String(value).padStart(2, "0");
+
+        const formatCountdown = (remainingMs) => {
+          const totalSeconds = Math.max(0, Math.floor(remainingMs / 1000));
+          const days = Math.floor(totalSeconds / 86400);
+          const hours = Math.floor((totalSeconds % 86400) / 3600);
+          const minutes = Math.floor((totalSeconds % 3600) / 60);
+          const seconds = totalSeconds % 60;
+          return `${pad(days)}J ${pad(hours)}H ${pad(minutes)}M ${pad(seconds)}S`;
+        };
+
+        const syncCountdownCards = (pricing, remainingText = "") => {
+          const hasCountdown = Boolean(pricing.nextChangeAt);
+          offerCopyNode.classList.toggle("is-compact", !hasCountdown);
+
+          countdownCards.forEach(({ card, titleNode, valueNode, sublineNode }) => {
+            card.hidden = !hasCountdown;
+
+            if (!hasCountdown) {
+              return;
+            }
+
+            titleNode.textContent = pricing.countdownTitle;
+            valueNode.textContent = remainingText || "00J 00H 00M 00S";
+            sublineNode.textContent = pricing.countdownSubline;
+          });
+        };
+
+        const applyPricing = (pricing) => {
+          currentPricing = pricing;
+          offerTextNode.textContent = pricing.offerText;
+          offerPriceNode.innerHTML = `${pricing.price}<span>EUR</span>`;
+          openButton.textContent = `Acheter pour ${pricing.priceLabel}`;
+          submitButton.textContent = `Valider et payer ${pricing.priceLabel}`;
+          buyModalTextNode.textContent = pricing.modalText;
+          roadmapStatusNode.textContent = pricing.roadmapStatus;
+
+          roadmapSteps.forEach((step) => {
+            const tagNode = step.querySelector(".price-step__tag");
+            if (!tagNode) {
+              return;
+            }
+
+            if (!step.dataset.defaultTag) {
+              step.dataset.defaultTag = tagNode.textContent;
+            }
+
+            const isActive = step.dataset.pricePhase === pricing.key;
+            const isNext = pricing.nextKey && step.dataset.pricePhase === pricing.nextKey;
+            step.classList.toggle("is-active", isActive);
+            step.classList.toggle("is-next", Boolean(isNext));
+            step.setAttribute("aria-current", isActive ? "true" : "false");
+
+            if (isActive) {
+              tagNode.textContent = "Actif maintenant";
+            } else if (isNext) {
+              tagNode.textContent = "Prochaine hausse";
+            } else if (
+              (pricing.key === "growth" && step.dataset.pricePhase === "launch") ||
+              (pricing.key === "final" && (step.dataset.pricePhase === "launch" || step.dataset.pricePhase === "growth"))
+            ) {
+              tagNode.textContent = "Termine";
+            } else {
+              tagNode.textContent = step.dataset.defaultTag;
+            }
+          });
+
+          syncCountdownCards(pricing);
+
+          return pricing;
+        };
+
+        const refreshCountdown = () => {
+          const livePricing = getPricingForDate(getParisDateKey());
+          if (livePricing.key !== currentPricing.key) {
+            applyPricing(livePricing);
+          }
+
+          if (!currentPricing.nextChangeAt) {
+            syncCountdownCards(currentPricing);
+            return;
+          }
+
+          const remainingMs = new Date(currentPricing.nextChangeAt).getTime() - Date.now();
+
+          if (remainingMs <= 0) {
+            applyPricing(getPricingForDate(getParisDateKey()));
+            return;
+          }
+
+          syncCountdownCards(currentPricing, formatCountdown(remainingMs));
+        };
+
+        const setStatus = (message, type = "") => {
+          statusNode.textContent = message;
+          statusNode.className = type ? `buy-status ${type}` : "buy-status";
+        };
+
+        const openModal = () => {
+          applyPricing(getPricingForDate(getParisDateKey()));
+          const savedEmail = window.localStorage.getItem("codexine_lead_email") || "";
+          if (savedEmail && !emailInput.value) {
+            emailInput.value = savedEmail;
+          }
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.classList.add("modal-open");
+          setStatus("");
+          window.setTimeout(() => firstnameInput.focus(), 20);
+        };
+
+        const closeModal = () => {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("modal-open");
+          setStatus("");
+        };
+
+        openButton.addEventListener("click", openModal);
+        closeButtons.forEach((button) => button.addEventListener("click", closeModal));
+        if (roadmapBuyButton && offerSection) {
+          roadmapBuyButton.addEventListener("click", () => {
+            offerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        }
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          if (!form.reportValidity()) {
+            return;
+          }
+
+          const firstname = firstnameInput.value.trim();
+          const lastname = lastnameInput.value.trim();
+          const email = emailInput.value.trim().toLowerCase();
+          const pricing = applyPricing(getPricingForDate(getParisDateKey()));
+
+          const message = [
+            "Nouveau paiement CODEXINE",
+            "Source: offre formationgratuite",
+            `Prenom: ${firstname}`,
+            `Nom: ${lastname}`,
+            `Email: ${email}`,
+            "Consentement: acces immediat + conditions d'utilisation acceptes",
+            `Offre: ${pricing.offerLine} + garantie commerciale 30 jours sous conditions`,
+            "Contenu: appel prive + coaching groupe WhatsApp + video 12 techniques + video trouver des clients + plateforme d'aide",
+            `Phase tarifaire: ${pricing.phaseLabel}`,
+            `Prix actif: ${pricing.priceLabel}`,
+            `Checkout: ${pricing.checkoutUrl}`,
+            `Date Paris: ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}`,
+          ].join("\n");
+
+          submitButton.disabled = true;
+          setStatus("Validation en cours...");
+
+          try {
+            const response = await fetch(
+              `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                },
+                body: new URLSearchParams({
+                  chat_id: TELEGRAM_CHAT_ID,
+                  text: message,
+                }),
+              }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok || !data.ok) {
+              throw new Error("Echec d'envoi Telegram");
+            }
+
+            window.localStorage.setItem("codexine_lead_email", email);
+            setStatus("Infos enregistrees. Redirection...");
+            window.setTimeout(() => {
+              window.location.href = pricing.checkoutUrl;
+            }, 220);
+          } catch (error) {
+            console.error(error);
+            setStatus("Impossible de valider pour le moment. Reessaie.", "is-error");
+            submitButton.disabled = false;
+          }
+        });
+
+        applyPricing(getPricingForDate(getParisDateKey()));
+        refreshCountdown();
+        window.setInterval(refreshCountdown, 1000);
+      })();
+
+      (() => {
+        const TELEGRAM_BOT_TOKEN = "8781312268:AAEWod2wkAD6o7792WQuRdC6DDqbz2aV-O8";
+        const TELEGRAM_CHAT_ID = "8253411443";
+
+        const openButton = document.getElementById("open-review-modal");
+        const modal = document.getElementById("review-modal");
+        const closeButtons = document.querySelectorAll("[data-close-review-modal]");
+        const form = document.getElementById("review-form");
+        const identityInput = document.getElementById("review-identity");
+        const messageInput = document.getElementById("review-message");
+        const submitButton = document.getElementById("review-submit-button");
+        const statusNode = document.getElementById("review-status");
+
+        if (!openButton || !modal || !form || !identityInput || !messageInput || !submitButton || !statusNode) {
+          return;
+        }
+
+        const setStatus = (message, type = "") => {
+          statusNode.textContent = message;
+          statusNode.className = type ? `review-status ${type}` : "review-status";
+        };
+
+        const openModal = () => {
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.classList.add("modal-open");
+          setStatus("");
+          window.setTimeout(() => identityInput.focus(), 20);
+        };
+
+        const closeModal = () => {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("modal-open");
+          setStatus("");
+        };
+
+        openButton.addEventListener("click", openModal);
+        closeButtons.forEach((button) => button.addEventListener("click", closeModal));
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          if (!form.reportValidity()) {
+            return;
+          }
+
+          const identity = identityInput.value.trim();
+          const review = messageInput.value.trim();
+
+          const telegramMessage = [
+            "Nouvel avis CODEXINE",
+            "Source: formationgratuite",
+            `Identite affichee: ${identity}`,
+            `Avis: ${review}`,
+            `Date: ${new Date().toLocaleString("fr-FR")}`,
+          ].join("\n");
+
+          submitButton.disabled = true;
+          setStatus("Envoi en cours...");
+
+          try {
+            const response = await fetch(
+              `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                },
+                body: new URLSearchParams({
+                  chat_id: TELEGRAM_CHAT_ID,
+                  text: telegramMessage,
+                }),
+              }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok || !data.ok) {
+              throw new Error("Echec d'envoi Telegram");
+            }
+
+            form.reset();
+            setStatus("Ton avis est en train d'etre verifie.");
+            window.setTimeout(() => {
+              closeModal();
+              submitButton.disabled = false;
+            }, 1200);
+          } catch (error) {
+            console.error(error);
+            setStatus("Impossible d'envoyer ton avis pour le moment.", "is-error");
+            submitButton.disabled = false;
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

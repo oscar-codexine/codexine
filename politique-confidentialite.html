@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Politique de confidentialite | CODEXINE by Oscar</title>
+    <meta
+      name="description"
+      content="Politique de confidentialite de CODEXINE : donnees collectees, cookies, droits RGPD, conservation et outils tiers utilises sur le site."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Oscar Sander" />
+    <meta name="theme-color" content="#050505" />
+    <link rel="canonical" href="https://codexine.fr/politique-confidentialite.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CODEXINE" />
+    <meta property="og:title" content="Politique de confidentialite | CODEXINE by Oscar" />
+    <meta
+      property="og:description"
+      content="La politique de confidentialite CODEXINE precise les donnees traitees, l'usage des cookies et les droits des utilisateurs."
+    />
+    <meta property="og:url" content="https://codexine.fr/politique-confidentialite.html" />
+    <meta property="og:image" content="https://codexine.fr/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Politique de confidentialite | CODEXINE by Oscar" />
+    <meta
+      name="twitter:description"
+      content="Politique de confidentialite CODEXINE : RGPD, cookies, donnees collectees et droits utilisateurs."
+    />
+    <meta name="twitter:image" content="https://codexine.fr/logo.png" />
+    <link rel="icon" type="image/png" href="./icon.png?v=20260410" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --panel: rgba(12, 12, 12, 0.92);
+        --panel-deep: rgba(14, 8, 9, 0.98);
+        --line: rgba(255, 255, 255, 0.08);
+        --line-red: rgba(255, 88, 99, 0.28);
+        --text: #faf5f5;
+        --muted: #a78f93;
+        --red: #ff5863;
+        --red-soft: #ff8b93;
+        --shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Outfit", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 88, 99, 0.18), transparent 28%),
+          radial-gradient(circle at 14% 18%, rgba(107, 17, 25, 0.32), transparent 34%),
+          radial-gradient(circle at 84% 18%, rgba(255, 88, 99, 0.1), transparent 24%),
+          linear-gradient(180deg, #080808 0%, #040404 54%, #060304 100%);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.36;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 52px 52px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 96%);
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(circle at center, transparent 42%, rgba(0, 0, 0, 0.56) 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        width: min(1200px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 54px 0 78px;
+      }
+
+      .hero {
+        width: min(900px, 100%);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero-logo {
+        display: block;
+        width: min(260px, 72vw);
+        height: auto;
+        margin: 0 auto 20px;
+        filter: drop-shadow(0 18px 36px rgba(255, 88, 99, 0.14));
+      }
+
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.24);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd9dc;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-tag::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--red);
+        box-shadow: 0 0 18px var(--red);
+      }
+
+      h1 {
+        margin: 20px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(4.4rem, 12vw, 8.2rem);
+        line-height: 0.88;
+        letter-spacing: 0.05em;
+        color: #fff4f4;
+        text-shadow:
+          0 0 20px rgba(255, 88, 99, 0.08),
+          0 0 48px rgba(255, 88, 99, 0.14);
+      }
+
+      .hero-lead {
+        width: min(760px, 100%);
+        margin: 18px auto 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.08rem);
+        line-height: 1.78;
+      }
+
+      .summary-grid {
+        margin-top: 38px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .summary-card,
+      .legal-card,
+      .callout {
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 88% 12%, rgba(255, 88, 99, 0.1), transparent 18%),
+          linear-gradient(180deg, rgba(15, 15, 15, 0.95), rgba(8, 8, 8, 0.98));
+        box-shadow: var(--shadow);
+      }
+
+      .summary-card {
+        padding: 22px;
+      }
+
+      .summary-label {
+        margin: 0;
+        color: rgba(255, 216, 219, 0.84);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .summary-title {
+        margin: 12px 0 0;
+        font-size: 1.34rem;
+        line-height: 1.24;
+        color: #fff6f6;
+      }
+
+      .summary-text {
+        margin: 10px 0 0;
+        color: var(--muted);
+        line-height: 1.66;
+      }
+
+      .callout {
+        margin-top: 24px;
+        padding: 22px 24px;
+        border-color: rgba(255, 88, 99, 0.18);
+      }
+
+      .callout h2 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .callout p {
+        margin: 12px 0 0;
+        color: #d9c6c8;
+        line-height: 1.72;
+      }
+
+      .legal-layout {
+        margin-top: 26px;
+        display: grid;
+        gap: 20px;
+      }
+
+      .legal-card {
+        padding: 26px 28px;
+      }
+
+      .legal-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 3px;
+        background: linear-gradient(180deg, rgba(255, 88, 99, 0.08), var(--red), rgba(255, 88, 99, 0.08));
+      }
+
+      .legal-card h2 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4.8vw, 3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff5f5;
+      }
+
+      .legal-card p,
+      .legal-card li {
+        color: var(--muted);
+        line-height: 1.78;
+      }
+
+      .legal-card p {
+        margin: 14px 0 0;
+      }
+
+      .legal-card ul {
+        margin: 14px 0 0;
+        padding-left: 20px;
+      }
+
+      .legal-card li + li {
+        margin-top: 10px;
+      }
+
+      .legal-card strong {
+        color: #fff1f2;
+      }
+
+      .mini-grid {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .mini-card {
+        padding: 18px;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 88, 99, 0.14);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .mini-card h3 {
+        margin: 0;
+        font-size: 1.02rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff2f2;
+      }
+
+      .mini-card p {
+        margin: 10px 0 0;
+      }
+
+      .legal-note {
+        margin-top: 14px;
+        font-size: 0.95rem;
+        color: rgba(255, 226, 228, 0.78);
+      }
+
+      .site-footer {
+        position: relative;
+        z-index: 1;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto 32px;
+        padding: 26px 0 0;
+      }
+
+      .site-footer::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 22px;
+        background: linear-gradient(90deg, transparent, rgba(255, 88, 99, 0.32), transparent);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .footer-logo {
+        width: min(176px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .footer-link,
+      .footer-copy {
+        color: rgba(255, 255, 255, 0.74);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.88rem;
+      }
+
+      .footer-link:hover,
+      .footer-link.is-current {
+        color: #fff4f4;
+      }
+
+      @media (max-width: 980px) {
+        .summary-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .mini-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 820px) {
+        main {
+          width: min(100%, calc(100% - 24px));
+          padding: 34px 0 72px;
+        }
+
+        .site-footer {
+          width: min(100%, calc(100% - 24px));
+        }
+
+        .footer-inner {
+          justify-content: center;
+        }
+
+        .footer-copy {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 560px) {
+        h1 {
+          font-size: clamp(3.1rem, 16vw, 4.8rem);
+          line-height: 0.92;
+        }
+
+        .hero-lead {
+          font-size: 0.98rem;
+          line-height: 1.7;
+        }
+
+        .summary-card,
+        .callout,
+        .legal-card {
+          border-radius: 24px;
+        }
+
+        .summary-card,
+        .callout,
+        .legal-card {
+          padding: 18px 16px;
+        }
+
+        .footer-inner {
+          gap: 14px 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <img class="hero-logo" src="./logo.png?v=20260410" alt="CODEXINE" />
+        <div class="hero-tag">Protection des donnees</div>
+        <h1>Politique de confidentialite</h1>
+        <p class="hero-lead">
+          Derniere mise a jour : <strong>10 avril 2026</strong>. Cette page explique
+          quelles donnees personnelles peuvent etre collectees sur l'ecosysteme CODEXINE,
+          pourquoi elles le sont, pendant combien de temps elles sont conservees et
+          comment exercer vos droits.
+        </p>
+      </section>
+
+      <section class="summary-grid" aria-label="Resume">
+        <article class="summary-card">
+          <p class="summary-label">Responsable</p>
+          <h2 class="summary-title">Aerix / Oscar Sander</h2>
+          <p class="summary-text">
+            Aerix, micro-entreprise, est responsable des traitements de donnees realises
+            via le site codexine.fr.
+          </p>
+        </article>
+
+        <article class="summary-card">
+          <p class="summary-label">Donnees</p>
+          <h2 class="summary-title">Email, identite, preferences techniques</h2>
+          <p class="summary-text">
+            Les donnees traitees dependent de votre interaction avec le site : demande
+            d'acces a la formation, achat, navigation, cookies et traces techniques.
+          </p>
+        </article>
+
+        <article class="summary-card">
+          <p class="summary-label">Vos droits</p>
+          <h2 class="summary-title">Acces, rectification, effacement, opposition</h2>
+          <p class="summary-text">
+            Vous pouvez exercer vos droits sur vos donnees et introduire une reclamation
+            aupres de la CNIL si vous estimez que vos droits ne sont pas respectes.
+          </p>
+        </article>
+      </section>
+
+      <section class="callout" aria-label="Point cle">
+        <h2>Une politique adaptee a la vraie logique du site</h2>
+        <p>
+          CODEXINE collecte principalement des donnees simples et utiles au fonctionnement
+          du parcours : email pour l'acces a la page de formation, nom/prenom/email pour
+          l'offre payante, choix de cookies, et certaines donnees techniques necessaires
+          au bon affichage du site ou a la notification interne des demandes.
+        </p>
+      </section>
+
+      <section class="legal-layout" aria-label="Contenu juridique">
+        <article class="legal-card">
+          <h2>1. Responsable du traitement</h2>
+          <p>
+            Le responsable du traitement des donnees personnelles collectees via
+            <strong>codexine.fr</strong> est :
+          </p>
+          <ul>
+            <li><strong>Entreprise :</strong> Aerix</li>
+            <li><strong>Responsable :</strong> Oscar Sander</li>
+            <li><strong>Adresse :</strong> 99 rue de la noue, 89000 Auxerre, France</li>
+            <li>
+              <strong>Email de contact :</strong>
+              <a href="mailto:oscaradressepro@gmail.com">oscaradressepro@gmail.com</a>
+            </li>
+            <li>
+              <strong>Telephone :</strong>
+              <a href="tel:+33744801499">+33 7 44 80 14 99</a>
+            </li>
+          </ul>
+        </article>
+
+        <article class="legal-card">
+          <h2>2. Quelles donnees peuvent etre collectees</h2>
+          <p>
+            Selon votre utilisation du site, CODEXINE peut collecter ou traiter les
+            categories suivantes :
+          </p>
+          <ul>
+            <li>
+              <strong>Donnees d'identification :</strong> prenom, nom, adresse email.
+            </li>
+            <li>
+              <strong>Donnees de commande :</strong> informations communiquees lors du
+              pre-paiement et informations utiles au suivi d'une commande.
+            </li>
+            <li>
+              <strong>Donnees de navigation et traces techniques :</strong> date,
+              interactions avec les formulaires, traces necessaires au fonctionnement du
+              site, choix relatifs au bandeau cookie.
+            </li>
+            <li>
+              <strong>Donnees locales sur votre appareil :</strong> stockage du choix
+              cookie et, le cas echeant, memorisation locale de l'email saisi afin de
+              faciliter votre parcours.
+            </li>
+          </ul>
+          <p>
+            CODEXINE ne collecte pas directement vos coordonnees bancaires sur ce site.
+            Le paiement est ensuite realise sur la page du prestataire de paiement
+            externe.
+          </p>
+        </article>
+
+        <article class="legal-card">
+          <h2>3. Dans quels cas les donnees sont collectees</h2>
+          <div class="mini-grid">
+            <div class="mini-card">
+              <h3>Acces a la formation gratuite</h3>
+              <p>
+                Lorsque vous cliquez sur le bouton permettant d'acceder a la formation
+                gratuite, un email peut etre demande pour enregistrer votre demande et
+                vous rediriger vers la page correspondante.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Achat de l'offre premium</h3>
+              <p>
+                Lors de la preparation de l'achat, votre prenom, nom et email peuvent etre
+                demandes afin de qualifier la commande avant redirection vers le paiement.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Cookies et preferences</h3>
+              <p>
+                Lors de votre arrivee sur l'accueil, un bandeau peut vous permettre
+                d'accepter ou de refuser les cookies et traceurs non essentiels.
+              </p>
+            </div>
+            <div class="mini-card">
+              <h3>Support et espaces prives</h3>
+              <p>
+                Si vous rejoignez un groupe prive ou utilisez un outil externe comme
+                WhatsApp, les donnees traitees par cette plateforme relevent aussi de sa
+                propre politique de confidentialite.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="legal-card">
+          <h2>4. Finalites et bases legales</h2>
+          <p>
+            Les donnees personnelles peuvent etre traitees pour les finalites suivantes :
+          </p>
+          <ul>
+            <li>
+              <strong>Gerer votre demande d'acces a la formation gratuite</strong> :
+              base legale fondee sur votre demande et, selon les cas, sur votre
+              consentement ou sur des mesures precontractuelles.
+            </li>
+            <li>
+              <strong>Gerer la commande et l'acces a l'offre premium</strong> :
+              execution de mesures precontractuelles et du contrat.
+            </li>
+            <li>
+              <strong>Assurer le suivi administratif, comptable et legal</strong> :
+              respect des obligations legales.
+            </li>
+            <li>
+              <strong>Assurer la securite, la prevention de la fraude et la preuve des
+              consentements</strong> : interet legitime et, pour le consentement cookie,
+              respect des obligations applicables.
+            </li>
+            <li>
+              <strong>Memoriser vos preferences de navigation</strong> : consentement
+              lorsque cela est requis et traceurs techniques strictement necessaires pour
+              le stockage du choix.
+            </li>
+          </ul>
+        </article>
+
+        <article class="legal-card">
+          <h2>5. Destinataires des donnees</h2>
+          <p>
+            Les donnees peuvent etre accessibles, dans la stricte limite de leurs besoins,
+            a l'editeur du site et a certains prestataires techniques utilises pour faire
+            fonctionner le parcours.
+          </p>
+          <ul>
+            <li>
+              <strong>Gestion interne CODEXINE</strong> pour le traitement des demandes,
+              des leads, des commandes et du support.
+            </li>
+            <li>
+              <strong>Telegram</strong> : certaines informations saisies dans les
+              formulaires du site peuvent etre transmises via l'API Telegram afin de
+              notifier l'editeur d'un nouveau lead ou d'un nouveau paiement.
+            </li>
+            <li>
+              <strong>Revolut</strong> ou tout autre prestataire de paiement affiche au
+              moment de la commande, pour le traitement de la transaction.
+            </li>
+            <li>
+              <strong>GitHub</strong> pour l'hebergement ou la diffusion technique de
+              certaines pages et ressources statiques.
+            </li>
+            <li>
+              <strong>Services tiers lies a l'affichage</strong>, tels que les polices
+              Google Fonts si elles sont chargees par le navigateur.
+            </li>
+          </ul>
+        </article>
+
+        <article class="legal-card">
+          <h2>6. Duree de conservation</h2>
+          <p>
+            Les durees ci-dessous sont donnees a titre general et peuvent etre adaptees
+            lorsqu'une obligation legale ou un besoin de preuve justifie une conservation
+            plus longue.
+          </p>
+          <ul>
+            <li>
+              <strong>Donnees de prospect</strong> : jusqu'a 3 ans apres le dernier
+              contact ou la derniere interaction utile.
+            </li>
+            <li>
+              <strong>Donnees liees a une commande</strong> : pendant la duree necessaire
+              a la gestion de la relation commerciale puis en archivage pendant la duree
+              imposee par les obligations comptables et fiscales applicables.
+            </li>
+            <li>
+              <strong>Choix cookie</strong> : jusqu'a 6 mois sur le navigateur, sauf
+              suppression manuelle par l'utilisateur.
+            </li>
+            <li>
+              <strong>Email memorise localement sur l'appareil</strong> : jusqu'a sa
+              suppression par l'utilisateur, la purge du navigateur ou son remplacement.
+            </li>
+          </ul>
+        </article>
+
+        <article class="legal-card">
+          <h2>7. Cookies et traceurs</h2>
+          <p>
+            Le site peut utiliser des cookies ou technologies similaires pour assurer son
+            bon fonctionnement, memoriser vos preferences et, le cas echeant, permettre
+            certains usages non essentiels uniquement apres votre choix.
+          </p>
+          <p>
+            Sur cette version du site, le bandeau cookie mis en place sur l'accueil vous
+            permet d'<strong>accepter</strong> ou de <strong>refuser</strong> les
+            cookies non essentiels avec un niveau de simplicite equivalent. Le choix est
+            ensuite memorise pour ne pas vous solliciter a chaque visite.
+          </p>
+          <p>
+            Aucun cookie publicitaire n'est active sans votre choix. Si des traceurs
+            optionnels supplementaires etaient ajoutes plus tard, une demande de
+            consentement prealable devrait etre affichee avant leur depot.
+          </p>
+        </article>
+
+        <article class="legal-card">
+          <h2>8. Transferts en dehors de l'Union europeenne</h2>
+          <p>
+            Certains prestataires techniques utilises par le site peuvent etre situes ou
+            heberger une partie de leurs infrastructures en dehors de l'Union europeenne,
+            notamment pour l'hebergement, les notifications ou certains services
+            techniques tiers.
+          </p>
+          <p>
+            Lorsque de tels transferts existent, ils doivent reposer sur un cadre
+            juridique approprie ou sur des garanties adaptees mises en place par le
+            prestataire concerne.
+          </p>
+        </article>
+
+        <article class="legal-card">
+          <h2>9. Securite</h2>
+          <p>
+            CODEXINE met en oeuvre des mesures organisationnelles et techniques
+            raisonnables pour limiter les acces non autorises, les usages abusifs, la
+            perte, l'alteration ou la divulgation non maitrisee des donnees.
+          </p>
+          <p>
+            Aucun systeme n'etant totalement invulnerable, l'utilisateur est invite a ne
+            jamais transmettre de donnees inutiles ou sensibles via les formulaires du
+            site si cela n'est pas strictement necessaire.
+          </p>
+        </article>
+
+        <article class="legal-card">
+          <h2>10. Vos droits</h2>
+          <p>
+            Sous reserve des conditions et limites prevues par la reglementation, vous
+            disposez des droits suivants :
+          </p>
+          <ul>
+            <li>droit d'acces ;</li>
+            <li>droit de rectification ;</li>
+            <li>droit d'effacement ;</li>
+            <li>droit a la limitation du traitement ;</li>
+            <li>droit d'opposition ;</li>
+            <li>droit a la portabilite lorsque ce droit s'applique ;</li>
+            <li>
+              droit de retirer votre consentement a tout moment lorsque le traitement est
+              fonde sur le consentement.
+            </li>
+          </ul>
+          <p>
+            Pour exercer vos droits, vous pouvez ecrire a
+            <a href="mailto:oscaradressepro@gmail.com">oscaradressepro@gmail.com</a>.
+            Vous pouvez egalement introduire une reclamation aupres de la
+            <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">
+              CNIL
+            </a>
+            si vous estimez que vos droits ne sont pas respectes.
+          </p>
+        </article>
+
+        <article class="legal-card">
+          <h2>11. Modification de la presente politique</h2>
+          <p>
+            La presente politique de confidentialite peut etre modifiee a tout moment
+            pour tenir compte d'une evolution du site, des traitements effectues, des
+            outils utilises ou du cadre legal applicable. La date de mise a jour indiquee
+            en haut de page permet d'identifier la version en vigueur.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="./index.html" aria-label="Accueil CODEXINE">
+          <img class="footer-logo" src="./logo.png?v=20260410" alt="CODEXINE" />
+        </a>
+        <a class="footer-link" href="./infos.html?v=20260410">Infos</a>
+        <a class="footer-link" href="./conditions-utilisation.html?v=20260410">Conditions d'utilisation</a>
+        <a class="footer-link is-current" href="./politique-confidentialite.html?v=20260410">
+          Politique de confidentialite
+        </a>
+        <a class="footer-link" href="./mentions-legales.html?v=20260410">Mentions legales</a>
+        <p class="footer-copy">© 2026 CODEXINE by Oscar.</p>
+      </div>
+    </footer>
+  </body>
+</html>
