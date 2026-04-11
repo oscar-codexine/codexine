@@ -1,9 +1,11 @@
 const BLOGS_API_URL =
   "https://api.github.com/repos/oscar-codexine/codexine/contents/blog?ref=main";
+const BLOGS_PUBLIC_BASE_URL = "https://codexine.fr/blog/";
 
 const FALLBACK_BLOGS = [
   {
     name: "blog13.html",
+    publishedUrl: `${BLOGS_PUBLIC_BASE_URL}blog13.html`,
     rawUrl:
       "https://raw.githubusercontent.com/oscar-codexine/codexine/main/blog/blog13.html",
     title: "Comment creer un systeme RAG sur Mistral : Tutoriel complet et facile",
@@ -33,18 +35,6 @@ function cleanTitle(rawTitle, fileName) {
   return rawTitle.replace(/\s*\|\s*Scale Blog\s*$/i, "").trim() || fallback;
 }
 
-function injectBaseTag(html, baseHref) {
-  if (/<base\s/i.test(html)) {
-    return html;
-  }
-
-  if (/<head\b[^>]*>/i.test(html)) {
-    return html.replace(/<head(\b[^>]*)>/i, `<head$1><base href="${baseHref}">`);
-  }
-
-  return `<!DOCTYPE html><html><head><base href="${baseHref}"></head><body>${html}</body></html>`;
-}
-
 function setStatus(message, isError) {
   blogStatus.textContent = message;
   blogStatus.classList.toggle("is-error", Boolean(isError));
@@ -69,36 +59,11 @@ function createCard(blog) {
   button.type = "button";
   button.setAttribute("aria-label", `Ouvrir ${blog.title}`);
 
-  const art = document.createElement("div");
-  art.className = "blog-card__art";
-
-  if (blog.image) {
-    art.style.backgroundImage =
-      `linear-gradient(180deg, rgba(18, 9, 10, 0.18), rgba(8, 8, 8, 0.88)), url("${blog.image}")`;
-  }
-
-  const body = document.createElement("div");
-  body.className = "blog-card__body";
-
-  const meta = document.createElement("div");
-  meta.className = "blog-card__meta";
-  meta.textContent = blog.name.replace(/\.html$/i, "");
-
   const title = document.createElement("h3");
   title.className = "blog-card__title";
   title.textContent = blog.title;
 
-  const description = document.createElement("p");
-  description.className = "blog-card__desc";
-  description.textContent =
-    blog.description || "Article disponible dans la bibliotheque CODEXINE.";
-
-  const cta = document.createElement("div");
-  cta.className = "blog-card__cta";
-  cta.textContent = "Ouvrir le blog";
-
-  body.append(meta, title, description, cta);
-  button.append(art, body);
+  button.append(title);
   article.append(button);
 
   button.addEventListener("click", async () => {
@@ -106,29 +71,13 @@ function createCard(blog) {
       return;
     }
 
-    const previousLabel = cta.textContent;
     button.disabled = true;
-    cta.textContent = "Ouverture...";
     setStatus(`Ouverture de "${blog.title}"...`);
 
     try {
-      const response = await fetch(blog.rawUrl, { cache: "no-store" });
-
-      if (!response.ok) {
-        throw new Error(`Impossible d'ouvrir ${blog.name}`);
-      }
-
-      const html = await response.text();
-      const baseHref = blog.rawUrl.replace(/[^/]+$/, "");
-      const hydratedHtml = injectBaseTag(html, baseHref);
-      const blob = new Blob([hydratedHtml], { type: "text/html" });
-      const blobUrl = URL.createObjectURL(blob);
-
-      window.location.assign(blobUrl);
-      window.setTimeout(() => URL.revokeObjectURL(blobUrl), 60000);
+      window.location.assign(blog.publishedUrl || blog.rawUrl);
     } catch (error) {
       button.disabled = false;
-      cta.textContent = previousLabel;
       setStatus("Impossible d'ouvrir ce blog pour le moment.", true);
     }
   });
@@ -161,6 +110,7 @@ function renderBlogs(blogs) {
 
 async function fetchBlogMeta(file) {
   const rawUrl = file.download_url;
+  const publishedUrl = `${BLOGS_PUBLIC_BASE_URL}${encodeURIComponent(file.name)}`;
 
   try {
     const htmlResponse = await fetch(rawUrl, { cache: "no-store" });
@@ -179,6 +129,7 @@ async function fetchBlogMeta(file) {
 
     return {
       name: file.name,
+      publishedUrl,
       rawUrl,
       title: cleanTitle(title, file.name),
       description: description.trim(),
@@ -187,6 +138,7 @@ async function fetchBlogMeta(file) {
   } catch (error) {
     return {
       name: file.name,
+      publishedUrl,
       rawUrl,
       title: cleanTitle("", file.name),
       description: "Article disponible dans la bibliotheque CODEXINE.",
