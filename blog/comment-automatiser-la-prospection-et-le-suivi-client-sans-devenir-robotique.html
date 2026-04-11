@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment automatiser la prospection et le suivi client sans devenir robotique | CODEXINE</title>
+    <meta
+      name="description"
+      content="Le guide CODEXINE pour automatiser la prospection, le suivi client et les relances sans perdre la personnalisation ni casser la relation."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Oscar Sander" />
+    <meta name="theme-color" content="#050505" />
+    <link
+      rel="canonical"
+      href="https://codexine.fr/blog/comment-automatiser-la-prospection-et-le-suivi-client-sans-devenir-robotique.html"
+    />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CODEXINE" />
+    <meta
+      property="og:title"
+      content="Comment automatiser la prospection et le suivi client sans devenir robotique | CODEXINE"
+    />
+    <meta
+      property="og:description"
+      content="Comment construire un systeme de prospection et de suivi client qui tourne sans perdre la qualite de la relation."
+    />
+    <meta
+      property="og:url"
+      content="https://codexine.fr/blog/comment-automatiser-la-prospection-et-le-suivi-client-sans-devenir-robotique.html"
+    />
+    <meta property="og:image" content="https://codexine.fr/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Comment automatiser la prospection et le suivi client sans devenir robotique | CODEXINE"
+    />
+    <meta
+      name="twitter:description"
+      content="Le plan CODEXINE pour automatiser acquisition et relances sans devenir un business froid et mecanique."
+    />
+    <meta name="twitter:image" content="https://codexine.fr/logo.png" />
+    <link rel="icon" type="image/png" href="https://codexine.fr/icon.png?v=20260410" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --panel: rgba(12, 12, 12, 0.92);
+        --line: rgba(255, 255, 255, 0.08);
+        --text: #faf5f5;
+        --muted: #a88f93;
+        --muted-strong: #d7c0c4;
+        --red: #ff5863;
+        --red-soft: #ff939b;
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Outfit", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 88, 99, 0.18), transparent 26%),
+          radial-gradient(circle at 14% 16%, rgba(126, 17, 28, 0.34), transparent 28%),
+          radial-gradient(circle at 86% 20%, rgba(255, 88, 99, 0.1), transparent 22%),
+          linear-gradient(180deg, #080808 0%, #040404 54%, #060304 100%);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.32;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 95%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: relative;
+        z-index: 1;
+        padding: 26px 0 8px;
+      }
+
+      .topbar__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .topbar__brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .topbar__logo {
+        width: min(190px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .topbar__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .topbar__link:hover {
+        color: #fff4f4;
+        border-color: rgba(255, 88, 99, 0.18);
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        padding: 18px 0 72px;
+      }
+
+      .hero {
+        width: min(1000px, 100%);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        width: min(280px, 100%);
+        height: auto;
+        margin: 0 auto 26px;
+        filter: drop-shadow(0 14px 28px rgba(255, 88, 99, 0.16));
+      }
+
+      .hero-divider {
+        width: min(180px, 36vw);
+        height: 2px;
+        margin: 22px auto 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, transparent, var(--red), transparent);
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.24);
+      }
+
+      .hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd6d9;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 22px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(4.2rem, 9vw, 7.2rem);
+        line-height: 0.92;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+        text-shadow:
+          0 0 20px rgba(255, 88, 99, 0.08),
+          0 0 44px rgba(255, 88, 99, 0.12);
+      }
+
+      .hero__lead {
+        width: min(760px, 100%);
+        margin: 20px auto 0;
+        color: var(--muted-strong);
+        font-size: 1.08rem;
+        line-height: 1.82;
+      }
+
+      .hero__meta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .hero__meta span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.88rem;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+        gap: 22px;
+        align-items: stretch;
+        margin-top: 40px;
+      }
+
+      .hero__visual {
+        width: min(960px, 100%);
+        margin: 30px auto 0;
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(10, 10, 10, 0.76);
+        box-shadow: var(--shadow);
+      }
+
+      .hero__visual img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .hero-card,
+      .summary-card {
+        position: relative;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-card {
+        min-height: 360px;
+        padding: 32px;
+        background:
+          radial-gradient(circle at 84% 18%, rgba(255, 88, 99, 0.16), transparent 24%),
+          linear-gradient(180deg, rgba(14, 14, 14, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+        background-size: 22px 22px;
+        opacity: 0.16;
+        pointer-events: none;
+      }
+
+      .hero-card__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+      }
+
+      .hero-card__label {
+        margin: 0;
+        color: #ffb9be;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-card h2 {
+        margin: 14px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.6rem, 5vw, 4rem);
+        line-height: 0.94;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .hero-card p {
+        width: min(520px, 100%);
+        margin: 16px 0 0;
+        color: rgba(255, 239, 240, 0.84);
+        line-height: 1.76;
+      }
+
+      .summary-card {
+        padding: 26px;
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.14), transparent 28%),
+          linear-gradient(180deg, rgba(15, 11, 12, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .summary-card h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .summary-list {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 14px;
+      }
+
+      .summary-list li {
+        position: relative;
+        padding-left: 18px;
+        color: rgba(255, 230, 232, 0.78);
+        line-height: 1.64;
+      }
+
+      .summary-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--red), var(--red-soft));
+        box-shadow: 0 0 16px rgba(255, 88, 99, 0.5);
+        transform: translateY(-50%);
+      }
+
+      .article {
+        width: min(980px, 100%);
+        margin: 34px auto 0;
+      }
+
+      .article-block {
+        margin-top: 22px;
+        padding: 30px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(13, 13, 13, 0.95), rgba(8, 8, 8, 0.98));
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
+      }
+
+      .article-block:first-child {
+        margin-top: 0;
+      }
+
+      .article-block h2 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .article-block p {
+        margin: 16px 0 0;
+        color: rgba(255, 231, 233, 0.76);
+        line-height: 1.84;
+        font-size: 1rem;
+      }
+
+      .article-block p strong {
+        color: #fff4f4;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+      }
+
+      .mini-card {
+        padding: 20px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.12), transparent 28%),
+          linear-gradient(180deg, rgba(17, 11, 12, 0.94), rgba(9, 9, 9, 0.98));
+      }
+
+      .mini-card__index {
+        color: #ffb0b6;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .mini-card h3 {
+        margin: 12px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .mini-card p {
+        margin-top: 12px;
+        color: rgba(255, 228, 230, 0.74);
+        line-height: 1.68;
+      }
+
+      .flow-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .flow-step {
+        padding: 22px;
+        border-radius: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.95), rgba(8, 8, 8, 0.98));
+      }
+
+      .flow-step__top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .flow-step__number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffb5bb;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+      }
+
+      .flow-step h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .flow-step p {
+        margin: 14px 0 0;
+        color: rgba(255, 228, 230, 0.76);
+        line-height: 1.72;
+      }
+
+      .roadmap {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .roadmap-item {
+        display: grid;
+        grid-template-columns: 108px minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
+        padding: 18px 20px;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.94), rgba(8, 8, 8, 0.98));
+      }
+
+      .roadmap-item__week {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 12px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd8db;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .roadmap-item h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .roadmap-item p {
+        margin: 10px 0 0;
+      }
+
+      .proof {
+        width: min(980px, 100%);
+        margin: 28px auto 0;
+        padding: 34px;
+        border-radius: 34px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.22), transparent 28%),
+          radial-gradient(circle, rgba(255, 255, 255, 0.07) 1.2px, transparent 1.2px),
+          linear-gradient(180deg, rgba(18, 7, 9, 0.98), rgba(10, 5, 6, 0.98));
+        background-size: auto, 24px 24px, auto;
+        box-shadow:
+          0 30px 80px rgba(0, 0, 0, 0.34),
+          0 0 30px rgba(255, 88, 99, 0.08);
+      }
+
+      .proof__header {
+        text-align: center;
+      }
+
+      .proof__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd6d9;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .proof h2 {
+        margin: 18px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(3rem, 6vw, 4.8rem);
+        line-height: 0.96;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+        text-align: center;
+      }
+
+      .proof h2 span {
+        color: var(--red-soft);
+      }
+
+      .proof__lead {
+        width: min(760px, 100%);
+        margin: 16px auto 0;
+        text-align: center;
+        color: rgba(255, 231, 233, 0.82);
+        font-size: 1.02rem;
+        line-height: 1.78;
+      }
+
+      .proof__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) minmax(0, 0.85fr);
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .proof-card {
+        padding: 22px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(17, 11, 12, 0.94), rgba(9, 9, 9, 0.98));
+      }
+
+      .proof-card--featured {
+        min-height: 100%;
+        grid-column: span 1;
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.16), transparent 24%),
+          linear-gradient(180deg, rgba(18, 11, 12, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .proof-card__badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 30px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd7da;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .proof-card__quote {
+        margin: 16px 0 0;
+        color: rgba(255, 231, 233, 0.82);
+        line-height: 1.82;
+      }
+
+      .proof-card__footer {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .proof-card__avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 255, 255, 0.04);
+        object-fit: cover;
+      }
+
+      .proof-card__name {
+        margin: 0;
+        color: #fff4f4;
+        font-size: 0.96rem;
+        font-weight: 700;
+      }
+
+      .proof-card__role {
+        margin: 4px 0 0;
+        color: rgba(255, 227, 229, 0.62);
+        font-size: 0.84rem;
+      }
+
+      .proof__cta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        margin-top: 24px;
+        padding: 22px 24px;
+        border-radius: 24px;
+        border: 1px dashed rgba(255, 88, 99, 0.22);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .proof__cta h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .proof__cta p {
+        margin: 10px 0 0;
+        color: rgba(255, 231, 233, 0.76);
+        line-height: 1.72;
+      }
+
+      .proof__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 300px;
+        padding: 18px 24px;
+        border-radius: 20px;
+        border: 0;
+        background: linear-gradient(135deg, var(--red), #ff7d86);
+        color: #fff6f6;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        box-shadow: 0 18px 42px rgba(255, 88, 99, 0.28);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .proof__button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 24px 52px rgba(255, 88, 99, 0.34);
+      }
+
+      .site-footer {
+        position: relative;
+        z-index: 1;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto 32px;
+        padding: 18px 0 0;
+      }
+
+      .site-footer::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 22px;
+        background: linear-gradient(90deg, transparent, rgba(255, 88, 99, 0.32), transparent);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .footer-logo {
+        width: min(176px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .footer-link,
+      .footer-copy {
+        color: rgba(255, 255, 255, 0.74);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.88rem;
+      }
+
+      .footer-link:hover {
+        color: #fff4f4;
+      }
+
+      @media (max-width: 980px) {
+        .hero__grid,
+        .grid-3,
+        .flow-grid,
+        .proof__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .roadmap-item,
+        .proof__cta {
+          grid-template-columns: 1fr;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .site-footer {
+          width: min(100%, calc(100% - 24px));
+        }
+
+        .footer-inner {
+          justify-content: center;
+        }
+
+        .footer-copy {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100%, calc(100% - 20px));
+        }
+
+        .topbar {
+          padding-top: 20px;
+        }
+
+        .topbar__inner {
+          flex-direction: column;
+        }
+
+        .hero h1 {
+          font-size: clamp(3.2rem, 13vw, 4.8rem);
+        }
+
+        .hero__lead {
+          font-size: 0.96rem;
+          line-height: 1.74;
+        }
+
+        .hero__visual {
+          margin-top: 22px;
+          border-radius: 24px;
+        }
+
+        .hero__visual img {
+          aspect-ratio: 16 / 10;
+        }
+
+        .hero-card,
+        .summary-card,
+        .article-block,
+        .proof {
+          padding: 22px 18px;
+          border-radius: 24px;
+        }
+
+        .hero-card {
+          min-height: 300px;
+        }
+
+        .hero-card h2,
+        .summary-card h3,
+        .article-block h2,
+        .proof h2,
+        .proof__cta h3 {
+          font-size: clamp(2.2rem, 10vw, 3.3rem);
+        }
+
+        .mini-card h3,
+        .flow-step h3,
+        .roadmap-item h3 {
+          font-size: 1.7rem;
+        }
+
+        .article-block p,
+        .mini-card p,
+        .flow-step p,
+        .proof-card__quote,
+        .proof__cta p {
+          font-size: 0.94rem;
+          line-height: 1.72;
+        }
+
+        .proof__button {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .footer-inner {
+          gap: 14px 18px;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Comment automatiser la prospection et le suivi client sans devenir robotique",
+        "description": "Le guide CODEXINE pour automatiser la prospection, le suivi client et les relances sans perdre la personnalisation ni casser la relation.",
+        "image": "https://codexine.fr/logo.png",
+        "author": {
+          "@type": "Person",
+          "name": "Oscar Sander"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "CODEXINE",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://codexine.fr/logo.png"
+          }
+        },
+        "datePublished": "2026-04-10",
+        "dateModified": "2026-04-10",
+        "mainEntityOfPage": "https://codexine.fr/blog/comment-automatiser-la-prospection-et-le-suivi-client-sans-devenir-robotique.html"
+      }
+    </script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <img class="logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        <div class="hero__eyebrow">Blog CODEXINE</div>
+        <h1>Comment automatiser la prospection et le suivi client sans devenir robotique</h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <p class="hero__lead">
+          Beaucoup de business veulent automatiser leurs leads, leurs relances et
+          leur suivi client. Le probleme, c'est qu'ils automatisent trop tot, trop
+          froidement ou sans regles claires. Resultat : les messages sonnent faux,
+          la relation se deteriore et l'automatisation finit par faire perdre plus
+          qu'elle ne rapporte.
+        </p>
+        <div class="hero__meta">
+          <span>10 avril 2026</span>
+          <span>Lecture 9 min</span>
+          <span>Prospection automatisee</span>
+        </div>
+
+        <figure class="hero__visual">
+          <img
+            src="https://images.pexels.com/photos/2182981/pexels-photo-2182981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            alt="Professionnels en reunion autour d'un ordinateur pour illustrer la prospection et le suivi client"
+            loading="eager"
+          />
+        </figure>
+
+        <div class="hero__grid">
+          <div class="hero-card">
+            <div class="hero-card__inner">
+              <p class="hero-card__label">Idee centrale</p>
+              <h2>La bonne automatisation ne remplace pas la relation. Elle supprime les frottements qui l'empechent d'exister.</h2>
+              <p>
+                Un bon systeme automatise le tri, la vitesse, la memoire et les
+                relances. Il ne remplace pas ton jugement quand il faut vraiment
+                parler a quelqu'un.
+              </p>
+            </div>
+          </div>
+
+          <aside class="summary-card" aria-label="Resume">
+            <h3>Ce que tu vas retenir</h3>
+            <ul class="summary-list">
+              <li>Les bons endroits a automatiser dans une machine de prospection.</li>
+              <li>Comment garder une sensation humaine dans le suivi client.</li>
+              <li>Les erreurs qui font sonner une automatisation comme un robot bas de gamme.</li>
+              <li>Un plan concret pour monter un flux acquisition + suivi en 30 jours.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <article class="article">
+        <section class="article-block">
+          <h2>1. Pourquoi la prospection devient vite chaotique sans systeme</h2>
+          <p>
+            Au debut, tout tient dans la tete. Tu sais qui recontacter, qui relancer,
+            qui a dit qu'il etait interesse et qui voulait revenir le mois prochain.
+            Puis l'activite grandit. Les messages s'empilent, les opportunites se
+            croisent, les suivis se perdent, et la prospection devient un melange de
+            post-it mentaux et de relances oubliees.
+          </p>
+          <p>
+            A ce stade, l'automatisation n'est pas un luxe. C'est une facon de
+            reprendre le controle. Mais attention : si tu lances des sequences sans
+            logique ni garde-fous, tu vas surtout augmenter le volume de messages
+            impersonnels. Le vrai sujet n'est pas d'automatiser plus. Le vrai sujet,
+            c'est d'automatiser les bonnes couches.
+          </p>
+
+          <div class="grid-3">
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 01</div>
+              <h3>Leads oublies</h3>
+              <p>
+                Des opportunites chaudes disparaissent juste parce que personne n'a
+                pense a faire la bonne relance au bon moment.
+              </p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 02</div>
+              <h3>Reponses lentes</h3>
+              <p>
+                Ton temps de reaction devient trop long, alors que c'est souvent la
+                vitesse qui fait la difference sur des prospects chauds.
+              </p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 03</div>
+              <h3>Memoire fragile</h3>
+              <p>
+                Sans systeme, la qualite du suivi depend de ton niveau d'energie et
+                de concentration du jour.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>2. Les 4 blocs a automatiser en priorite</h2>
+          <p>
+            Tout ne doit pas etre automatise. En revanche, certaines couches se
+            pretent parfaitement a un systeme IA bien pense.
+          </p>
+
+          <div class="flow-grid">
+            <div class="flow-step">
+              <div class="flow-step__top">
+                <span class="flow-step__number">01</span>
+                <h3>Capture</h3>
+              </div>
+              <p>
+                Chaque lead doit entrer proprement dans ton systeme, avec sa source,
+                son besoin, son contexte et un minimum d'informations exploitables.
+              </p>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-step__top">
+                <span class="flow-step__number">02</span>
+                <h3>Qualification</h3>
+              </div>
+              <p>
+                L'IA peut classer, noter, trier et preparer des priorites selon des
+                regles simples : urgence, budget, intention, secteur ou maturite.
+              </p>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-step__top">
+                <span class="flow-step__number">03</span>
+                <h3>Relance</h3>
+              </div>
+              <p>
+                Les rappels et suivis peuvent etre automatises sans devenir froids,
+                a condition d'utiliser du contexte, du timing et de vraies sorties utiles.
+              </p>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-step__top">
+                <span class="flow-step__number">04</span>
+                <h3>Escalade humaine</h3>
+              </div>
+              <p>
+                Des qu'un lead montre un fort signal d'interet, le systeme doit
+                sortir du mode automatique et te ramener la balle proprement.
+              </p>
+            </div>
+          </div>
+
+          <p>
+            Cette derniere couche est capitale. Beaucoup de business automatisent
+            l'envoi, mais oublient le transfert. Or un bon systeme ne fait pas que
+            pousser des messages. Il sait aussi <strong>quand se taire</strong> pour
+            te laisser intervenir.
+          </p>
+        </section>
+
+        <section class="article-block">
+          <h2>3. Comment eviter l'effet “robot” dans les messages</h2>
+          <p>
+            Ce qui rend un message robotique, ce n'est pas le fait qu'il soit
+            automatise. C'est le fait qu'il soit vide, trop generique ou deconnecte
+            du contexte. Pour corriger ca, il faut nourrir ton systeme avec de la
+            vraie matiere : source du lead, besoin exprime, contenu consulte, etape
+            du parcours, dernier echange, objection percue.
+          </p>
+          <p>
+            Ensuite, tu imposes des regles editoriales. Par exemple : ne jamais
+            relancer sans angle utile, ne jamais envoyer deux fois le meme message,
+            toujours faire reference a une action ou une intention precedente, et
+            toujours prevoir une porte de sortie. C'est cette structure qui donne
+            un rendu humain.
+          </p>
+
+          <div class="grid-3">
+            <div class="mini-card">
+              <div class="mini-card__index">Regle 01</div>
+              <h3>Contexte</h3>
+              <p>
+                Chaque message doit se baser sur un signal reel : clic, reponse,
+                formulaire, call, visite ou demande.
+              </p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Regle 02</div>
+              <h3>Utilite</h3>
+              <p>
+                La relance doit apporter quelque chose : precision, ressource,
+                prochaine etape claire ou gain de temps.
+              </p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Regle 03</div>
+              <h3>Sortie</h3>
+              <p>
+                Le prospect doit pouvoir repondre, reporter, dire non ou passer a
+                l'etape suivante sans friction.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>4. Le stack minimal pour lancer un systeme acquisition + suivi</h2>
+          <p>
+            Tu n'as pas besoin d'une usine a gaz pour commencer. Un bon socle suffit
+            largement si ton process est clair.
+          </p>
+
+          <div class="flow-grid">
+            <div class="flow-step">
+              <div class="flow-step__top">
+                <span class="flow-step__number">A</span>
+                <h3>Source</h3>
+              </div>
+              <p>
+                Formulaire, calendrier, WhatsApp, email, landing page ou inbox CRM :
+                tout doit remonter au meme endroit.
+              </p>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-step__top">
+                <span class="flow-step__number">B</span>
+                <h3>Moteur</h3>
+              </div>
+              <p>
+                Make ou Zapier orchestrent la logique : lecture, tri, creation de
+                tache, message et changement de statut.
+              </p>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-step__top">
+                <span class="flow-step__number">C</span>
+                <h3>Intelligence</h3>
+              </div>
+              <p>
+                L'IA aide a qualifier, preparer des brouillons, suggerer la
+                prochaine action et enrichir la memoire commerciale.
+              </p>
+            </div>
+
+            <div class="flow-step">
+              <div class="flow-step__top">
+                <span class="flow-step__number">D</span>
+                <h3>Controle</h3>
+              </div>
+              <p>
+                Dashboard, CRM ou base Notion pour voir qui bouge, qui bloque, et
+                ou tu dois reprendre la main.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>5. Plan 30 jours : monter un systeme propre sans te disperser</h2>
+          <div class="roadmap">
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 1</div>
+              <div>
+                <h3>Cartographie</h3>
+                <p>
+                  Liste tous les points de contact ou un lead peut entrer. Puis note
+                  ce qui se passe aujourd'hui, manuellement, juste apres.
+                </p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 2</div>
+              <div>
+                <h3>Qualification</h3>
+                <p>
+                  Definis 3 a 5 niveaux de priorite et les regles qui permettent au
+                  systeme de les attribuer automatiquement.
+                </p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 3</div>
+              <div>
+                <h3>Relances utiles</h3>
+                <p>
+                  Ecris 3 sequences maximum, courtes et contextuelles. Une sequence
+                  doit aider, pas harceler.
+                </p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 4</div>
+              <div>
+                <h3>Mesure et reprise</h3>
+                <p>
+                  Observe le taux de reponse, la vitesse de traitement et le moment
+                  ou l'humain doit reprendre la main.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>6. Ce qu'il faut retenir</h2>
+          <p>
+            Automatiser la prospection ne veut pas dire industrialiser l'approximation.
+            Cela veut dire enlever les taches qui ralentissent la relation, structurer
+            les bonnes informations, et faire en sorte que les bons leads tombent
+            entre de bonnes mains plus vite.
+          </p>
+          <p>
+            Si ton systeme respecte le contexte, le timing et les points de bascule
+            vers l'humain, tu ne deviens pas plus froid. Tu deviens plus fiable,
+            plus rapide et plus clair. C'est exactement la difference entre une
+            prospection subie et une acquisition pilotee.
+          </p>
+        </section>
+      </article>
+
+      <section class="proof" aria-label="Avis et CTA final">
+        <div class="proof__header">
+          <div class="proof__eyebrow">Avis verifies CODEXINE</div>
+          <h2>LE PROCHAIN RETOUR ICI, <span>PEUT ETRE LE VOTRE.</span></h2>
+          <p class="proof__lead">
+            Pas besoin de promesses irreelles. Quand un systeme est bien pense, les
+            resultats se voient dans le temps gagne, les relances mieux gerees et
+            la clarte des prochaines actions.
+          </p>
+        </div>
+
+        <div class="proof__grid">
+          <article class="proof-card proof-card--featured">
+            <div class="proof-card__badge">Prospection automatisee</div>
+            <p class="proof-card__quote">
+              J'ai pris l'appel en etant hyper sceptique. Le gars est direct, il m'a
+              pas vendu de reve. Il m'a juste dit ou je perdais mon temps.
+              Resultat : j'ai automatise mon process de prospection en 2 jours.
+              Meilleur rapport qualite-prix de l'annee.
+            </p>
+            <div class="proof-card__footer">
+              <img
+                class="proof-card__avatar"
+                src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=CamilleL"
+                alt="Camille L."
+                loading="lazy"
+              />
+              <div>
+                <p class="proof-card__name">Camille L.</p>
+                <p class="proof-card__role">Avis verifie</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="proof-card">
+            <div class="proof-card__badge">Clients signes</div>
+            <p class="proof-card__quote">
+              La video trouver des clients m'a file 3 idees que j'ai appliquees tout
+              de suite. J'ai signe une presta 2 jours apres.
+            </p>
+            <div class="proof-card__footer">
+              <img
+                class="proof-card__avatar"
+                src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=SofiaK"
+                alt="Sofia K."
+                loading="lazy"
+              />
+              <div>
+                <p class="proof-card__name">Sofia K.</p>
+                <p class="proof-card__role">Avis verifie</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="proof-card">
+            <div class="proof-card__badge">Strategie plus claire</div>
+            <p class="proof-card__quote">
+              L'appel m'a pose 3 questions que personne ne m'avait jamais posees.
+              Je me suis rendue compte que je faisais du bruit au lieu de faire du resultat.
+            </p>
+            <div class="proof-card__footer">
+              <img
+                class="proof-card__avatar"
+                src="https://api.dicebear.com/9.x/notionists-neutral/svg?seed=SarahG"
+                alt="Sarah G."
+                loading="lazy"
+              />
+              <div>
+                <p class="proof-card__name">Sarah G.</p>
+                <p class="proof-card__role">Avis verifie</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="proof__cta">
+          <div>
+            <h3>Accede a la page principale et vois comment CODEXINE structure tout le reste</h3>
+            <p>
+              Si tu veux passer d'outils disperses a un systeme IA qui suit,
+              qualifie, relance et accelere, la suite commence sur l'accueil.
+            </p>
+          </div>
+          <a class="proof__button" id="silent-cta-button" href="https://codexine.fr/index.html?v=20260410">
+            Acceder a la formation gratuite
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="https://codexine.fr/index.html?v=20260410" aria-label="Accueil CODEXINE">
+          <img class="footer-logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        </a>
+        <a class="footer-link" href="https://codexine.fr/infos.html?v=20260410">Infos</a>
+        <a class="footer-link" href="https://codexine.fr/conditions-utilisation.html?v=20260410">Conditions d'utilisation</a>
+        <a class="footer-link" href="https://codexine.fr/politique-confidentialite.html?v=20260410">Politique de confidentialite</a>
+        <a class="footer-link" href="https://codexine.fr/mentions-legales.html?v=20260410">Mentions legales</a>
+        <p class="footer-copy">© 2026 CODEXINE by Oscar.</p>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const TELEGRAM_BOT_TOKEN = "8781312268:AAEWod2wkAD6o7792WQuRdC6DDqbz2aV-O8";
+        const TELEGRAM_CHAT_ID = "8253411443";
+        const button = document.getElementById("silent-cta-button");
+
+        if (!button) {
+          return;
+        }
+
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          const targetUrl =
+            button.getAttribute("href") || "https://codexine.fr/index.html?v=20260410";
+          const message = [
+            "Nouveau clic CTA blog CODEXINE",
+            "Source: comment-automatiser-la-prospection-et-le-suivi-client-sans-devenir-robotique",
+            "Article: Comment automatiser la prospection et le suivi client sans devenir robotique",
+            `Page: ${window.location.href}`,
+            `Destination: ${targetUrl}`,
+            `User agent: ${navigator.userAgent}`,
+            `Langue: ${navigator.language || "inconnue"}`,
+            `Date: ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}`,
+          ].join("\n");
+
+          fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: new URLSearchParams({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: message,
+            }),
+            keepalive: true,
+          }).catch(() => {});
+
+          window.setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 120);
+        });
+      })();
+    </script>
+  </body>
+</html>
