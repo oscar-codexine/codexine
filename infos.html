@@ -221,19 +221,19 @@
       .blog-grid {
         margin-top: 24px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
 
       .blog-card {
         position: relative;
         overflow: hidden;
-        border-radius: 28px;
+        border-radius: 22px;
         border: 1px solid rgba(255, 255, 255, 0.08);
         background:
           linear-gradient(180deg, rgba(14, 14, 14, 0.96), rgba(8, 8, 8, 0.98)),
           linear-gradient(135deg, rgba(255, 88, 99, 0.06), transparent 44%);
-        box-shadow: 0 24px 54px rgba(0, 0, 0, 0.22);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
       }
 
       .blog-card::before {
@@ -245,8 +245,12 @@
       }
 
       .blog-card__button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
         width: 100%;
-        padding: 0;
+        padding: 18px 22px;
         border: 0;
         color: inherit;
         text-align: left;
@@ -254,82 +258,37 @@
         background: transparent;
       }
 
+      .blog-card__button::after {
+        content: "↗";
+        flex: 0 0 auto;
+        color: rgba(255, 255, 255, 0.42);
+        font-size: 1rem;
+        transition:
+          transform 180ms ease,
+          color 180ms ease;
+      }
+
       .blog-card__button:disabled {
         cursor: wait;
-      }
-
-      .blog-card__art {
-        position: relative;
-        height: 188px;
-        background:
-          radial-gradient(circle at 18% 18%, rgba(255, 88, 99, 0.26), transparent 24%),
-          radial-gradient(circle at 84% 24%, rgba(255, 88, 99, 0.12), transparent 20%),
-          linear-gradient(135deg, rgba(38, 8, 10, 0.96), rgba(10, 10, 10, 0.98));
-        background-size: cover;
-        background-position: center;
-      }
-
-      .blog-card__art::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 22%),
-          linear-gradient(180deg, transparent 42%, rgba(7, 7, 7, 0.84) 100%);
-      }
-
-      .blog-card__body {
-        position: relative;
-        padding: 22px 22px 24px;
-      }
-
-      .blog-card__meta {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 8px 11px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 88, 99, 0.18);
-        background: rgba(255, 88, 99, 0.08);
-        color: #ffd9dc;
-        font-size: 0.74rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+        opacity: 0.72;
       }
 
       .blog-card__title {
-        margin: 16px 0 0;
-        font-size: 1.32rem;
-        line-height: 1.28;
+        margin: 0;
+        font-size: 1.08rem;
+        font-weight: 600;
+        line-height: 1.48;
         color: #fff6f6;
-      }
-
-      .blog-card__desc {
-        margin: 12px 0 0;
-        color: var(--muted);
-        line-height: 1.68;
-      }
-
-      .blog-card__cta {
-        margin-top: 18px;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        color: #ffecee;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-
-      .blog-card__cta::after {
-        content: "↗";
-        font-size: 1.02rem;
       }
 
       .blog-card:hover {
         transform: translateY(-3px);
         border-color: rgba(255, 88, 99, 0.18);
+      }
+
+      .blog-card:hover .blog-card__button::after {
+        transform: translate(2px, -2px);
+        color: rgba(255, 255, 255, 0.84);
       }
 
       .blog-card,
@@ -341,7 +300,7 @@
       }
 
       .blog-card.is-loading {
-        min-height: 350px;
+        min-height: 72px;
         background:
           linear-gradient(90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
           linear-gradient(180deg, rgba(14, 14, 14, 0.96), rgba(8, 8, 8, 0.98));
@@ -482,15 +441,7 @@
 
         .blog-grid {
           grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .blog-card__art {
-          height: 170px;
-        }
-
-        .blog-card__body {
-          padding: 18px 18px 20px;
+          gap: 12px;
         }
 
         .footer-inner {
@@ -521,7 +472,7 @@
         </div>
 
         <p class="library-note">
-          Chaque carte ouvre le fichier HTML du blog dans le navigateur, sans t'envoyer vers GitHub.
+          Chaque titre ouvre directement le blog dans le navigateur, sans t'envoyer vers GitHub.
         </p>
 
         <div class="blog-grid" id="blog-grid" aria-live="polite">
