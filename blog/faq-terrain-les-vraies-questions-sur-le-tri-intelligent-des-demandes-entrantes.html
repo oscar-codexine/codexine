@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences | CODEXINE</title>
+    <meta name="description" content="Découvrez comment gérer efficacement les demandes entrantes avec le tri intelligent. Des réponses pratiques aux questions de terrain pour une meilleure gestion du volume." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Oscar Sander" />
+    <meta name="theme-color" content="#050505" />
+    <link rel="canonical" href="https://codexine.fr/blog/faq-terrain-les-vraies-questions-sur-le-tri-intelligent-des-demandes-entrantes.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CODEXINE" />
+    <meta property="og:title" content="FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences | CODEXINE" />
+    <meta property="og:description" content="Découvrez comment gérer efficacement les demandes entrantes avec le tri intelligent. Des réponses pratiques aux questions de terrain pour une meilleure gestion du volume." />
+    <meta property="og:url" content="https://codexine.fr/blog/faq-terrain-les-vraies-questions-sur-le-tri-intelligent-des-demandes-entrantes.html" />
+    <meta property="og:image" content="https://codexine.fr/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences | CODEXINE" />
+    <meta name="twitter:description" content="Découvrez comment gérer efficacement les demandes entrantes avec le tri intelligent. Des réponses pratiques aux questions de terrain pour une meilleure gestion du volume." />
+    <meta name="twitter:image" content="https://codexine.fr/logo.png" />
+    <link rel="icon" type="image/png" href="https://codexine.fr/icon.png?v=20260410" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --panel: rgba(12, 12, 12, 0.92);
+        --panel-soft: rgba(18, 11, 12, 0.92);
+        --line: rgba(255, 255, 255, 0.08);
+        --line-red: rgba(255, 88, 99, 0.28);
+        --text: #faf5f5;
+        --muted: #a88f93;
+        --muted-strong: #d7c0c4;
+        --red: #ff5863;
+        --red-soft: #ff939b;
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Outfit", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 88, 99, 0.18), transparent 26%),
+          radial-gradient(circle at 12% 14%, rgba(126, 17, 28, 0.34), transparent 28%),
+          radial-gradient(circle at 86% 20%, rgba(255, 88, 99, 0.1), transparent 22%),
+          linear-gradient(180deg, #080808 0%, #040404 54%, #060304 100%);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.32;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 95%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: relative;
+        z-index: 1;
+        padding: 26px 0 8px;
+      }
+
+      .topbar__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .topbar__brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .topbar__logo {
+        width: min(190px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .topbar__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .topbar__link:hover {
+        color: #fff4f4;
+        border-color: rgba(255, 88, 99, 0.18);
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        padding: 18px 0 72px;
+      }
+
+      .hero {
+        width: min(1000px, 100%);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        width: min(280px, 100%);
+        height: auto;
+        margin: 0 auto 26px;
+        filter: drop-shadow(0 14px 28px rgba(255, 88, 99, 0.16));
+      }
+
+      .hero-divider {
+        width: min(180px, 36vw);
+        height: 2px;
+        margin: 22px auto 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, transparent, var(--red), transparent);
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.24);
+      }
+
+      .hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd6d9;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 22px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(4.2rem, 9vw, 7.4rem);
+        line-height: 0.92;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+        text-shadow:
+          0 0 20px rgba(255, 88, 99, 0.08),
+          0 0 44px rgba(255, 88, 99, 0.12);
+      }
+
+      .hero__lead {
+        width: min(760px, 100%);
+        margin: 20px auto 0;
+        color: var(--muted-strong);
+        font-size: 1.08rem;
+        line-height: 1.82;
+      }
+
+      .hero__meta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .hero__meta span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.88rem;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+        gap: 22px;
+        align-items: stretch;
+        margin-top: 40px;
+      }
+
+      .hero__visual {
+        width: min(960px, 100%);
+        margin: 30px auto 0;
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(10, 10, 10, 0.76);
+        box-shadow: var(--shadow);
+      }
+
+      .hero__visual img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .hero-card,
+      .summary-card {
+        position: relative;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-card {
+        min-height: 360px;
+        padding: 32px;
+        background:
+          radial-gradient(circle at 84% 18%, rgba(255, 88, 99, 0.16), transparent 24%),
+          linear-gradient(180deg, rgba(14, 14, 14, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+        background-size: 22px 22px;
+        opacity: 0.16;
+        pointer-events: none;
+      }
+
+      .hero-card__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+      }
+
+      .hero-card__label {
+        margin: 0;
+        color: #ffb9be;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-card h2 {
+        margin: 14px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.6rem, 5vw, 4rem);
+        line-height: 0.94;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .hero-card p {
+        width: min(520px, 100%);
+        margin: 16px 0 0;
+        color: rgba(255, 239, 240, 0.84);
+        line-height: 1.76;
+      }
+
+      .summary-card {
+        padding: 26px;
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.14), transparent 28%),
+          linear-gradient(180deg, rgba(15, 11, 12, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .summary-card h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .summary-list {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 14px;
+      }
+
+      .summary-list li {
+        position: relative;
+        padding-left: 18px;
+        color: rgba(255, 230, 232, 0.78);
+        line-height: 1.64;
+      }
+
+      .summary-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--red), var(--red-soft));
+        box-shadow: 0 0 16px rgba(255, 88, 99, 0.5);
+        transform: translateY(-50%);
+      }
+
+      .article {
+        width: min(980px, 100%);
+        margin: 34px auto 0;
+      }
+
+      .article-block {
+        margin-top: 22px;
+        padding: 30px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(13, 13, 13, 0.95), rgba(8, 8, 8, 0.98));
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
+      }
+
+      .article-block:first-child {
+        margin-top: 0;
+      }
+
+      .article-block h2 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .article-block p {
+        margin: 16px 0 0;
+        color: rgba(255, 231, 233, 0.76);
+        line-height: 1.84;
+        font-size: 1rem;
+      }
+
+      .article-block p strong {
+        color: #fff4f4;
+      }
+
+      .split-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+      }
+
+      .mini-card {
+        padding: 20px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.12), transparent 28%),
+          linear-gradient(180deg, rgba(17, 11, 12, 0.94), rgba(9, 9, 9, 0.98));
+      }
+
+      .mini-card__index {
+        color: #ffb0b6;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .mini-card h3 {
+        margin: 12px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .mini-card p {
+        margin-top: 12px;
+        color: rgba(255, 228, 230, 0.74);
+        line-height: 1.68;
+      }
+
+      .system-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .system-step {
+        padding: 22px;
+        border-radius: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.95), rgba(8, 8, 8, 0.98));
+      }
+
+      .system-step__top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .system-step__number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffb5bb;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+      }
+
+      .system-step h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .system-step p {
+        margin: 14px 0 0;
+        color: rgba(255, 228, 230, 0.76);
+        line-height: 1.72;
+      }
+
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .stack-card {
+        padding: 22px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .stack-card h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .stack-card p {
+        margin: 12px 0 0;
+        color: rgba(255, 228, 230, 0.74);
+      }
+
+      .stack-card ul {
+        margin: 14px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .stack-card li {
+        color: rgba(255, 228, 230, 0.74);
+        line-height: 1.6;
+      }
+
+      .stack-card li strong {
+        color: #fff4f4;
+      }
+
+      .roadmap {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .roadmap-item {
+        display: grid;
+        grid-template-columns: 108px minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
+        padding: 18px 20px;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.94), rgba(8, 8, 8, 0.98));
+      }
+
+      .roadmap-item__week {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 12px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd8db;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .roadmap-item h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .roadmap-item p {
+        margin: 10px 0 0;
+      }
+
+      .checklist {
+        margin-top: 24px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .checklist-item {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .checklist-item__mark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        background: rgba(255, 88, 99, 0.1);
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        color: #ffb0b6;
+        font-weight: 800;
+      }
+
+      .checklist-item p {
+        margin: 0;
+      }
+
+      .cta {
+        position: relative;
+        width: min(980px, 100%);
+        margin: 28px auto 0;
+        padding: 44px 42px;
+        border-radius: 34px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.22), transparent 28%),
+          radial-gradient(circle, rgba(255, 255, 255, 0.07) 1.2px, transparent 1.2px),
+          linear-gradient(180deg, rgba(18, 7, 9, 0.98), rgba(10, 5, 6, 0.98));
+        background-size: auto, 24px 24px, auto;
+        box-shadow:
+          0 30px 80px rgba(0, 0, 0, 0.34),
+          0 0 30px rgba(255, 88, 99, 0.08);
+        overflow: hidden;
+      }
+
+      .cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+        pointer-events: none;
+      }
+
+      .cta h2 {
+        margin: 0;
+        text-align: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(3rem, 6vw, 4.8rem);
+        line-height: 0.96;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+      }
+
+      .cta h2 span {
+        color: var(--red-soft);
+      }
+
+      .cta__lead {
+        width: min(760px, 100%);
+        margin: 18px auto 0;
+        text-align: center;
+        color: rgba(255, 231, 233, 0.82);
+        font-size: 1.06rem;
+        line-height: 1.82;
+      }
+
+      .cta__points {
+        margin-top: 30px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .cta__point {
+        display: grid;
+        grid-template-columns: 3px minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
+      }
+
+      .cta__bar {
+        width: 3px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(255, 88, 99, 0.18), var(--red), rgba(255, 88, 99, 0.18));
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.26);
+      }
+
+      .cta__point strong {
+        display: block;
+        color: #fff4f4;
+        font-size: 1.2rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .cta__point p {
+        margin: 8px 0 0;
+        color: rgba(255, 231, 233, 0.78);
+        line-height: 1.76;
+      }
+
+      .cta__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 34px;
+      }
+
+      .cta__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 320px;
+        padding: 18px 24px;
+        border-radius: 20px;
+        border: 0;
+        background: linear-gradient(135deg, var(--red), #ff7d86);
+        color: #fff6f6;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        box-shadow: 0 18px 42px rgba(255, 88, 99, 0.28);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .cta__button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 24px 52px rgba(255, 88, 99, 0.34);
+      }
+
+      .site-footer {
+        position: relative;
+        z-index: 1;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto 32px;
+        padding: 18px 0 0;
+      }
+
+      .site-footer::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 22px;
+        background: linear-gradient(90deg, transparent, rgba(255, 88, 99, 0.32), transparent);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .footer-logo {
+        width: min(176px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .footer-link,
+      .footer-copy {
+        color: rgba(255, 255, 255, 0.74);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.88rem;
+      }
+
+      .footer-link:hover {
+        color: #fff4f4;
+      }
+
+      @media (max-width: 980px) {
+        .hero__grid,
+        .split-grid,
+        .system-grid,
+        .stack-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .roadmap-item {
+          grid-template-columns: 1fr;
+        }
+
+        .site-footer {
+          width: min(100%, calc(100% - 24px));
+        }
+
+        .footer-inner {
+          justify-content: center;
+        }
+
+        .footer-copy {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100%, calc(100% - 20px));
+        }
+
+        .topbar {
+          padding-top: 20px;
+        }
+
+        .topbar__inner {
+          flex-direction: column;
+        }
+
+        .hero h1 {
+          font-size: clamp(3.2rem, 13vw, 4.8rem);
+        }
+
+        .hero__lead {
+          font-size: 0.96rem;
+          line-height: 1.74;
+        }
+
+        .hero__visual {
+          margin-top: 22px;
+          border-radius: 24px;
+        }
+
+        .hero__visual img {
+          aspect-ratio: 16 / 10;
+        }
+
+        .hero-card,
+        .summary-card,
+        .article-block,
+        .cta {
+          padding: 22px 18px;
+          border-radius: 24px;
+        }
+
+        .hero-card {
+          min-height: 300px;
+        }
+
+        .hero-card h2,
+        .summary-card h3,
+        .article-block h2,
+        .cta h2 {
+          font-size: clamp(2.2rem, 10vw, 3.3rem);
+        }
+
+        .mini-card h3,
+        .system-step h3,
+        .stack-card h3,
+        .roadmap-item h3 {
+          font-size: 1.7rem;
+        }
+
+        .article-block p,
+        .mini-card p,
+        .system-step p,
+        .stack-card p,
+        .cta__point p {
+          font-size: 0.94rem;
+          line-height: 1.72;
+        }
+
+        .cta__button {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .footer-inner {
+          gap: 14px 18px;
+        }
+      }
+    </style>
+    
+    <style>
+      .cta-choice {
+        display: grid;
+        gap: 24px;
+      }
+
+      .cta-choice__eyebrow {
+        margin: 0;
+        color: rgba(255, 139, 147, 0.92);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+        letter-spacing: 0.16em;
+      }
+
+      .cta-choice__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .cta-choice__card {
+        border-radius: 24px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          linear-gradient(180deg, rgba(255, 88, 99, 0.08), rgba(255, 88, 99, 0.02)),
+          rgba(10, 7, 7, 0.82);
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+        padding: 20px 18px;
+      }
+
+      .cta-choice__card strong {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 0.96rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .cta-choice__card p {
+        margin: 0;
+        color: rgba(247, 245, 243, 0.78);
+      }
+
+      .cta-form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .cta-form__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .cta-form__field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .cta-form__field span {
+        color: rgba(247, 245, 243, 0.72);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .cta-form__field--full {
+        grid-column: 1 / -1;
+      }
+
+      .cta-form__input {
+        width: 100%;
+        border: 1px solid rgba(255, 88, 99, 0.24);
+        border-radius: 18px;
+        background: rgba(8, 6, 6, 0.86);
+        color: #f7f5f3;
+        padding: 16px 18px;
+        font: inherit;
+        outline: none;
+        transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+      }
+
+      .cta-form__input:focus {
+        border-color: rgba(255, 88, 99, 0.72);
+        box-shadow: 0 0 0 4px rgba(255, 88, 99, 0.12);
+        transform: translateY(-1px);
+      }
+
+      .cta__actions--stack {
+        align-items: flex-start;
+      }
+
+      .cta-form__status {
+        margin: 0;
+        color: rgba(247, 245, 243, 0.82);
+        font-size: 0.95rem;
+      }
+
+      .cta-form__status[hidden] {
+        display: none;
+      }
+
+      @media (max-width: 920px) {
+        .cta-choice__grid,
+        .cta-form__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-form__field--full {
+          grid-column: auto;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences",
+  "description": "Découvrez comment gérer efficacement les demandes entrantes avec le tri intelligent. Des réponses pratiques aux questions de terrain pour une meilleure gestion du volume.",
+  "author": {
+    "@type": "Person",
+    "name": "Oscar Sander"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CODEXINE",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codexine.fr/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://codexine.fr/blog/faq-terrain-les-vraies-questions-sur-le-tri-intelligent-des-demandes-entrantes.html",
+  "datePublished": "2026-04-12",
+  "dateModified": "2026-04-12"
+}
+    </script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <img class="logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        <div class="hero__eyebrow">FAQ terrain : Le tri intelligent des demandes entrantes</div>
+        <h1>FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences</h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <p class="hero__lead">Des réponses concrètes et utiles pour les freelances et petites agences qui cherchent à gérer efficacement leur travail.</p>
+        <div class="hero__meta">
+          <span>12 avril 2026</span>
+          <span>Lecture 11 min</span>
+          <span>le tri intelligent des demandes entrantes</span>
+        </div>
+
+        <figure class="hero__visual">
+          <img src="https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Illustration du theme le tri intelligent des demandes entrantes dans un contexte business et automatisation" loading="eager" />
+        </figure>
+
+        <div class="hero__grid">
+          <div class="hero-card">
+            <div class="hero-card__inner">
+              <p class="hero-card__label">Commencez dès aujourd&#x27;hui</p>
+              <h2>Proposez un système de capture et qualification des leads plus propre avant d&#x27;ajouter du volume</h2>
+              <p>Optimisez votre temps et vos ressources en capturant et qualifiant les leads de manière intelligente. Découvrez comment avec notre guide complet sur le tri intelligent des demandes entrantes.</p>
+            </div>
+          </div>
+
+          <aside class="summary-card" aria-label="Resume">
+            <h3>Les vraies questions sur le tri intelligent des demandes entrantes</h3>
+            <ul class="summary-list">
+              <li>Qu&#x27;est-ce que le tri intelligent des demandes entrantes ?</li>
+              <li>Comment gérer efficacement un volume important de demandes ?</li>
+              <li>Quelles sont les meilleures pratiques pour une gestion optimale ?</li>
+              <li>Comment mesurer la performance du tri intelligent ?</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <article class="article">
+        <section class="article-block">
+          <h2>Le tri intelligent des demandes entrantes : Vraies questions et réponses pour les freelances et petites agences</h2>
+          <p>Qu&#x27;est-ce que le tri intelligent des demandes entrantes ? Le tri intelligent est une méthode qui permet de classer et de prioriser les demandes en fonction de leur importance, de leur pertinence et de leurs risques. Cela aide à gérer efficacement un volume important de demandes tout en maximisant la productivité.</p>
+          <p>Comment gérer efficacement un volume important de demandes ? Pour cela, il est essentiel d&#x27;avoir une méthode claire et structurée pour trier les demandes. Il faut établir des critères précis et cohérents qui permettent de classer les demandes en fonction de leur urgence et de leur pertinence.</p>
+
+          <div class="split-grid">
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 01</div>
+              <h3>Quelles sont les meilleures pratiques pour une gestion optimale ?</h3>
+              <p>Il est recommandé de suivre des pratiques telles que l&#x27;évaluation des besoins, la priorisation des demandes et la mise en place d&#x27;un système de suivi. Il est également important de maintenir une communication claire avec les clients pour leur tenir informés sur le statut de leurs demandes.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 02</div>
+              <h3>Comment mesurer la performance du tri intelligent ?</h3>
+              <p>La performance peut être mesurée en fonction de plusieurs indicateurs tels que le temps passé pour traiter les demandes, le nombre de demandes traitées par jour et le taux de satisfaction des clients. Il est également possible d&#x27;utiliser des outils de gestion du projet pour suivre la progression.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 03</div>
+              <h3>Proposer un système de capture et qualification des leads plus propre avant d&#x27;ajouter du volume.</h3>
+              <p>Avant de s&#x27;investir dans le tri intelligent des demandes entrantes, il est recommandé de mettre en place un système de capture et qualification des leads. Cela permet de sélectionner les clients les plus pertinents et de leur proposer des services qui correspondent à leurs besoins. Ensuite, on peut ajouter du volume progressivement tout en assurant une gestion optimale.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>Les vraies questions sur le tri intelligent des demandes entrantes - Réponses concrètes pour les freelances et petites agences</h2>
+          <p>Vous cherchez à gérer efficacement votre travail ? Apprenez comment répondre aux vraies questions de terrain sur le tri intelligent des demandes entrantes.</p>
+
+          <div class="system-grid">
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">01</span>
+                <h3>Qu&#x27;est-ce que le tri intelligent des demandes entrantes ?</h3>
+              </div>
+              <p>Le tri intelligent des demandes entrantes consiste à classer et à prioriser les demandes de clients en fonction de leur importance, de leur urgence et de leur potentiel commercial. Cela permet d&#x27;optimiser votre temps et vos ressources pour répondre aux clients les plus pertinents.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">02</span>
+                <h3>Comment gérer efficacement un volume important de demandes ?</h3>
+              </div>
+              <p>Pour gérer un volume important de demandes, utilisez des outils et méthodes spécifiques. Créez une liste des demandes, classifiez-les en fonction de leur priorité et allouez du temps pour les traiter dans l&#x27;ordre approprié. Utilisez également des techniques comme la délégation et le partage des tâches.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">03</span>
+                <h3>Quelles sont les meilleures pratiques pour une gestion optimale ?</h3>
+              </div>
+              <p>Pour une gestion optimale, adoptez des pratiques telles que l&#x27;automatisation du tri, la mise en place d&#x27;un système de suivi et la formation régulière de votre équipe. Créez également des modèles de réponse standardisés pour les demandes courantes afin de gagner du temps.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">04</span>
+                <h3>Comment mesurer la performance du tri intelligent ?</h3>
+              </div>
+              <p>Mesurez la performance du tri intelligent en utilisant des indicateurs clés comme le taux de conversion, le temps moyen pour traiter une demande et le nombre de demandes traitées par unité de temps. Comparez ces données avec les performances précédentes pour identifier les domaines d&#x27;amélioration.</p>
+            </div>
+          </div>
+
+          <p>En répondant aux vraies questions sur le tri intelligent des demandes entrantes, vous pouvez améliorer la productivité et gagner du temps. Commencez dès aujourd&#x27;hui en proposant un système de capture et qualification des leads plus propre avant d&#x27;ajouter du volume.</p>
+        </section>
+
+        <section class="article-block">
+          <h2>FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences</h2>
+          <p>Découvrez comment gérer efficacement un volume important de demandes avec une approche intelligente. Voici les réponses aux questions les plus courantes sur ce sujet.</p>
+
+          <div class="split-grid">
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 01</div>
+              <h3>Qu&#x27;est-ce que le tri intelligent des demandes entrantes ?</h3>
+              <p>Le tri intelligent des demandes entrantes consiste à classer et à prioriser les propositions de travail en fonction de leur pertinence, de la qualité du projet et de votre disponibilité. Cela vous permet d&#x27;accepter uniquement les opportunités qui correspondent parfaitement à vos compétences et à vos objectifs.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 02</div>
+              <h3>Comment gérer efficacement un volume important de demandes ?</h3>
+              <p>Pour gérer efficacement un grand nombre de propositions, utilisez des outils de gestion de projet comme Trello ou Asana. Créez des listes pour chaque étape du processus (reception, tri, qualification, suivi) et déplacez les tâches en fonction de leur avancement. Cela vous permet de suivre facilement le flux de travail et d&#x27;optimiser votre temps.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 03</div>
+              <h3>Quelles sont les meilleures pratiques pour une gestion optimale ?</h3>
+              <p>Pour une gestion optimale, établissez des critères clairs pour le tri et la qualification. Utilisez un système de scoring ou de points pour évaluer chaque proposition. Également, n&#x27;oubliez pas de maintenir une communication régulière avec les clients potentiels pour clarifier vos attentes et leur offrir une meilleure expérience.</p>
+            </div>
+          </div>
+
+          <p>En appliquant ces conseils, vous serez mieux équipé pour gérer un volume important de demandes entrantes. N&#x27;oubliez pas que la clé du succès est l&#x27;efficacité et la qualité. Investissez dans des outils et des processus qui vous permettent d&#x27;être plus productif.</p>
+        </section>
+
+        <section class="article-block">
+          <h2>FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences</h2>
+          <p>Découvrez comment gérer efficacement un volume important de demandes avec une approche structurée. Des solutions simples à des systèmes avancés, nous avons les réponses pour optimiser votre gestion.</p>
+
+          <div class="stack-grid">
+            <div class="stack-card">
+              <h3>Simple</h3>
+              <p>Pour les freelances et petites agences débutantes, voici quelques astuces pratiques pour gérer efficacement leur travail quotidien.</p>
+              <ul>
+                <li>Créez un système de classement simple basé sur le type de demande (par exemple : freelance, projet, etc.).</li>
+                <li>Utilisez des outils numériques comme des listes de tâches ou des applications de gestion de projet pour suivre les demandes en cours.</li>
+                <li>Établissez un calendrier quotidien pour traiter les demandes et prévoir le temps nécessaire pour chaque tâche.</li>
+              </ul>
+            </div>
+
+            <div class="stack-card">
+              <h3>Solide</h3>
+              <p>Pour les freelances et petites agences plus expérimentées, une approche plus structurée est nécessaire pour optimiser la gestion des demandes.</p>
+              <ul>
+                <li>Créez un système de tri intelligent basé sur plusieurs critères (type de demande, priorité, délais, etc.).</li>
+                <li>Utilisez des outils spécialisés comme des logiciels de gestion de projet ou des plateformes de collaboration pour suivre les demandes en temps réel.</li>
+                <li>Établissez des processus de qualification rigoureux pour éliminer les demandes non pertinentes et concentrer vos efforts sur celles qui ont le plus d&#x27;impact.</li>
+              </ul>
+            </div>
+
+            <div class="stack-card">
+              <h3>Scale</h3>
+              <p>Pour les freelances et petites agences souhaitant gérer un volume important de demandes, une approche scalable est nécessaire pour maintenir l&#x27;efficacité.</p>
+              <ul>
+                <li>Créez un système de tri intelligent basé sur des algorithmes automatisés pour classer et prioriser les demandes en fonction de plusieurs critères.</li>
+                <li>Utilisez des outils spécialisés comme des logiciels de gestion de projet ou des plateformes de collaboration pour suivre les demandes en temps réel et gérer le volume important.</li>
+                <li>Établissez un processus de qualification rigoureux pour éliminer les demandes non pertinentes et concentrer vos efforts sur celles qui ont le plus d&#x27;impact.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences</h2>
+          <p>Découvrez comment gérer efficacement un volume important de demandes avec une stratégie de tri intelligente. Des réponses concrètes et utiles pour les freelances et petites agences qui cherchent à optimiser leur travail.</p>
+
+          <div class="roadmap">
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 1</div>
+              <div>
+                <h3>Comprendre le tri intelligent des demandes entrantes</h3>
+                <p>Qu&#x27;est-ce que le tri intelligent des demandes entrantes ? Découvrez ce qui vous permet de gérer efficacement un volume important de demandes en priorisant les tâches les plus importantes.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 2</div>
+              <div>
+                <h3>Pratiques de gestion optimale</h3>
+                <p>Quelles sont les meilleures pratiques pour une gestion optimale des demandes entrantes ? Apprenez comment classer, prioriser et déléguer les tâches pour maximiser votre productivité.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 3</div>
+              <div>
+                <h3>Mesurer la performance du tri intelligent</h3>
+                <p>Comment mesurer la performance du tri intelligent ? Découvrez des indicateurs clés de performance (KPI) pour évaluer l&#x27;efficacité de votre système de gestion des demandes.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 4</div>
+              <div>
+                <h3>Proposer un système de capture et qualification des leads plus propre</h3>
+                <p>Commencez dès aujourd&#x27;hui pour une meilleure gestion du volume et un temps libre supplémentaire. Proposez un système de capture et qualification des leads plus propre avant d&#x27;ajouter du volume.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences</h2>
+          <p>Découvrez comment gérer efficacement un volume important de demandes entrantes avec un système de tri intelligent. Des réponses concrètes et utiles pour les freelances et petites agences qui cherchent à optimiser leur gestion.</p>
+
+          <div class="checklist">
+            <div class="checklist-item">
+              <div class="checklist-item__mark">1</div>
+              <p>Qu&#x27;est-ce que le tri intelligent des demandes entrantes ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">2</div>
+              <p>Comment gérer efficacement un volume important de demandes ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">3</div>
+              <p>Quelles sont les meilleures pratiques pour une gestion optimale ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">4</div>
+              <p>Comment mesurer la performance du tri intelligent ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">5</div>
+              <p>Proposez un système de capture et qualification des leads plus propre avant d&#x27;ajouter du volume.</p>
+            </div>
+          </div>
+
+          <p>Commencez dès aujourd&#x27;hui pour une meilleure gestion du volume et un temps libre supplémentaire. Contactez-nous pour obtenir plus d&#x27;informations sur notre solution.</p>
+        </section>
+      </article>
+
+      <section class="cta" aria-label="CTA final">
+        <div class="cta-choice">
+          <p class="cta-choice__eyebrow">YOUTUBE CODEXINE</p>
+          <h2>Voir l'automatisation appliquee a des cas concrets</h2>
+          <p class="cta__lead">
+            La chaine YouTube CODEXINE permet de creuser les mecanismes, voir des exemples plus visuels
+            et comprendre comment une idee devient un systeme qui travaille vraiment.
+          </p>
+
+          <div class="cta-choice__grid">
+            <article class="cta-choice__card">
+              <strong>Demonstrations claires</strong>
+              <p>Des explications plus faciles a capter quand tu veux voir la logique en mouvement.</p>
+            </article>
+            <article class="cta-choice__card">
+              <strong>Cas d'usage reels</strong>
+              <p>Prospection, contenu, qualification, back-office: les sujets qui comptent pour une vraie activite.</p>
+            </article>
+            <article class="cta-choice__card">
+              <strong>Format plus vivant</strong>
+              <p>Parfait si tu veux apprendre en regardant plutot qu'en lisant encore un article de plus.</p>
+            </article>
+          </div>
+
+          <div class="cta__actions">
+            <a
+              class="cta__button"
+              data-codexine-cta="link"
+              data-cta-id="aller-sur-la-chaine-youtube"
+              data-cta-name="Aller sur la chaine YouTube"
+              href="https://www.youtube.com/@codexine"
+            >
+              Aller sur la chaine YouTube
+            </a>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="https://codexine.fr/index.html?v=20260410" aria-label="Accueil CODEXINE">
+          <img class="footer-logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        </a>
+        <a class="footer-link" href="https://codexine.fr/infos.html?v=20260410">Infos</a>
+        <a class="footer-link" href="https://codexine.fr/conditions-utilisation.html?v=20260410">Conditions d'utilisation</a>
+        <a class="footer-link" href="https://codexine.fr/politique-confidentialite.html?v=20260410">Politique de confidentialite</a>
+        <a class="footer-link" href="https://codexine.fr/mentions-legales.html?v=20260410">Mentions legales</a>
+        <p class="footer-copy">© 2026 CODEXINE by Oscar.</p>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const TELEGRAM_BOT_TOKEN = "8781312268:AAEWod2wkAD6o7792WQuRdC6DDqbz2aV-O8";
+        const TELEGRAM_CHAT_ID = "8253411443";
+        const nodes = document.querySelectorAll("[data-codexine-cta]");
+
+        if (!nodes.length) {
+          return;
+        }
+
+        const endpoint = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+        const sendMessage = (message) =>
+          fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: new URLSearchParams({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: message,
+            }),
+            keepalive: true,
+          });
+
+        const humanizeField = (value) =>
+          String(value || "")
+            .replace(/_/g, " ")
+            .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+        const buildBaseLines = (node, action, destination) => [
+            "Nouveau clic CTA blog CODEXINE",
+            "Source: " + "faq-terrain-les-vraies-questions-sur-le-tri-intelligent-des-demandes-entrantes",
+            "Article: " + "FAQ terrain : Le tri intelligent des demandes entrantes - Guide complet pour les freelances et petites agences",
+            `CTA: ${node.dataset.ctaName || "CTA inconnu"}`,
+            `CTA ID: ${node.dataset.ctaId || "sans-id"}`,
+            `Action: ${action}`,
+            `Page: ${window.location.href}`,
+            `Destination: ${destination || "aucune"}`,
+            `Referrer: ${document.referrer || "direct"}`,
+            `Viewport: ${window.innerWidth}x${window.innerHeight}`,
+            `Ecran: ${window.screen.width}x${window.screen.height}`,
+            `User agent: ${navigator.userAgent}`,
+            `Langue: ${navigator.language || "inconnue"}`,
+            `Date: ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}`,
+          ];
+
+        nodes.forEach((node) => {
+          if (node.matches("a")) {
+            node.addEventListener("click", (event) => {
+              event.preventDefault();
+              const targetUrl = node.getAttribute("href") || "https://codexine.fr/index.html?v=20260410";
+              const message = buildBaseLines(node, "click", targetUrl).join("\n");
+
+              sendMessage(message).catch(() => {});
+
+              window.setTimeout(() => {
+                window.location.href = targetUrl;
+              }, 120);
+            });
+            return;
+          }
+
+          if (!node.matches("form")) {
+            return;
+          }
+
+          node.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const destination = node.dataset.ctaDestination || "";
+            const formData = new FormData(node);
+            const extraLines = [];
+            const submitButton = node.querySelector('button[type="submit"]');
+            const statusNode = node.querySelector("[data-cta-status]");
+
+            for (const [key, value] of formData.entries()) {
+              const cleaned = String(value || "").trim();
+              if (!cleaned) {
+                continue;
+              }
+              extraLines.push(`${humanizeField(key)}: ${cleaned}`);
+            }
+
+            const message = buildBaseLines(node, "form_submit", destination)
+              .concat(extraLines)
+              .join("\n");
+
+            if (submitButton) {
+              submitButton.disabled = true;
+            }
+
+            sendMessage(message)
+              .catch(() => ({}))
+              .finally(() => {
+                node.reset();
+
+                if (statusNode) {
+                  statusNode.hidden = false;
+                  statusNode.textContent =
+                    node.dataset.successMessage || "Demande envoyee.";
+                }
+
+                if (submitButton) {
+                  submitButton.disabled = false;
+                }
+
+                if (destination) {
+                  window.setTimeout(() => {
+                    window.location.href = destination;
+                  }, 450);
+                }
+              });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
