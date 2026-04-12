@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Virage Décisif de Meta : Comment une Stratégie IA a Changé le Destin d&#x27;une Entreprise | CODEXINE</title>
+    <meta name="description" content="Découvrez comment la récente stratégie IA de Meta a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Oscar Sander" />
+    <meta name="theme-color" content="#050505" />
+    <link rel="canonical" href="https://codexine.fr/blog/le-virage-decisif-de-meta-qui-a-change-son-destin.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CODEXINE" />
+    <meta property="og:title" content="Le Virage Décisif de Meta : Comment une Stratégie IA a Changé le Destin d&#x27;une Entreprise | CODEXINE" />
+    <meta property="og:description" content="Découvrez comment la récente stratégie IA de Meta a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs." />
+    <meta property="og:url" content="https://codexine.fr/blog/le-virage-decisif-de-meta-qui-a-change-son-destin.html" />
+    <meta property="og:image" content="https://codexine.fr/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Le Virage Décisif de Meta : Comment une Stratégie IA a Changé le Destin d&#x27;une Entreprise | CODEXINE" />
+    <meta name="twitter:description" content="Découvrez comment la récente stratégie IA de Meta a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs." />
+    <meta name="twitter:image" content="https://codexine.fr/logo.png" />
+    <link rel="icon" type="image/png" href="https://codexine.fr/icon.png?v=20260410" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --panel: rgba(12, 12, 12, 0.92);
+        --panel-soft: rgba(18, 11, 12, 0.92);
+        --line: rgba(255, 255, 255, 0.08);
+        --line-red: rgba(255, 88, 99, 0.28);
+        --text: #faf5f5;
+        --muted: #a88f93;
+        --muted-strong: #d7c0c4;
+        --red: #ff5863;
+        --red-soft: #ff939b;
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Outfit", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 88, 99, 0.18), transparent 26%),
+          radial-gradient(circle at 12% 14%, rgba(126, 17, 28, 0.34), transparent 28%),
+          radial-gradient(circle at 86% 20%, rgba(255, 88, 99, 0.1), transparent 22%),
+          linear-gradient(180deg, #080808 0%, #040404 54%, #060304 100%);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.32;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 95%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: relative;
+        z-index: 1;
+        padding: 26px 0 8px;
+      }
+
+      .topbar__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .topbar__brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .topbar__logo {
+        width: min(190px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .topbar__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .topbar__link:hover {
+        color: #fff4f4;
+        border-color: rgba(255, 88, 99, 0.18);
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        padding: 18px 0 72px;
+      }
+
+      .hero {
+        width: min(1000px, 100%);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        width: min(280px, 100%);
+        height: auto;
+        margin: 0 auto 26px;
+        filter: drop-shadow(0 14px 28px rgba(255, 88, 99, 0.16));
+      }
+
+      .hero-divider {
+        width: min(180px, 36vw);
+        height: 2px;
+        margin: 22px auto 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, transparent, var(--red), transparent);
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.24);
+      }
+
+      .hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd6d9;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 22px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(4.2rem, 9vw, 7.4rem);
+        line-height: 0.92;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+        text-shadow:
+          0 0 20px rgba(255, 88, 99, 0.08),
+          0 0 44px rgba(255, 88, 99, 0.12);
+      }
+
+      .hero__lead {
+        width: min(760px, 100%);
+        margin: 20px auto 0;
+        color: var(--muted-strong);
+        font-size: 1.08rem;
+        line-height: 1.82;
+      }
+
+      .hero__meta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .hero__meta span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.88rem;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+        gap: 22px;
+        align-items: stretch;
+        margin-top: 40px;
+      }
+
+      .hero__visual {
+        width: min(960px, 100%);
+        margin: 30px auto 0;
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(10, 10, 10, 0.76);
+        box-shadow: var(--shadow);
+      }
+
+      .hero__visual img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .hero-card,
+      .summary-card {
+        position: relative;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-card {
+        min-height: 360px;
+        padding: 32px;
+        background:
+          radial-gradient(circle at 84% 18%, rgba(255, 88, 99, 0.16), transparent 24%),
+          linear-gradient(180deg, rgba(14, 14, 14, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+        background-size: 22px 22px;
+        opacity: 0.16;
+        pointer-events: none;
+      }
+
+      .hero-card__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+      }
+
+      .hero-card__label {
+        margin: 0;
+        color: #ffb9be;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-card h2 {
+        margin: 14px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.6rem, 5vw, 4rem);
+        line-height: 0.94;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .hero-card p {
+        width: min(520px, 100%);
+        margin: 16px 0 0;
+        color: rgba(255, 239, 240, 0.84);
+        line-height: 1.76;
+      }
+
+      .summary-card {
+        padding: 26px;
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.14), transparent 28%),
+          linear-gradient(180deg, rgba(15, 11, 12, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .summary-card h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .summary-list {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 14px;
+      }
+
+      .summary-list li {
+        position: relative;
+        padding-left: 18px;
+        color: rgba(255, 230, 232, 0.78);
+        line-height: 1.64;
+      }
+
+      .summary-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--red), var(--red-soft));
+        box-shadow: 0 0 16px rgba(255, 88, 99, 0.5);
+        transform: translateY(-50%);
+      }
+
+      .article {
+        width: min(980px, 100%);
+        margin: 34px auto 0;
+      }
+
+      .article-block {
+        margin-top: 22px;
+        padding: 30px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(13, 13, 13, 0.95), rgba(8, 8, 8, 0.98));
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
+      }
+
+      .article-block:first-child {
+        margin-top: 0;
+      }
+
+      .article-block h2 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .article-block p {
+        margin: 16px 0 0;
+        color: rgba(255, 231, 233, 0.76);
+        line-height: 1.84;
+        font-size: 1rem;
+      }
+
+      .article-block p strong {
+        color: #fff4f4;
+      }
+
+      .split-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+      }
+
+      .mini-card {
+        padding: 20px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.12), transparent 28%),
+          linear-gradient(180deg, rgba(17, 11, 12, 0.94), rgba(9, 9, 9, 0.98));
+      }
+
+      .mini-card__index {
+        color: #ffb0b6;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .mini-card h3 {
+        margin: 12px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .mini-card p {
+        margin-top: 12px;
+        color: rgba(255, 228, 230, 0.74);
+        line-height: 1.68;
+      }
+
+      .system-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .system-step {
+        padding: 22px;
+        border-radius: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.95), rgba(8, 8, 8, 0.98));
+      }
+
+      .system-step__top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .system-step__number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffb5bb;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+      }
+
+      .system-step h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .system-step p {
+        margin: 14px 0 0;
+        color: rgba(255, 228, 230, 0.76);
+        line-height: 1.72;
+      }
+
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .stack-card {
+        padding: 22px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .stack-card h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .stack-card p {
+        margin: 12px 0 0;
+        color: rgba(255, 228, 230, 0.74);
+      }
+
+      .stack-card ul {
+        margin: 14px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .stack-card li {
+        color: rgba(255, 228, 230, 0.74);
+        line-height: 1.6;
+      }
+
+      .stack-card li strong {
+        color: #fff4f4;
+      }
+
+      .roadmap {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .roadmap-item {
+        display: grid;
+        grid-template-columns: 108px minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
+        padding: 18px 20px;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.94), rgba(8, 8, 8, 0.98));
+      }
+
+      .roadmap-item__week {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 12px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd8db;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .roadmap-item h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .roadmap-item p {
+        margin: 10px 0 0;
+      }
+
+      .checklist {
+        margin-top: 24px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .checklist-item {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .checklist-item__mark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        background: rgba(255, 88, 99, 0.1);
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        color: #ffb0b6;
+        font-weight: 800;
+      }
+
+      .checklist-item p {
+        margin: 0;
+      }
+
+      .cta {
+        position: relative;
+        width: min(980px, 100%);
+        margin: 28px auto 0;
+        padding: 44px 42px;
+        border-radius: 34px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.22), transparent 28%),
+          radial-gradient(circle, rgba(255, 255, 255, 0.07) 1.2px, transparent 1.2px),
+          linear-gradient(180deg, rgba(18, 7, 9, 0.98), rgba(10, 5, 6, 0.98));
+        background-size: auto, 24px 24px, auto;
+        box-shadow:
+          0 30px 80px rgba(0, 0, 0, 0.34),
+          0 0 30px rgba(255, 88, 99, 0.08);
+        overflow: hidden;
+      }
+
+      .cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+        pointer-events: none;
+      }
+
+      .cta h2 {
+        margin: 0;
+        text-align: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(3rem, 6vw, 4.8rem);
+        line-height: 0.96;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+      }
+
+      .cta h2 span {
+        color: var(--red-soft);
+      }
+
+      .cta__lead {
+        width: min(760px, 100%);
+        margin: 18px auto 0;
+        text-align: center;
+        color: rgba(255, 231, 233, 0.82);
+        font-size: 1.06rem;
+        line-height: 1.82;
+      }
+
+      .cta__points {
+        margin-top: 30px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .cta__point {
+        display: grid;
+        grid-template-columns: 3px minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
+      }
+
+      .cta__bar {
+        width: 3px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(255, 88, 99, 0.18), var(--red), rgba(255, 88, 99, 0.18));
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.26);
+      }
+
+      .cta__point strong {
+        display: block;
+        color: #fff4f4;
+        font-size: 1.2rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .cta__point p {
+        margin: 8px 0 0;
+        color: rgba(255, 231, 233, 0.78);
+        line-height: 1.76;
+      }
+
+      .cta__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 34px;
+      }
+
+      .cta__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 320px;
+        padding: 18px 24px;
+        border-radius: 20px;
+        border: 0;
+        background: linear-gradient(135deg, var(--red), #ff7d86);
+        color: #fff6f6;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        box-shadow: 0 18px 42px rgba(255, 88, 99, 0.28);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .cta__button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 24px 52px rgba(255, 88, 99, 0.34);
+      }
+
+      .site-footer {
+        position: relative;
+        z-index: 1;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto 32px;
+        padding: 18px 0 0;
+      }
+
+      .site-footer::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 22px;
+        background: linear-gradient(90deg, transparent, rgba(255, 88, 99, 0.32), transparent);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .footer-logo {
+        width: min(176px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .footer-link,
+      .footer-copy {
+        color: rgba(255, 255, 255, 0.74);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.88rem;
+      }
+
+      .footer-link:hover {
+        color: #fff4f4;
+      }
+
+      @media (max-width: 980px) {
+        .hero__grid,
+        .split-grid,
+        .system-grid,
+        .stack-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .roadmap-item {
+          grid-template-columns: 1fr;
+        }
+
+        .site-footer {
+          width: min(100%, calc(100% - 24px));
+        }
+
+        .footer-inner {
+          justify-content: center;
+        }
+
+        .footer-copy {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100%, calc(100% - 20px));
+        }
+
+        .topbar {
+          padding-top: 20px;
+        }
+
+        .topbar__inner {
+          flex-direction: column;
+        }
+
+        .hero h1 {
+          font-size: clamp(3.2rem, 13vw, 4.8rem);
+        }
+
+        .hero__lead {
+          font-size: 0.96rem;
+          line-height: 1.74;
+        }
+
+        .hero__visual {
+          margin-top: 22px;
+          border-radius: 24px;
+        }
+
+        .hero__visual img {
+          aspect-ratio: 16 / 10;
+        }
+
+        .hero-card,
+        .summary-card,
+        .article-block,
+        .cta {
+          padding: 22px 18px;
+          border-radius: 24px;
+        }
+
+        .hero-card {
+          min-height: 300px;
+        }
+
+        .hero-card h2,
+        .summary-card h3,
+        .article-block h2,
+        .cta h2 {
+          font-size: clamp(2.2rem, 10vw, 3.3rem);
+        }
+
+        .mini-card h3,
+        .system-step h3,
+        .stack-card h3,
+        .roadmap-item h3 {
+          font-size: 1.7rem;
+        }
+
+        .article-block p,
+        .mini-card p,
+        .system-step p,
+        .stack-card p,
+        .cta__point p {
+          font-size: 0.94rem;
+          line-height: 1.72;
+        }
+
+        .cta__button {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .footer-inner {
+          gap: 14px 18px;
+        }
+      }
+    </style>
+    
+    <style>
+      .cta-choice {
+        display: grid;
+        gap: 24px;
+      }
+
+      .cta-choice__eyebrow {
+        margin: 0;
+        color: rgba(255, 139, 147, 0.92);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+        letter-spacing: 0.16em;
+      }
+
+      .cta-choice__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .cta-choice__card {
+        border-radius: 24px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          linear-gradient(180deg, rgba(255, 88, 99, 0.08), rgba(255, 88, 99, 0.02)),
+          rgba(10, 7, 7, 0.82);
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+        padding: 20px 18px;
+      }
+
+      .cta-choice__card strong {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 0.96rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .cta-choice__card p {
+        margin: 0;
+        color: rgba(247, 245, 243, 0.78);
+      }
+
+      .cta-form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .cta-form__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .cta-form__field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .cta-form__field span {
+        color: rgba(247, 245, 243, 0.72);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .cta-form__field--full {
+        grid-column: 1 / -1;
+      }
+
+      .cta-form__input {
+        width: 100%;
+        border: 1px solid rgba(255, 88, 99, 0.24);
+        border-radius: 18px;
+        background: rgba(8, 6, 6, 0.86);
+        color: #f7f5f3;
+        padding: 16px 18px;
+        font: inherit;
+        outline: none;
+        transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+      }
+
+      .cta-form__input:focus {
+        border-color: rgba(255, 88, 99, 0.72);
+        box-shadow: 0 0 0 4px rgba(255, 88, 99, 0.12);
+        transform: translateY(-1px);
+      }
+
+      .cta__actions--stack {
+        align-items: flex-start;
+      }
+
+      .cta-form__status {
+        margin: 0;
+        color: rgba(247, 245, 243, 0.82);
+        font-size: 0.95rem;
+      }
+
+      .cta-form__status[hidden] {
+        display: none;
+      }
+
+      @media (max-width: 920px) {
+        .cta-choice__grid,
+        .cta-form__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-form__field--full {
+          grid-column: auto;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Le Virage Décisif de Meta : Comment une Stratégie IA a Changé le Destin d'une Entreprise",
+  "description": "Découvrez comment la récente stratégie IA de Meta a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs.",
+  "author": {
+    "@type": "Person",
+    "name": "Oscar Sander"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CODEXINE",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codexine.fr/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://codexine.fr/blog/le-virage-decisif-de-meta-qui-a-change-son-destin.html",
+  "datePublished": "2026-04-12",
+  "dateModified": "2026-04-12"
+}
+    </script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <img class="logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        <div class="hero__eyebrow">Le Virage Décisif de Meta : Un Changement Stratégique Incontournable</div>
+        <h1>Le Virage Décisif de Meta : Comment une Stratégie IA a Changé le Destin d&#x27;une Entreprise</h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <p class="hero__lead">Meta, une entreprise technologique majeure, a récemment pris un tournant crucial avec sa stratégie IA. Cette décision a profondément affecté son parcours et la manière dont elle opère aujourd&#x27;hui.</p>
+        <div class="hero__meta">
+          <span>12 avril 2026</span>
+          <span>Lecture 10 min</span>
+          <span>Le virage décisif de Meta qui a changé son destin</span>
+        </div>
+
+        <figure class="hero__visual">
+          <img src="https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Illustration du theme Le virage décisif de Meta qui a changé son destin dans un contexte business et automatisation" loading="eager" />
+        </figure>
+
+        <div class="hero__grid">
+          <div class="hero-card">
+            <div class="hero-card__inner">
+              <p class="hero-card__label">En savoir plus sur le virage décisif de Meta</p>
+              <h2>Comprendre les Implications du Changement Stratégique d&#x27;IA chez Meta</h2>
+              <p>Découvrez comment cette récente stratégie IA a permis à Meta de se positionner différemment sur le marché et ce qui en découlera pour l&#x27;avenir.</p>
+            </div>
+          </div>
+
+          <aside class="summary-card" aria-label="Resume">
+            <h3>Les Principaux Aspects du Virage Décisif de Meta</h3>
+            <ul class="summary-list">
+              <li>Meta a adopté une approche plus centrée sur l&#x27;intelligence artificielle pour améliorer ses services et produits.</li>
+              <li>Cette stratégie a conduit à des innovations majeures, notamment dans les réseaux sociaux et la publicité ciblée.</li>
+              <li>Le changement stratégique d&#x27;IA a également permis à Meta de renforcer sa position sur le marché du cloud computing.</li>
+              <li>Cependant, cette transition a également posé des défis pour l&#x27;entreprise.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <article class="article">
+        <section class="article-block">
+          <h2>Le Virage Décisif de Meta : Comment une Stratégie IA a Changé le Destin d&#x27;une Entreprise</h2>
+          <p>Meta, une entreprise technologique majeure, a récemment pris un tournant crucial avec sa stratégie IA. Cette décision a profondément affecté son parcours et la manière dont elle opère aujourd&#x27;hui.</p>
+          <p>Cette stratégie a conduit à des innovations majeures, notamment dans les réseaux sociaux et la publicité ciblée. En intégrant l&#x27;IA, Meta a été en mesure d&#x27;améliorer significativement l&#x27;expérience utilisateur sur ses plateformes comme Facebook et Instagram. Les algorithmes d&#x27;IA ont également permis une publicité ciblée plus précise, augmentant ainsi les taux de conversion pour les annonceurs.</p>
+
+          <div class="split-grid">
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 01</div>
+              <h3>Amélioration des expériences utilisateur</h3>
+              <p>Grâce à l&#x27;IA, Meta a pu personnaliser davantage les contenus et les suggestions aux utilisateurs, augmentant ainsi la satisfaction globale.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 02</div>
+              <h3>Publicité ciblée plus efficace</h3>
+              <p>Les algorithmes d&#x27;IA ont permis une publicité ciblée beaucoup plus précise, permettant aux annonceurs de toucher les personnes les plus susceptibles de convertir.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 03</div>
+              <h3>Renforcement sur le marché du cloud computing</h3>
+              <p>La transition vers une stratégie IA a également permis à Meta d&#x27;investir davantage dans son infrastructure cloud, renforçant ainsi sa position de leader sur ce marché.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>Analyse Stratégique du Virage Décisif d&#x27;IA chez Meta : Les Éléments Clés à Comprendre</h2>
+          <p>Le virage stratégique d&#x27;IA chez Meta a été une décision cruciale qui a profondément impacté l&#x27;entreprise. Cette transition vers une approche plus centrée sur l&#x27;intelligence artificielle a conduit à des innovations majeures et a renforcé sa position sur le marché. Cependant, elle a également posé des défis significatifs. Dans ce bloc, nous allons décomposer les éléments clés de cette stratégie et en tirer des enseignements pour votre propre entreprise.</p>
+
+          <div class="system-grid">
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">01</span>
+                <h3>L&#x27;Adoption d&#x27;une Stratégie IA Centrée</h3>
+              </div>
+              <p>Meta a choisi de se tourner vers l&#x27;intelligence artificielle comme pilier central de sa stratégie. Cette décision a permis à l&#x27;entreprise de développer des technologies innovantes et de transformer ses services existants.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">02</span>
+                <h3>Innovations Majeures dans les Réseaux Sociaux et la Publicité Ciblée</h3>
+              </div>
+              <p>L&#x27;intégration d&#x27;IA a conduit à des avancées significatives dans les réseaux sociaux, comme Facebook et Instagram. Les algorithmes de recommandation plus intelligents ont augmenté l&#x27;engagement des utilisateurs et ont permis une publicité ciblée plus précise.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">03</span>
+                <h3>Renforcement sur le Marché du Cloud Computing</h3>
+              </div>
+              <p>La stratégie IA a également aidé Meta à renforcer sa position sur le marché du cloud computing. Les services AWS ont bénéficié d&#x27;innovations basées sur l&#x27;IA, offrant des solutions plus efficaces et personnalisées.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">04</span>
+                <h3>Défis Posés par la Transition Stratégique</h3>
+              </div>
+              <p>Cependant, cette transition vers une approche plus centrée sur l&#x27;IA a également posé des défis. Les investissements importants dans les technologies d&#x27;IA ont nécessité des ajustements financiers et organisationnels. De plus, le développement et la mise en œuvre de ces technologies complexes ont requis une formation accrue de l&#x27;équipe.</p>
+            </div>
+          </div>
+
+          <p>Comprendre les implications du virage stratégique d&#x27;IA chez Meta peut vous aider à identifier les opportunités et défis similaires dans votre propre entreprise. Dans notre prochaine étape CODEXINE, nous allons explorer comment analyser la concurrence en utilisant l&#x27;intelligence artificielle.</p>
+        </section>
+
+        <section class="article-block">
+          <h2>Implications du Virage Décisif d&#x27;IA chez Meta : Cas Pratiques et Perspectives</h2>
+          <p>Ce bloc explore comment le changement stratégique d&#x27;IA chez Meta a affecté son parcours et les implications pour d&#x27;autres entreprises. Nous examinerons des cas concrets et des perspectives futures.</p>
+
+          <div class="split-grid">
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 01</div>
+              <h3>Innovation dans les Réseaux Sociaux</h3>
+              <p>Meta a utilisé l&#x27;IA pour améliorer ses réseaux sociaux, offrant une meilleure expérience utilisateur et des publicités ciblées plus précises. Cela a conduit à une croissance significative des utilisateurs et des revenus.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 02</div>
+              <h3>Renforcement de la Position sur le Marché du Cloud Computing</h3>
+              <p>En investissant dans l&#x27;IA, Meta a renforcé sa position sur le marché du cloud computing. Ses services AWS ont vu une croissance rapide, profitant des capacités d&#x27;analyse et de traitement des données offertes par l&#x27;IA.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 03</div>
+              <h3>Défis et Adaptations</h3>
+              <p>Bien que les avantages soient nombreux, le changement stratégique d&#x27;IA a également posé des défis. Meta doit continuer à investir dans la formation de son personnel et à s&#x27;adapter aux nouvelles technologies pour maintenir sa compétitivité.</p>
+            </div>
+          </div>
+
+          <p>En analysant les cas pratiques du virage stratégique d&#x27;IA chez Meta, nous pouvons tirer des leçons précieuses pour notre propre stratégie. Découvrez la prochaine étape CODEXINE : &#x27;Stratégies IA Efficaces pour vos Entreprises&#x27;.</p>
+        </section>
+
+        <section class="article-block">
+          <h2>Le Virage Décisif de Meta : Comment une Stratégie IA a Changé le Destin d&#x27;une Entreprise</h2>
+          <p>Meta, une entreprise technologique majeure, a récemment pris un tournant crucial avec sa stratégie IA. Cette décision a profondément affecté son parcours et la manière dont elle opère aujourd&#x27;hui.</p>
+
+          <div class="stack-grid">
+            <div class="stack-card">
+              <h3>Simple</h3>
+              <p>La mise en œuvre d&#x27;une stratégie IA simple permet à Meta de personnaliser davantage les expériences utilisateur. Cela a conduit à une augmentation significative du temps passé sur ses plateformes et à une croissance des revenus.</p>
+              <ul>
+                <li>Personnalisation des publicités ciblées</li>
+                <li>Amélioration de l&#x27;engagement sur les réseaux sociaux</li>
+                <li>Optimisation des résultats publicitaires</li>
+              </ul>
+            </div>
+
+            <div class="stack-card">
+              <h3>Solide</h3>
+              <p>La stratégie IA solide d Meta a permis une amélioration significative du service client et de la satisfaction des utilisateurs. Cela a conduit à une croissance durable et à une meilleure réputation de marque.</p>
+              <ul>
+                <li>Intelligence artificielle pour le support client</li>
+                <li>Analyse prédictive pour la maintenance préventive</li>
+                <li>Amélioration de l&#x27;accessibilité des produits</li>
+              </ul>
+            </div>
+
+            <div class="stack-card">
+              <h3>Scale</h3>
+              <p>La mise en œuvre d&#x27;une stratégie IA à grande échelle a permis à Meta de renforcer sa position sur le marché du cloud computing. Cela a conduit à une croissance significative des revenus et à une meilleure compétitivité.</p>
+              <ul>
+                <li>Services de stockage et de traitement de données</li>
+                <li>Solutions d&#x27;analyse big data</li>
+                <li>Infrastructure de réseau distribué</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>Le Virage Décisif de Meta : Comment une Stratégie IA a Changé le Destin d&#x27;une Entreprise</h2>
+          <p>Meta, une entreprise technologique majeure, a récemment pris un tournant crucial avec sa stratégie IA. Cette décision a profondément affecté son parcours et la manière dont elle opère aujourd&#x27;hui.</p>
+
+          <div class="roadmap">
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 1</div>
+              <div>
+                <h3>Comprendre le Virage Décisif d&#x27;IA chez Meta</h3>
+                <p>Découvrez ce qui a conduit Meta à adopter une approche plus centrée sur l&#x27;intelligence artificielle. Apprenez les motivations et les objectifs derrière cette stratégie.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 2</div>
+              <div>
+                <h3>Innovations Majeures : Les Nouveautés d&#x27;IA chez Meta</h3>
+                <p>Explorez les innovations majeures que Meta a réalisées grâce à sa stratégie IA. Découvrez comment ces changements ont affecté ses services et produits.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 3</div>
+              <div>
+                <h3>Renforcement de la Position sur le Marché du Cloud Computing</h3>
+                <p>Apprenez comment Meta a utilisé son investissement en IA pour renforcer sa position sur le marché du cloud computing. Découvrez les bénéfices concrets.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 4</div>
+              <div>
+                <h3>Défis et Perspectives : L&#x27;Impact du Virage IA chez Meta</h3>
+                <p>Analysez les défis que Meta a rencontrés lors de cette transition et explorez les perspectives à long terme. Découvrez comment ces changements peuvent influencer votre propre stratégie.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>Analyse Stratégique : Le Virage Décisif de Meta et ses Implications pour l&#x27;IA</h2>
+          <p>Dans cette section, nous allons décomposer le virage stratégique d&#x27;IA chez Meta et explorer comment cela a changé son parcours. Nous examinerons les avantages et les défis associés à cette transition et vous proposerons des étapes clés pour analyser sa signification pour votre entreprise.</p>
+
+          <div class="checklist">
+            <div class="checklist-item">
+              <div class="checklist-item__mark">1</div>
+              <p>Comprendre le pourquoi : Quels sont les objectifs de Meta derrière ce changement ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">2</div>
+              <p>Évaluer les avantages : Comment cette stratégie a-t-elle permis à Meta d&#x27;innover et de renforcer sa position sur le marché ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">3</div>
+              <p>Identifier les défis : Quelles ont été les principales difficultés rencontrées durant cette transition ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">4</div>
+              <p>Apprendre des leçons : Quels sont les enseignements que nous pouvons tirer pour notre propre stratégie d&#x27;IA ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">5</div>
+              <p>Planifier l&#x27;action : Comment intégrer ces insights dans votre approche d&#x27;IA et de technologie ?</p>
+            </div>
+          </div>
+
+          <p>En conclusion, le virage stratégique d&#x27;IA chez Meta offre une perspective précieuse sur les opportunités et défis associés à cette transformation. En suivant les étapes clés proposées ci-dessus, vous pourrez mieux analyser sa signification pour votre entreprise et planifier vos propres initiatives en IA.</p>
+        </section>
+      </article>
+
+      <section class="cta" aria-label="CTA final">
+        <div class="cta-choice">
+          <p class="cta-choice__eyebrow">EXPERT IA</p>
+          <h2>Passer du stade curieux au stade operable</h2>
+          <p class="cta__lead">
+            Si ton objectif n'est pas juste de comprendre l'IA mais de savoir quoi en faire dans une activite,
+            il faut un cap, une methode et un terrain d'application. C'est exactement le role de CODEXINE.
+          </p>
+
+          <div class="cta-choice__grid">
+            <article class="cta-choice__card">
+              <strong>Vision claire</strong>
+              <p>Comprendre quels systemes valent vraiment ton energie.</p>
+            </article>
+            <article class="cta-choice__card">
+              <strong>Niveau superieur</strong>
+              <p>Sortir du simple test d'outil pour aller vers une competence monnayable.</p>
+            </article>
+            <article class="cta-choice__card">
+              <strong>Application directe</strong>
+              <p>Transformer les concepts en process, contenu et execution reelle.</p>
+            </article>
+          </div>
+
+          <div class="cta__actions">
+            <a
+              class="cta__button"
+              data-codexine-cta="link"
+              data-cta-id="devenir-un-expert-ia"
+              data-cta-name="Devenir un expert IA"
+              href="https://codexine.fr/index.html?v=20260410"
+            >
+              Devenir un expert IA
+            </a>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="https://codexine.fr/index.html?v=20260410" aria-label="Accueil CODEXINE">
+          <img class="footer-logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        </a>
+        <a class="footer-link" href="https://codexine.fr/infos.html?v=20260410">Infos</a>
+        <a class="footer-link" href="https://codexine.fr/conditions-utilisation.html?v=20260410">Conditions d'utilisation</a>
+        <a class="footer-link" href="https://codexine.fr/politique-confidentialite.html?v=20260410">Politique de confidentialite</a>
+        <a class="footer-link" href="https://codexine.fr/mentions-legales.html?v=20260410">Mentions legales</a>
+        <p class="footer-copy">© 2026 CODEXINE by Oscar.</p>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const TELEGRAM_BOT_TOKEN = "8781312268:AAEWod2wkAD6o7792WQuRdC6DDqbz2aV-O8";
+        const TELEGRAM_CHAT_ID = "8253411443";
+        const nodes = document.querySelectorAll("[data-codexine-cta]");
+
+        if (!nodes.length) {
+          return;
+        }
+
+        const endpoint = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+        const sendMessage = (message) =>
+          fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: new URLSearchParams({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: message,
+            }),
+            keepalive: true,
+          });
+
+        const humanizeField = (value) =>
+          String(value || "")
+            .replace(/_/g, " ")
+            .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+        const buildBaseLines = (node, action, destination) => [
+            "Nouveau clic CTA blog CODEXINE",
+            "Source: " + "le-virage-decisif-de-meta-qui-a-change-son-destin",
+            "Article: " + "Le Virage Décisif de Meta : Comment une Stratégie IA a Changé le Destin d'une Entreprise",
+            `CTA: ${node.dataset.ctaName || "CTA inconnu"}`,
+            `CTA ID: ${node.dataset.ctaId || "sans-id"}`,
+            `Action: ${action}`,
+            `Page: ${window.location.href}`,
+            `Destination: ${destination || "aucune"}`,
+            `Referrer: ${document.referrer || "direct"}`,
+            `Viewport: ${window.innerWidth}x${window.innerHeight}`,
+            `Ecran: ${window.screen.width}x${window.screen.height}`,
+            `User agent: ${navigator.userAgent}`,
+            `Langue: ${navigator.language || "inconnue"}`,
+            `Date: ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}`,
+          ];
+
+        nodes.forEach((node) => {
+          if (node.matches("a")) {
+            node.addEventListener("click", (event) => {
+              event.preventDefault();
+              const targetUrl = node.getAttribute("href") || "https://codexine.fr/index.html?v=20260410";
+              const message = buildBaseLines(node, "click", targetUrl).join("\n");
+
+              sendMessage(message).catch(() => {});
+
+              window.setTimeout(() => {
+                window.location.href = targetUrl;
+              }, 120);
+            });
+            return;
+          }
+
+          if (!node.matches("form")) {
+            return;
+          }
+
+          node.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const destination = node.dataset.ctaDestination || "";
+            const formData = new FormData(node);
+            const extraLines = [];
+            const submitButton = node.querySelector('button[type="submit"]');
+            const statusNode = node.querySelector("[data-cta-status]");
+
+            for (const [key, value] of formData.entries()) {
+              const cleaned = String(value || "").trim();
+              if (!cleaned) {
+                continue;
+              }
+              extraLines.push(`${humanizeField(key)}: ${cleaned}`);
+            }
+
+            const message = buildBaseLines(node, "form_submit", destination)
+              .concat(extraLines)
+              .join("\n");
+
+            if (submitButton) {
+              submitButton.disabled = true;
+            }
+
+            sendMessage(message)
+              .catch(() => ({}))
+              .finally(() => {
+                node.reset();
+
+                if (statusNode) {
+                  statusNode.hidden = false;
+                  statusNode.textContent =
+                    node.dataset.successMessage || "Demande envoyee.";
+                }
+
+                if (submitButton) {
+                  submitButton.disabled = false;
+                }
+
+                if (destination) {
+                  window.setTimeout(() => {
+                    window.location.href = destination;
+                  }, 450);
+                }
+              });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
