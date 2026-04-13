@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin | CODEXINE</title>
+    <meta name="description" content="Découvrez comment la stratégie d&#x27;IA de Sony a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Oscar Sander" />
+    <meta name="theme-color" content="#050505" />
+    <link rel="canonical" href="https://codexine.fr/blog/le-virage-decisif-de-sony-qui-a-change-son-destin.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CODEXINE" />
+    <meta property="og:title" content="Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin | CODEXINE" />
+    <meta property="og:description" content="Découvrez comment la stratégie d&#x27;IA de Sony a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs." />
+    <meta property="og:url" content="https://codexine.fr/blog/le-virage-decisif-de-sony-qui-a-change-son-destin.html" />
+    <meta property="og:image" content="https://codexine.fr/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin | CODEXINE" />
+    <meta name="twitter:description" content="Découvrez comment la stratégie d&#x27;IA de Sony a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs." />
+    <meta name="twitter:image" content="https://codexine.fr/logo.png" />
+    <link rel="icon" type="image/png" href="https://codexine.fr/icon.png?v=20260410" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --panel: rgba(12, 12, 12, 0.92);
+        --panel-soft: rgba(18, 11, 12, 0.92);
+        --line: rgba(255, 255, 255, 0.08);
+        --line-red: rgba(255, 88, 99, 0.28);
+        --text: #faf5f5;
+        --muted: #a88f93;
+        --muted-strong: #d7c0c4;
+        --red: #ff5863;
+        --red-soft: #ff939b;
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Outfit", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 88, 99, 0.18), transparent 26%),
+          radial-gradient(circle at 12% 14%, rgba(126, 17, 28, 0.34), transparent 28%),
+          radial-gradient(circle at 86% 20%, rgba(255, 88, 99, 0.1), transparent 22%),
+          linear-gradient(180deg, #080808 0%, #040404 54%, #060304 100%);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.32;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 95%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: relative;
+        z-index: 1;
+        padding: 26px 0 8px;
+      }
+
+      .topbar__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .topbar__brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .topbar__logo {
+        width: min(190px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .topbar__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .topbar__link:hover {
+        color: #fff4f4;
+        border-color: rgba(255, 88, 99, 0.18);
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        padding: 18px 0 72px;
+      }
+
+      .hero {
+        width: min(1000px, 100%);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        width: min(280px, 100%);
+        height: auto;
+        margin: 0 auto 26px;
+        filter: drop-shadow(0 14px 28px rgba(255, 88, 99, 0.16));
+      }
+
+      .hero-divider {
+        width: min(180px, 36vw);
+        height: 2px;
+        margin: 22px auto 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, transparent, var(--red), transparent);
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.24);
+      }
+
+      .hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd6d9;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 22px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(4.2rem, 9vw, 7.4rem);
+        line-height: 0.92;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+        text-shadow:
+          0 0 20px rgba(255, 88, 99, 0.08),
+          0 0 44px rgba(255, 88, 99, 0.12);
+      }
+
+      .hero__lead {
+        width: min(760px, 100%);
+        margin: 20px auto 0;
+        color: var(--muted-strong);
+        font-size: 1.08rem;
+        line-height: 1.82;
+      }
+
+      .hero__meta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .hero__meta span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.88rem;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+        gap: 22px;
+        align-items: stretch;
+        margin-top: 40px;
+      }
+
+      .hero__visual {
+        width: min(960px, 100%);
+        margin: 30px auto 0;
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(10, 10, 10, 0.76);
+        box-shadow: var(--shadow);
+      }
+
+      .hero__visual img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .hero-card,
+      .summary-card {
+        position: relative;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-card {
+        min-height: 360px;
+        padding: 32px;
+        background:
+          radial-gradient(circle at 84% 18%, rgba(255, 88, 99, 0.16), transparent 24%),
+          linear-gradient(180deg, rgba(14, 14, 14, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+        background-size: 22px 22px;
+        opacity: 0.16;
+        pointer-events: none;
+      }
+
+      .hero-card__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+      }
+
+      .hero-card__label {
+        margin: 0;
+        color: #ffb9be;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-card h2 {
+        margin: 14px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.6rem, 5vw, 4rem);
+        line-height: 0.94;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .hero-card p {
+        width: min(520px, 100%);
+        margin: 16px 0 0;
+        color: rgba(255, 239, 240, 0.84);
+        line-height: 1.76;
+      }
+
+      .summary-card {
+        padding: 26px;
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.14), transparent 28%),
+          linear-gradient(180deg, rgba(15, 11, 12, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .summary-card h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .summary-list {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 14px;
+      }
+
+      .summary-list li {
+        position: relative;
+        padding-left: 18px;
+        color: rgba(255, 230, 232, 0.78);
+        line-height: 1.64;
+      }
+
+      .summary-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--red), var(--red-soft));
+        box-shadow: 0 0 16px rgba(255, 88, 99, 0.5);
+        transform: translateY(-50%);
+      }
+
+      .article {
+        width: min(980px, 100%);
+        margin: 34px auto 0;
+      }
+
+      .article-block {
+        margin-top: 22px;
+        padding: 30px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(13, 13, 13, 0.95), rgba(8, 8, 8, 0.98));
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
+      }
+
+      .article-block:first-child {
+        margin-top: 0;
+      }
+
+      .article-block h2 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .article-block p {
+        margin: 16px 0 0;
+        color: rgba(255, 231, 233, 0.76);
+        line-height: 1.84;
+        font-size: 1rem;
+      }
+
+      .article-block p strong {
+        color: #fff4f4;
+      }
+
+      .split-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+      }
+
+      .mini-card {
+        padding: 20px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.12), transparent 28%),
+          linear-gradient(180deg, rgba(17, 11, 12, 0.94), rgba(9, 9, 9, 0.98));
+      }
+
+      .mini-card__index {
+        color: #ffb0b6;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .mini-card h3 {
+        margin: 12px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .mini-card p {
+        margin-top: 12px;
+        color: rgba(255, 228, 230, 0.74);
+        line-height: 1.68;
+      }
+
+      .system-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .system-step {
+        padding: 22px;
+        border-radius: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.95), rgba(8, 8, 8, 0.98));
+      }
+
+      .system-step__top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .system-step__number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffb5bb;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+      }
+
+      .system-step h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .system-step p {
+        margin: 14px 0 0;
+        color: rgba(255, 228, 230, 0.76);
+        line-height: 1.72;
+      }
+
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .stack-card {
+        padding: 22px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .stack-card h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .stack-card p {
+        margin: 12px 0 0;
+        color: rgba(255, 228, 230, 0.74);
+      }
+
+      .stack-card ul {
+        margin: 14px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .stack-card li {
+        color: rgba(255, 228, 230, 0.74);
+        line-height: 1.6;
+      }
+
+      .stack-card li strong {
+        color: #fff4f4;
+      }
+
+      .roadmap {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .roadmap-item {
+        display: grid;
+        grid-template-columns: 108px minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
+        padding: 18px 20px;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.94), rgba(8, 8, 8, 0.98));
+      }
+
+      .roadmap-item__week {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 12px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd8db;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .roadmap-item h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .roadmap-item p {
+        margin: 10px 0 0;
+      }
+
+      .checklist {
+        margin-top: 24px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .checklist-item {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .checklist-item__mark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        background: rgba(255, 88, 99, 0.1);
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        color: #ffb0b6;
+        font-weight: 800;
+      }
+
+      .checklist-item p {
+        margin: 0;
+      }
+
+      .cta {
+        position: relative;
+        width: min(980px, 100%);
+        margin: 28px auto 0;
+        padding: 44px 42px;
+        border-radius: 34px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.22), transparent 28%),
+          radial-gradient(circle, rgba(255, 255, 255, 0.07) 1.2px, transparent 1.2px),
+          linear-gradient(180deg, rgba(18, 7, 9, 0.98), rgba(10, 5, 6, 0.98));
+        background-size: auto, 24px 24px, auto;
+        box-shadow:
+          0 30px 80px rgba(0, 0, 0, 0.34),
+          0 0 30px rgba(255, 88, 99, 0.08);
+        overflow: hidden;
+      }
+
+      .cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+        pointer-events: none;
+      }
+
+      .cta h2 {
+        margin: 0;
+        text-align: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(3rem, 6vw, 4.8rem);
+        line-height: 0.96;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+      }
+
+      .cta h2 span {
+        color: var(--red-soft);
+      }
+
+      .cta__lead {
+        width: min(760px, 100%);
+        margin: 18px auto 0;
+        text-align: center;
+        color: rgba(255, 231, 233, 0.82);
+        font-size: 1.06rem;
+        line-height: 1.82;
+      }
+
+      .cta__points {
+        margin-top: 30px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .cta__point {
+        display: grid;
+        grid-template-columns: 3px minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
+      }
+
+      .cta__bar {
+        width: 3px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(255, 88, 99, 0.18), var(--red), rgba(255, 88, 99, 0.18));
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.26);
+      }
+
+      .cta__point strong {
+        display: block;
+        color: #fff4f4;
+        font-size: 1.2rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .cta__point p {
+        margin: 8px 0 0;
+        color: rgba(255, 231, 233, 0.78);
+        line-height: 1.76;
+      }
+
+      .cta__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 34px;
+      }
+
+      .cta__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 320px;
+        padding: 18px 24px;
+        border-radius: 20px;
+        border: 0;
+        background: linear-gradient(135deg, var(--red), #ff7d86);
+        color: #fff6f6;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        box-shadow: 0 18px 42px rgba(255, 88, 99, 0.28);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .cta__button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 24px 52px rgba(255, 88, 99, 0.34);
+      }
+
+      .site-footer {
+        position: relative;
+        z-index: 1;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto 32px;
+        padding: 18px 0 0;
+      }
+
+      .site-footer::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 22px;
+        background: linear-gradient(90deg, transparent, rgba(255, 88, 99, 0.32), transparent);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .footer-logo {
+        width: min(176px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .footer-link,
+      .footer-copy {
+        color: rgba(255, 255, 255, 0.74);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.88rem;
+      }
+
+      .footer-link:hover {
+        color: #fff4f4;
+      }
+
+      @media (max-width: 980px) {
+        .hero__grid,
+        .split-grid,
+        .system-grid,
+        .stack-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .roadmap-item {
+          grid-template-columns: 1fr;
+        }
+
+        .site-footer {
+          width: min(100%, calc(100% - 24px));
+        }
+
+        .footer-inner {
+          justify-content: center;
+        }
+
+        .footer-copy {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100%, calc(100% - 20px));
+        }
+
+        .topbar {
+          padding-top: 20px;
+        }
+
+        .topbar__inner {
+          flex-direction: column;
+        }
+
+        .hero h1 {
+          font-size: clamp(3.2rem, 13vw, 4.8rem);
+        }
+
+        .hero__lead {
+          font-size: 0.96rem;
+          line-height: 1.74;
+        }
+
+        .hero__visual {
+          margin-top: 22px;
+          border-radius: 24px;
+        }
+
+        .hero__visual img {
+          aspect-ratio: 16 / 10;
+        }
+
+        .hero-card,
+        .summary-card,
+        .article-block,
+        .cta {
+          padding: 22px 18px;
+          border-radius: 24px;
+        }
+
+        .hero-card {
+          min-height: 300px;
+        }
+
+        .hero-card h2,
+        .summary-card h3,
+        .article-block h2,
+        .cta h2 {
+          font-size: clamp(2.2rem, 10vw, 3.3rem);
+        }
+
+        .mini-card h3,
+        .system-step h3,
+        .stack-card h3,
+        .roadmap-item h3 {
+          font-size: 1.7rem;
+        }
+
+        .article-block p,
+        .mini-card p,
+        .system-step p,
+        .stack-card p,
+        .cta__point p {
+          font-size: 0.94rem;
+          line-height: 1.72;
+        }
+
+        .cta__button {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .footer-inner {
+          gap: 14px 18px;
+        }
+      }
+    </style>
+    
+    <style>
+      .cta-choice {
+        display: grid;
+        gap: 24px;
+      }
+
+      .cta-choice__eyebrow {
+        margin: 0;
+        color: rgba(255, 139, 147, 0.92);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+        letter-spacing: 0.16em;
+      }
+
+      .cta-choice__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .cta-choice__card {
+        border-radius: 24px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          linear-gradient(180deg, rgba(255, 88, 99, 0.08), rgba(255, 88, 99, 0.02)),
+          rgba(10, 7, 7, 0.82);
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+        padding: 20px 18px;
+      }
+
+      .cta-choice__card strong {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 0.96rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .cta-choice__card p {
+        margin: 0;
+        color: rgba(247, 245, 243, 0.78);
+      }
+
+      .cta-form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .cta-form__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .cta-form__field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .cta-form__field span {
+        color: rgba(247, 245, 243, 0.72);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .cta-form__field--full {
+        grid-column: 1 / -1;
+      }
+
+      .cta-form__input {
+        width: 100%;
+        border: 1px solid rgba(255, 88, 99, 0.24);
+        border-radius: 18px;
+        background: rgba(8, 6, 6, 0.86);
+        color: #f7f5f3;
+        padding: 16px 18px;
+        font: inherit;
+        outline: none;
+        transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+      }
+
+      .cta-form__input:focus {
+        border-color: rgba(255, 88, 99, 0.72);
+        box-shadow: 0 0 0 4px rgba(255, 88, 99, 0.12);
+        transform: translateY(-1px);
+      }
+
+      .cta__actions--stack {
+        align-items: flex-start;
+      }
+
+      .cta-form__status {
+        margin: 0;
+        color: rgba(247, 245, 243, 0.82);
+        font-size: 0.95rem;
+      }
+
+      .cta-form__status[hidden] {
+        display: none;
+      }
+
+      @media (max-width: 920px) {
+        .cta-choice__grid,
+        .cta-form__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-form__field--full {
+          grid-column: auto;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin",
+  "description": "Découvrez comment la stratégie d'IA de Sony a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs.",
+  "author": {
+    "@type": "Person",
+    "name": "Oscar Sander"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CODEXINE",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codexine.fr/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://codexine.fr/blog/le-virage-decisif-de-sony-qui-a-change-son-destin.html",
+  "datePublished": "2026-04-13",
+  "dateModified": "2026-04-13"
+}
+    </script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <img class="logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        <div class="hero__eyebrow">Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin</div>
+        <h1>Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin</h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <p class="hero__lead">Découvrez comment la stratégie d&#x27;IA de Sony a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs.</p>
+        <div class="hero__meta">
+          <span>13 avril 2026</span>
+          <span>Lecture 10 min</span>
+          <span>Le virage décisif de Sony qui a changé son destin</span>
+        </div>
+
+        <figure class="hero__visual">
+          <img src="https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Illustration du theme Le virage décisif de Sony qui a changé son destin dans un contexte business et automatisation" loading="eager" />
+        </figure>
+
+        <div class="hero__grid">
+          <div class="hero-card">
+            <div class="hero-card__inner">
+              <p class="hero-card__label">En savoir plus</p>
+              <h2>Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin</h2>
+              <p>Découvrez comment la stratégie d&#x27;IA de Sony a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs.</p>
+            </div>
+          </div>
+
+          <aside class="summary-card" aria-label="Resume">
+            <h3>Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin</h3>
+            <ul class="summary-list">
+              <li>La stratégie d&#x27;IA de Sony a été un virage décisif qui a changé sa position sur le marché.</li>
+              <li>L&#x27;adoption proactive et la mise en œuvre efficace d&#x27;une stratégie d&#x27;IA ont permis à Sony de se démarquer des concurrents.</li>
+              <li>Le succès de cette stratégie a conduit à une augmentation significative du chiffre d&#x27;affaires et de la rentabilité de l&#x27;entreprise.</li>
+              <li>Ce virage décisif a ouvert de nouvelles opportunités pour Sony dans divers domaines tels que le jeu vidéo, la réalité augmentée et la réalité virtuelle.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <article class="article">
+        <section class="article-block">
+          <h2>Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin</h2>
+          <p>La stratégie d&#x27;IA de Sony a été un virage décisif qui a changé sa position sur le marché. L&#x27;adoption proactive et la mise en œuvre efficace d&#x27;une stratégie d&#x27;IA ont permis à Sony de se démarquer des concurrents. Le succès de cette stratégie a conduit à une augmentation significative du chiffre d&#x27;affaires et de la rentabilité de l&#x27;entreprise.</p>
+          <p>Ce virage décisif a ouvert de nouvelles opportunités pour Sony dans divers domaines tels que le jeu vidéo, la réalité augmentée et la réalité virtuelle. Cela illustre comment une stratégie bien conçue en IA peut non seulement aider une entreprise à gagner du terrain sur ses concurrents mais aussi créer de nouveaux marchés et générer des revenus supplémentaires.</p>
+
+          <div class="split-grid">
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 01</div>
+              <h3>Adoption proactive de l&#x27;IA</h3>
+              <p>Sony a pris les premières mesures pour intégrer l&#x27;IA dans ses opérations. Cela inclut la création d&#x27;une équipe dédiée à la recherche et au développement d&#x27;applications IA, ainsi que l&#x27;investissement en technologies avancées.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 02</div>
+              <h3>Mise en œuvre efficace</h3>
+              <p>La mise en œuvre de cette stratégie n&#x27;a pas été sans défis. Cependant, Sony a su surmonter ces obstacles grâce à une approche méthodique et à l&#x27;engagement des différents départements de l&#x27;entreprise.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 03</div>
+              <h3>Création de nouvelles opportunités</h3>
+              <p>La stratégie d&#x27;IA a permis à Sony de se diversifier dans des domaines innovants. Par exemple, la réalité augmentée et la réalité virtuelle ont été développés pour enrichir l&#x27;expérience utilisateur et créer de nouveaux marchés.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>Comment Analyser Votre Marché et Mettre en Œuvre une Stratégie d&#x27;IA Efficace</h2>
+          <p>Après le virage décisif de Sony, il est crucial pour les entrepreneurs de comprendre comment analyser leur marché et mettre en œuvre une stratégie d&#x27;IA qui les donne un avantage concurrentiel. Voici les étapes à suivre.</p>
+
+          <div class="system-grid">
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">01</span>
+                <h3>Analysez Votre Marché</h3>
+              </div>
+              <p>Commencez par comprendre votre marché cible. Quels sont vos clients, leurs besoins et leurs préférences ? Utilisez des outils de recherche pour recueillir des données sur votre public cible.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">02</span>
+                <h3>Identifier Vos Besoins en IA</h3>
+              </div>
+              <p>Sur la base de vos recherches, identifiez les domaines où l&#x27;IA peut vous aider. Cela pourrait être le service client, la personnalisation des produits ou services, ou encore l&#x27;amélioration de votre opération.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">03</span>
+                <h3>Mettez en Œuvre une Stratégie d&#x27;IA Efficace</h3>
+              </div>
+              <p>Engagez un consultant spécialisé en IA pour aider à concevoir et mettre en œuvre votre stratégie. Assurez-vous que la solution est adaptée à vos besoins spécifiques et que l&#x27;intégration est fluide.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">04</span>
+                <h3>Suivez et Ajustez Votre Stratégie</h3>
+              </div>
+              <p>Une fois votre stratégie mise en œuvre, suivez ses performances régulièrement. Utilisez les données pour identifier les domaines à améliorer et ajustez votre stratégie en conséquence.</p>
+            </div>
+          </div>
+
+          <p>En suivant ces étapes, vous pouvez transformer votre entreprise comme Sony a fait avec son virage décisif en IA. N&#x27;oubliez pas que l&#x27;IA est un outil puissant qui peut grandement améliorer votre compétitivité sur le marché.</p>
+        </section>
+
+        <section class="article-block">
+          <h2>Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin</h2>
+          <p>Découvrez comment la stratégie d&#x27;IA de Sony a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs.</p>
+
+          <div class="split-grid">
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 01</div>
+              <h3>Adoption Proactive</h3>
+              <p>Sony a adopté une approche proactive en investissant dans la recherche et le développement d&#x27;IA. Cette stratégie a permis à l&#x27;entreprise de développer des technologies innovantes qui ont été rapidement mises sur le marché.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 02</div>
+              <h3>Mise en Œuvre Efficace</h3>
+              <p>La mise en œuvre efficace de la stratégie d&#x27;IA a été cruciale pour Sony. L&#x27;entreprise a mis en place des équipes dédiées à l&#x27;application de ces technologies, ce qui lui a permis de les intégrer rapidement et efficacement dans ses produits et services.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 03</div>
+              <h3>Opportunités Nouvelles</h3>
+              <p>Le succès de la stratégie d&#x27;IA a ouvert de nouvelles opportunités pour Sony. L&#x27;entreprise a pu s&#x27;adapter rapidement aux tendances du marché et développer des produits innovants qui ont été bien accueillis par les consommateurs.</p>
+            </div>
+          </div>
+
+          <p>Ce virage décisif a conduit à une augmentation significative du chiffre d&#x27;affaires et de la rentabilité de Sony. Si vous souhaitez suivre ce chemin vers le succès, apprenez à analyser votre marché, identifier vos besoins et mettre en œuvre une stratégie d&#x27;IA qui vous donnera un avantage concurrentiel.</p>
+        </section>
+
+        <section class="article-block">
+          <h2>Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin</h2>
+          <p>La stratégie d&#x27;IA de Sony a été un virage décisif qui a changé sa position sur le marché. Analysons comment cette démarche proactive et efficace a permis à l&#x27;entreprise de se démarquer des concurrents, augmenter significativement son chiffre d&#x27;affaires et ouvrir de nouvelles opportunités dans divers domaines tels que le jeu vidéo, la réalité augmentée et la réalité virtuelle.</p>
+
+          <div class="stack-grid">
+            <div class="stack-card">
+              <h3>Simple</h3>
+              <p>Pour commencer, voici quelques étapes simples pour analyser votre marché et identifier vos besoins en IA :</p>
+              <ul>
+                <li>Connaître votre public cible : Qui sont vos clients ? Quels sont leurs besoins ?</li>
+                <li>Évaluer la concurrence : Quelles solutions d&#x27;IA utilisent-les les concurrents ? Comment peuvent-elles être améliorées ?</li>
+                <li>Définir des objectifs clairs : Que visez-vous à accomplir grâce à l&#x27;IA ? Augmenter la productivité, améliorer l&#x27;expérience utilisateur, etc.</li>
+              </ul>
+            </div>
+
+            <div class="stack-card">
+              <h3>Solide</h3>
+              <p>Pour mettre en œuvre une stratégie d&#x27;IA solide, suivez ces étapes :</p>
+              <ul>
+                <li>Élaborer un plan stratégique : Quelles sont les actions à entreprendre ? Comment intégrer l&#x27;IA dans votre organisation ?</li>
+                <li>Investir en formation et développement : Avez-vous des compétences en IA au sein de votre équipe ? Si non, comment allez-vous les acquérir ?</li>
+                <li>Tester et optimiser : Mettez en œuvre des prototypes d&#x27;IA et observez leurs performances. Faites des ajustements pour améliorer leur efficacité.</li>
+              </ul>
+            </div>
+
+            <div class="stack-card">
+              <h3>Scale</h3>
+              <p>Pour échapper au simple et solide, voici les étapes cruciales pour une stratégie d&#x27;IA à grande échelle :</p>
+              <ul>
+                <li>Créer un environnement culturel : Promouvez une culture d&#x27;innovation et de prise de risque dans votre organisation.</li>
+                <li>Investir en infrastructure : Avez-vous les ressources nécessaires (hardware, logiciels) pour mettre en œuvre des solutions d&#x27;IA à grande échelle ?</li>
+                <li>Collaborer avec des partenaires : Cherchez des partenariats stratégiques pour accéder à des technologies et compétences supplémentaires.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin</h2>
+          <p>Découvrez comment la stratégie d&#x27;IA de Sony a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs.</p>
+
+          <div class="roadmap">
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 1</div>
+              <div>
+                <h3>Analysez votre marché et identifiez vos besoins</h3>
+                <p>Comprendre votre marché cible est crucial. Évaluez la concurrence, l&#x27;offre actuelle et les tendances du secteur.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 2</div>
+              <div>
+                <h3>Définissez vos objectifs d&#x27;IA</h3>
+                <p>Établissez des objectifs SMART (Spécifiques, Mesurables, Atteignables, Réalistes et Temporels) pour votre stratégie d&#x27;IA.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 3</div>
+              <div>
+                <h3>Mettez en œuvre une solution IA pilotée</h3>
+                <p>Choisissez un projet pilote qui peut avoir un impact significatif sur votre entreprise. Développez et déployez cette solution.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 4</div>
+              <div>
+                <h3>Évaluez les résultats et adaptez-vous</h3>
+                <p>Analysez les performances de votre projet pilote. Identifiez les points forts et les domaines d&#x27;amélioration pour une mise en œuvre plus large.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin</h2>
+          <p>Découvrez comment la stratégie d&#x27;IA de Sony a transformé sa position sur le marché. Analyse détaillée et conseils pratiques pour les entrepreneurs.</p>
+
+          <div class="checklist">
+            <div class="checklist-item">
+              <div class="checklist-item__mark">1</div>
+              <p>Comprendre l&#x27;importance de l&#x27;IA dans les entreprises modernes</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">2</div>
+              <p>Identifier les domaines stratégiques où l&#x27;IA peut apporter des avantages concurrentiels</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">3</div>
+              <p>Élaborer une stratégie d&#x27;IA adaptée à votre entreprise</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">4</div>
+              <p>Mettre en œuvre la stratégie IA étape par étape</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">5</div>
+              <p>Mesurer et analyser le retour sur investissement de la stratégie d&#x27;IA</p>
+            </div>
+          </div>
+
+          <p>Apprenez à analyser votre marché, identifier vos besoins et mettre en œuvre une stratégie d&#x27;IA qui vous donnera un avantage concurrentiel. Continuez avec l&#x27;étape suivante CODEXINE : &#x27;Comment développer une équipe d&#x27;IA efficace&#x27;.</p>
+        </section>
+      </article>
+
+      <section class="cta" aria-label="CTA final">
+        <div class="cta-choice">
+          <p class="cta-choice__eyebrow">ELIGIBILITE</p>
+          <h2>Verifier si la formation gratuite colle vraiment a ton contexte</h2>
+          <p class="cta__lead">
+            Si tu veux savoir si CODEXINE peut vraiment t'aider maintenant, laisse quelques infos
+            sur ton contexte. On regarde le niveau de fit avant d'ajouter encore une couche de contenu.
+          </p>
+
+          <div class="cta-choice__grid">
+            <article class="cta-choice__card">
+              <strong>Qualification rapide</strong>
+              <p>On voit tout de suite si ton contexte merite un parcours plus pousse ou un point d'entree plus simple.</p>
+            </article>
+            <article class="cta-choice__card">
+              <strong>Pas de blabla</strong>
+              <p>Le but est d'eviter les parcours inutiles et d'aller vers la suite la plus logique.</p>
+            </article>
+            <article class="cta-choice__card">
+              <strong>Signal business</strong>
+              <p>Tu nous aides a comprendre ton terrain au lieu de rester sur des generalites.</p>
+            </article>
+          </div>
+
+          <form
+            class="cta-form"
+            data-codexine-cta="form"
+            data-cta-id="eligible-a-la-formation-gratuite"
+            data-cta-name="Eligible a la formation gratuite ?"
+            data-cta-destination="https://codexine.fr/index.html?v=20260410"
+            data-success-message="Demande recue. On verifie rapidement ton profil."
+          >
+            <div class="cta-form__grid">
+              <label class="cta-form__field">
+                <span>Entreprise</span>
+                <input class="cta-form__input" type="text" name="entreprise" autocomplete="organization" required />
+              </label>
+              <label class="cta-form__field">
+                <span>Site web</span>
+                <input class="cta-form__input" type="url" name="site_web" inputmode="url" placeholder="https://..." required />
+              </label>
+              <label class="cta-form__field">
+                <span>Prenom</span>
+                <input class="cta-form__input" type="text" name="prenom" autocomplete="given-name" required />
+              </label>
+              <label class="cta-form__field">
+                <span>Nom</span>
+                <input class="cta-form__input" type="text" name="nom" autocomplete="family-name" required />
+              </label>
+            </div>
+
+            <div class="cta__actions cta__actions--stack">
+              <button class="cta__button" type="submit">Verifier mon eligibilite</button>
+              <p class="cta-form__status" data-cta-status hidden></p>
+            </div>
+          </form>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="https://codexine.fr/index.html?v=20260410" aria-label="Accueil CODEXINE">
+          <img class="footer-logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        </a>
+        <a class="footer-link" href="https://codexine.fr/infos.html?v=20260410">Infos</a>
+        <a class="footer-link" href="https://codexine.fr/conditions-utilisation.html?v=20260410">Conditions d'utilisation</a>
+        <a class="footer-link" href="https://codexine.fr/politique-confidentialite.html?v=20260410">Politique de confidentialite</a>
+        <a class="footer-link" href="https://codexine.fr/mentions-legales.html?v=20260410">Mentions legales</a>
+        <p class="footer-copy">© 2026 CODEXINE by Oscar.</p>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const TELEGRAM_BOT_TOKEN = "8781312268:AAEWod2wkAD6o7792WQuRdC6DDqbz2aV-O8";
+        const TELEGRAM_CHAT_ID = "8253411443";
+        const nodes = document.querySelectorAll("[data-codexine-cta]");
+
+        if (!nodes.length) {
+          return;
+        }
+
+        const endpoint = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+        const sendMessage = (message) =>
+          fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: new URLSearchParams({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: message,
+            }),
+            keepalive: true,
+          });
+
+        const humanizeField = (value) =>
+          String(value || "")
+            .replace(/_/g, " ")
+            .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+        const buildBaseLines = (node, action, destination) => [
+            "Nouveau clic CTA blog CODEXINE",
+            "Source: " + "le-virage-decisif-de-sony-qui-a-change-son-destin",
+            "Article: " + "Le Virage Décisif de Sony : Comment une Stratégie IA a Changé son Destin",
+            `CTA: ${node.dataset.ctaName || "CTA inconnu"}`,
+            `CTA ID: ${node.dataset.ctaId || "sans-id"}`,
+            `Action: ${action}`,
+            `Page: ${window.location.href}`,
+            `Destination: ${destination || "aucune"}`,
+            `Referrer: ${document.referrer || "direct"}`,
+            `Viewport: ${window.innerWidth}x${window.innerHeight}`,
+            `Ecran: ${window.screen.width}x${window.screen.height}`,
+            `User agent: ${navigator.userAgent}`,
+            `Langue: ${navigator.language || "inconnue"}`,
+            `Date: ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}`,
+          ];
+
+        nodes.forEach((node) => {
+          if (node.matches("a")) {
+            node.addEventListener("click", (event) => {
+              event.preventDefault();
+              const targetUrl = node.getAttribute("href") || "https://codexine.fr/index.html?v=20260410";
+              const message = buildBaseLines(node, "click", targetUrl).join("\n");
+
+              sendMessage(message).catch(() => {});
+
+              window.setTimeout(() => {
+                window.location.href = targetUrl;
+              }, 120);
+            });
+            return;
+          }
+
+          if (!node.matches("form")) {
+            return;
+          }
+
+          node.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const destination = node.dataset.ctaDestination || "";
+            const formData = new FormData(node);
+            const extraLines = [];
+            const submitButton = node.querySelector('button[type="submit"]');
+            const statusNode = node.querySelector("[data-cta-status]");
+
+            for (const [key, value] of formData.entries()) {
+              const cleaned = String(value || "").trim();
+              if (!cleaned) {
+                continue;
+              }
+              extraLines.push(`${humanizeField(key)}: ${cleaned}`);
+            }
+
+            const message = buildBaseLines(node, "form_submit", destination)
+              .concat(extraLines)
+              .join("\n");
+
+            if (submitButton) {
+              submitButton.disabled = true;
+            }
+
+            sendMessage(message)
+              .catch(() => ({}))
+              .finally(() => {
+                node.reset();
+
+                if (statusNode) {
+                  statusNode.hidden = false;
+                  statusNode.textContent =
+                    node.dataset.successMessage || "Demande envoyee.";
+                }
+
+                if (submitButton) {
+                  submitButton.disabled = false;
+                }
+
+                if (destination) {
+                  window.setTimeout(() => {
+                    window.location.href = destination;
+                  }, 450);
+                }
+              });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
