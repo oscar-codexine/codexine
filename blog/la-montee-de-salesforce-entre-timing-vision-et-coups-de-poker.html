@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants | CODEXINE</title>
+    <meta name="description" content="Découvrez comment le timing parfait et la vision stratégique peuvent transformer votre entreprise avec Salesforce. Des conseils précieux pour tirer parti des dernières tendances en IA." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Oscar Sander" />
+    <meta name="theme-color" content="#050505" />
+    <link rel="canonical" href="https://codexine.fr/blog/la-montee-de-salesforce-entre-timing-vision-et-coups-de-poker.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="CODEXINE" />
+    <meta property="og:title" content="La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants | CODEXINE" />
+    <meta property="og:description" content="Découvrez comment le timing parfait et la vision stratégique peuvent transformer votre entreprise avec Salesforce. Des conseils précieux pour tirer parti des dernières tendances en IA." />
+    <meta property="og:url" content="https://codexine.fr/blog/la-montee-de-salesforce-entre-timing-vision-et-coups-de-poker.html" />
+    <meta property="og:image" content="https://codexine.fr/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants | CODEXINE" />
+    <meta name="twitter:description" content="Découvrez comment le timing parfait et la vision stratégique peuvent transformer votre entreprise avec Salesforce. Des conseils précieux pour tirer parti des dernières tendances en IA." />
+    <meta name="twitter:image" content="https://codexine.fr/logo.png" />
+    <link rel="icon" type="image/png" href="https://codexine.fr/icon.png?v=20260410" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --panel: rgba(12, 12, 12, 0.92);
+        --panel-soft: rgba(18, 11, 12, 0.92);
+        --line: rgba(255, 255, 255, 0.08);
+        --line-red: rgba(255, 88, 99, 0.28);
+        --text: #faf5f5;
+        --muted: #a88f93;
+        --muted-strong: #d7c0c4;
+        --red: #ff5863;
+        --red-soft: #ff939b;
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Outfit", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 50% 0%, rgba(255, 88, 99, 0.18), transparent 26%),
+          radial-gradient(circle at 12% 14%, rgba(126, 17, 28, 0.34), transparent 28%),
+          radial-gradient(circle at 86% 20%, rgba(255, 88, 99, 0.1), transparent 22%),
+          linear-gradient(180deg, #080808 0%, #040404 54%, #060304 100%);
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.32;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 50px 50px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 95%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: relative;
+        z-index: 1;
+        padding: 26px 0 8px;
+      }
+
+      .topbar__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .topbar__brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .topbar__logo {
+        width: min(190px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .topbar__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .topbar__link:hover {
+        color: #fff4f4;
+        border-color: rgba(255, 88, 99, 0.18);
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        padding: 18px 0 72px;
+      }
+
+      .hero {
+        width: min(1000px, 100%);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        width: min(280px, 100%);
+        height: auto;
+        margin: 0 auto 26px;
+        filter: drop-shadow(0 14px 28px rgba(255, 88, 99, 0.16));
+      }
+
+      .hero-divider {
+        width: min(180px, 36vw);
+        height: 2px;
+        margin: 22px auto 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, transparent, var(--red), transparent);
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.24);
+      }
+
+      .hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 9px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.22);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd6d9;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 22px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(4.2rem, 9vw, 7.4rem);
+        line-height: 0.92;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+        text-shadow:
+          0 0 20px rgba(255, 88, 99, 0.08),
+          0 0 44px rgba(255, 88, 99, 0.12);
+      }
+
+      .hero__lead {
+        width: min(760px, 100%);
+        margin: 20px auto 0;
+        color: var(--muted-strong);
+        font-size: 1.08rem;
+        line-height: 1.82;
+      }
+
+      .hero__meta {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .hero__meta span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.88rem;
+      }
+
+      .hero__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+        gap: 22px;
+        align-items: stretch;
+        margin-top: 40px;
+      }
+
+      .hero__visual {
+        width: min(960px, 100%);
+        margin: 30px auto 0;
+        border-radius: 30px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(10, 10, 10, 0.76);
+        box-shadow: var(--shadow);
+      }
+
+      .hero__visual img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      .hero-card,
+      .summary-card {
+        position: relative;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-card {
+        min-height: 360px;
+        padding: 32px;
+        background:
+          radial-gradient(circle at 84% 18%, rgba(255, 88, 99, 0.16), transparent 24%),
+          linear-gradient(180deg, rgba(14, 14, 14, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle, rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+        background-size: 22px 22px;
+        opacity: 0.16;
+        pointer-events: none;
+      }
+
+      .hero-card__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+      }
+
+      .hero-card__label {
+        margin: 0;
+        color: #ffb9be;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .hero-card h2 {
+        margin: 14px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.6rem, 5vw, 4rem);
+        line-height: 0.94;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .hero-card p {
+        width: min(520px, 100%);
+        margin: 16px 0 0;
+        color: rgba(255, 239, 240, 0.84);
+        line-height: 1.76;
+      }
+
+      .summary-card {
+        padding: 26px;
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.14), transparent 28%),
+          linear-gradient(180deg, rgba(15, 11, 12, 0.96), rgba(8, 8, 8, 0.98));
+      }
+
+      .summary-card h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .summary-list {
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 14px;
+      }
+
+      .summary-list li {
+        position: relative;
+        padding-left: 18px;
+        color: rgba(255, 230, 232, 0.78);
+        line-height: 1.64;
+      }
+
+      .summary-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--red), var(--red-soft));
+        box-shadow: 0 0 16px rgba(255, 88, 99, 0.5);
+        transform: translateY(-50%);
+      }
+
+      .article {
+        width: min(980px, 100%);
+        margin: 34px auto 0;
+      }
+
+      .article-block {
+        margin-top: 22px;
+        padding: 30px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(13, 13, 13, 0.95), rgba(8, 8, 8, 0.98));
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
+      }
+
+      .article-block:first-child {
+        margin-top: 0;
+      }
+
+      .article-block h2 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .article-block p {
+        margin: 16px 0 0;
+        color: rgba(255, 231, 233, 0.76);
+        line-height: 1.84;
+        font-size: 1rem;
+      }
+
+      .article-block p strong {
+        color: #fff4f4;
+      }
+
+      .split-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+      }
+
+      .mini-card {
+        padding: 20px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.12), transparent 28%),
+          linear-gradient(180deg, rgba(17, 11, 12, 0.94), rgba(9, 9, 9, 0.98));
+      }
+
+      .mini-card__index {
+        color: #ffb0b6;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .mini-card h3 {
+        margin: 12px 0 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .mini-card p {
+        margin-top: 12px;
+        color: rgba(255, 228, 230, 0.74);
+        line-height: 1.68;
+      }
+
+      .system-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .system-step {
+        padding: 22px;
+        border-radius: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.95), rgba(8, 8, 8, 0.98));
+      }
+
+      .system-step__top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .system-step__number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffb5bb;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+      }
+
+      .system-step h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .system-step p {
+        margin: 14px 0 0;
+        color: rgba(255, 228, 230, 0.76);
+        line-height: 1.72;
+      }
+
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .stack-card {
+        padding: 22px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .stack-card h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .stack-card p {
+        margin: 12px 0 0;
+        color: rgba(255, 228, 230, 0.74);
+      }
+
+      .stack-card ul {
+        margin: 14px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .stack-card li {
+        color: rgba(255, 228, 230, 0.74);
+        line-height: 1.6;
+      }
+
+      .stack-card li strong {
+        color: #fff4f4;
+      }
+
+      .roadmap {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .roadmap-item {
+        display: grid;
+        grid-template-columns: 108px minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
+        padding: 18px 20px;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background:
+          linear-gradient(180deg, rgba(16, 12, 13, 0.94), rgba(8, 8, 8, 0.98));
+      }
+
+      .roadmap-item__week {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 12px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background: rgba(255, 88, 99, 0.08);
+        color: #ffd8db;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .roadmap-item h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        color: #fff4f4;
+      }
+
+      .roadmap-item p {
+        margin: 10px 0 0;
+      }
+
+      .checklist {
+        margin-top: 24px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .checklist-item {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .checklist-item__mark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        background: rgba(255, 88, 99, 0.1);
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        color: #ffb0b6;
+        font-weight: 800;
+      }
+
+      .checklist-item p {
+        margin: 0;
+      }
+
+      .cta {
+        position: relative;
+        width: min(980px, 100%);
+        margin: 28px auto 0;
+        padding: 44px 42px;
+        border-radius: 34px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 88, 99, 0.22), transparent 28%),
+          radial-gradient(circle, rgba(255, 255, 255, 0.07) 1.2px, transparent 1.2px),
+          linear-gradient(180deg, rgba(18, 7, 9, 0.98), rgba(10, 5, 6, 0.98));
+        background-size: auto, 24px 24px, auto;
+        box-shadow:
+          0 30px 80px rgba(0, 0, 0, 0.34),
+          0 0 30px rgba(255, 88, 99, 0.08);
+        overflow: hidden;
+      }
+
+      .cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+        pointer-events: none;
+      }
+
+      .cta h2 {
+        margin: 0;
+        text-align: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(3rem, 6vw, 4.8rem);
+        line-height: 0.96;
+        letter-spacing: 0.05em;
+        color: #fff5f5;
+      }
+
+      .cta h2 span {
+        color: var(--red-soft);
+      }
+
+      .cta__lead {
+        width: min(760px, 100%);
+        margin: 18px auto 0;
+        text-align: center;
+        color: rgba(255, 231, 233, 0.82);
+        font-size: 1.06rem;
+        line-height: 1.82;
+      }
+
+      .cta__points {
+        margin-top: 30px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .cta__point {
+        display: grid;
+        grid-template-columns: 3px minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
+      }
+
+      .cta__bar {
+        width: 3px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(255, 88, 99, 0.18), var(--red), rgba(255, 88, 99, 0.18));
+        box-shadow: 0 0 18px rgba(255, 88, 99, 0.26);
+      }
+
+      .cta__point strong {
+        display: block;
+        color: #fff4f4;
+        font-size: 1.2rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .cta__point p {
+        margin: 8px 0 0;
+        color: rgba(255, 231, 233, 0.78);
+        line-height: 1.76;
+      }
+
+      .cta__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 34px;
+      }
+
+      .cta__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 320px;
+        padding: 18px 24px;
+        border-radius: 20px;
+        border: 0;
+        background: linear-gradient(135deg, var(--red), #ff7d86);
+        color: #fff6f6;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        box-shadow: 0 18px 42px rgba(255, 88, 99, 0.28);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .cta__button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 24px 52px rgba(255, 88, 99, 0.34);
+      }
+
+      .site-footer {
+        position: relative;
+        z-index: 1;
+        width: min(1240px, calc(100% - 40px));
+        margin: 0 auto 32px;
+        padding: 18px 0 0;
+      }
+
+      .site-footer::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 22px;
+        background: linear-gradient(90deg, transparent, rgba(255, 88, 99, 0.32), transparent);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .footer-logo {
+        width: min(176px, 42vw);
+        height: auto;
+        display: block;
+      }
+
+      .footer-link,
+      .footer-copy {
+        color: rgba(255, 255, 255, 0.74);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.88rem;
+      }
+
+      .footer-link:hover {
+        color: #fff4f4;
+      }
+
+      @media (max-width: 980px) {
+        .hero__grid,
+        .split-grid,
+        .system-grid,
+        .stack-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .roadmap-item {
+          grid-template-columns: 1fr;
+        }
+
+        .site-footer {
+          width: min(100%, calc(100% - 24px));
+        }
+
+        .footer-inner {
+          justify-content: center;
+        }
+
+        .footer-copy {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100%, calc(100% - 20px));
+        }
+
+        .topbar {
+          padding-top: 20px;
+        }
+
+        .topbar__inner {
+          flex-direction: column;
+        }
+
+        .hero h1 {
+          font-size: clamp(3.2rem, 13vw, 4.8rem);
+        }
+
+        .hero__lead {
+          font-size: 0.96rem;
+          line-height: 1.74;
+        }
+
+        .hero__visual {
+          margin-top: 22px;
+          border-radius: 24px;
+        }
+
+        .hero__visual img {
+          aspect-ratio: 16 / 10;
+        }
+
+        .hero-card,
+        .summary-card,
+        .article-block,
+        .cta {
+          padding: 22px 18px;
+          border-radius: 24px;
+        }
+
+        .hero-card {
+          min-height: 300px;
+        }
+
+        .hero-card h2,
+        .summary-card h3,
+        .article-block h2,
+        .cta h2 {
+          font-size: clamp(2.2rem, 10vw, 3.3rem);
+        }
+
+        .mini-card h3,
+        .system-step h3,
+        .stack-card h3,
+        .roadmap-item h3 {
+          font-size: 1.7rem;
+        }
+
+        .article-block p,
+        .mini-card p,
+        .system-step p,
+        .stack-card p,
+        .cta__point p {
+          font-size: 0.94rem;
+          line-height: 1.72;
+        }
+
+        .cta__button {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .footer-inner {
+          gap: 14px 18px;
+        }
+      }
+    </style>
+    
+    <style>
+      .cta-choice {
+        display: grid;
+        gap: 24px;
+      }
+
+      .cta-choice__eyebrow {
+        margin: 0;
+        color: rgba(255, 139, 147, 0.92);
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+        letter-spacing: 0.16em;
+      }
+
+      .cta-choice__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .cta-choice__card {
+        border-radius: 24px;
+        border: 1px solid rgba(255, 88, 99, 0.18);
+        background:
+          linear-gradient(180deg, rgba(255, 88, 99, 0.08), rgba(255, 88, 99, 0.02)),
+          rgba(10, 7, 7, 0.82);
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+        padding: 20px 18px;
+      }
+
+      .cta-choice__card strong {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 0.96rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .cta-choice__card p {
+        margin: 0;
+        color: rgba(247, 245, 243, 0.78);
+      }
+
+      .cta-form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .cta-form__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .cta-form__field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .cta-form__field span {
+        color: rgba(247, 245, 243, 0.72);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .cta-form__field--full {
+        grid-column: 1 / -1;
+      }
+
+      .cta-form__input {
+        width: 100%;
+        border: 1px solid rgba(255, 88, 99, 0.24);
+        border-radius: 18px;
+        background: rgba(8, 6, 6, 0.86);
+        color: #f7f5f3;
+        padding: 16px 18px;
+        font: inherit;
+        outline: none;
+        transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+      }
+
+      .cta-form__input:focus {
+        border-color: rgba(255, 88, 99, 0.72);
+        box-shadow: 0 0 0 4px rgba(255, 88, 99, 0.12);
+        transform: translateY(-1px);
+      }
+
+      .cta__actions--stack {
+        align-items: flex-start;
+      }
+
+      .cta-form__status {
+        margin: 0;
+        color: rgba(247, 245, 243, 0.82);
+        font-size: 0.95rem;
+      }
+
+      .cta-form__status[hidden] {
+        display: none;
+      }
+
+      @media (max-width: 920px) {
+        .cta-choice__grid,
+        .cta-form__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-form__field--full {
+          grid-column: auto;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants",
+  "description": "Découvrez comment le timing parfait et la vision stratégique peuvent transformer votre entreprise avec Salesforce. Des conseils précieux pour tirer parti des dernières tendances en IA.",
+  "author": {
+    "@type": "Person",
+    "name": "Oscar Sander"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CODEXINE",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://codexine.fr/logo.png"
+    }
+  },
+  "mainEntityOfPage": "https://codexine.fr/blog/la-montee-de-salesforce-entre-timing-vision-et-coups-de-poker.html",
+  "datePublished": "2026-04-13",
+  "dateModified": "2026-04-13"
+}
+    </script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <img class="logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        <div class="hero__eyebrow">La montée de Salesforce : Timing, vision et coups de poker</div>
+        <h1>La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants</h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <p class="hero__lead">Comprendre les éléments clés qui ont conduit à la croissance exponentielle de Salesforce. Des conseils pratiques pour tirer parti des dernières tendances en IA.</p>
+        <div class="hero__meta">
+          <span>13 avril 2026</span>
+          <span>Lecture 11 min</span>
+          <span>La montée de Salesforce, entre timing, vision et coups de poker</span>
+        </div>
+
+        <figure class="hero__visual">
+          <img src="https://images.pexels.com/photos/1933900/pexels-photo-1933900.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Illustration du theme La montée de Salesforce, entre timing, vision et coups de poker dans un contexte business et automatisation" loading="eager" />
+        </figure>
+
+        <div class="hero__grid">
+          <div class="hero-card">
+            <div class="hero-card__inner">
+              <p class="hero-card__label">Découvrez comment</p>
+              <h2>La montée de Salesforce : Timing, vision et coups de poker</h2>
+              <p>Apprenez les secrets derrière la réussite de Salesforce. Des conseils pour optimiser votre stratégie et tirer parti des dernières tendances en IA.</p>
+            </div>
+          </div>
+
+          <aside class="summary-card" aria-label="Resume">
+            <h3>Les éléments clés de la montée de Salesforce</h3>
+            <ul class="summary-list">
+              <li>Le timing parfait : Quand est le meilleur moment pour adopter Salesforce ?</li>
+              <li>La vision stratégique : Comment définir une stratégie claire et cohérente ?</li>
+              <li>Coups de poker : Des astuces pour maximiser vos investissements en IA</li>
+              <li>cta_title</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <article class="article">
+        <section class="article-block">
+          <h2>La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants</h2>
+          <p>La croissance exponentielle de Salesforce est un phénomène fascinant qui a captivé l&#x27;industrie technologique. Pour comprendre cette montée, il est crucial d&#x27;analyser plusieurs aspects clés : le timing parfait, la vision stratégique et les coups de poker en matière d&#x27;IA. Ces éléments sont interdépendants et ont contribué à la réussite de Salesforce sur le marché.</p>
+          <p>Le timing parfait est essentiel pour tout projet de technologie. Salesforce a choisi un moment strategic où les entreprises commençaient à comprendre l&#x27;importance de la gestion des données et du marketing digital. La disponibilité d&#x27;outils simples et intuitifs, ainsi que leur capacité à s&#x27;intégrer avec d&#x27;autres systèmes, ont été clés pour son succès.</p>
+
+          <div class="split-grid">
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 01</div>
+              <h3>Le timing parfait : Quand est le meilleur moment pour adopter Salesforce ?</h3>
+              <p>Salesforce a choisi un moment strategic où les entreprises commençaient à comprendre l&#x27;importance de la gestion des données et du marketing digital. La disponibilité d&#x27;outils simples et intuitifs, ainsi que leur capacité à s&#x27;intégrer avec d&#x27;autres systèmes, ont été clés pour son succès.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 02</div>
+              <h3>La vision stratégique : Comment définir une stratégie claire et cohérente ?</h3>
+              <p>Une vision stratégique forte a permis à Salesforce de rester à l&#x27;avant-garde. Elle s&#x27;est centrée sur la facilité d&#x27;utilisation, la flexibilité et la sécurité des données, ce qui a attiré les entreprises de toutes tailles.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Signal 03</div>
+              <h3>Coups de poker : Des astuces pour maximiser vos investissements en IA</h3>
+              <p>Salesforce a su tirer parti des dernières tendances en IA, notamment en développant des fonctionnalités d&#x27;analyse prédictive et d&#x27;intelligence artificielle. Ces innovations ont non seulement amélioré les performances des entreprises mais ont également ouvert de nouvelles opportunités de croissance.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants</h2>
+          <p>Comprendre les éléments clés qui ont conduit à la croissance exponentielle de Salesforce. Des conseils pratiques pour tirer parti des dernières tendances en IA.</p>
+
+          <div class="system-grid">
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">01</span>
+                <h3>Le timing parfait : Quand est le meilleur moment pour adopter Salesforce ?</h3>
+              </div>
+              <p>La décision d&#x27;adopter Salesforce dépend de nombreux facteurs. Analysez votre marché, la concurrence et vos ressources. Le moment idéal est lorsque vous êtes prêt à investir dans l&#x27;innovation et que votre entreprise a besoin d&#x27;une plateforme robuste pour gérer ses données et processus.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">02</span>
+                <h3>La vision stratégique : Comment définir une stratégie claire et cohérente ?</h3>
+              </div>
+              <p>Définissez vos objectifs à long terme et alignez-les avec les valeurs de votre entreprise. Salesforce vous permet de créer des scénarios et de modéliser différentes stratégies pour atteindre ces objectifs. Utilisez cette plateforme pour planifier et suivre le progrès de votre organisation.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">03</span>
+                <h3>Coups de poker : Des astuces pour maximiser vos investissements en IA</h3>
+              </div>
+              <p>Optimisez votre utilisation de Salesforce en automatisant les processus répétitifs et en centralisant les données. Investissez dans la formation de votre équipe pour tirer le meilleur parti des fonctionnalités avancées de Salesforce. N&#x27;oubliez pas de surveiller régulièrement l&#x27;efficacité de vos investissements.</p>
+            </div>
+
+            <div class="system-step">
+              <div class="system-step__top">
+                <span class="system-step__number">04</span>
+                <h3>Conclusion et prochaine étape</h3>
+              </div>
+              <p>La montée de Salesforce nécessite une stratégie bien thought-out. En suivant les étapes ci-dessus, vous pouvez maximiser votre potentiel en IA et aider votre entreprise à réussir. Pour continuer sur cette lancée, passez à l&#x27;étape suivante de CODEXINE : &#x27;Stratégies d&#x27;IA pour améliorer la productivité&#x27;.</p>
+            </div>
+          </div>
+
+          <p>La montée de Salesforce est un sujet complexe, mais nous avons simplifié les choses pour vous aider à prendre des décisions éclairées. Suivez notre guide complet pour une meilleure compréhension et application des concepts.</p>
+        </section>
+
+        <section class="article-block">
+          <h2>La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants</h2>
+          <p>Comprendre les éléments clés qui ont conduit à la croissance exponentielle de Salesforce. Des conseils pratiques pour tirer parti des dernières tendances en IA.</p>
+
+          <div class="split-grid">
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 01</div>
+              <h3>Le timing parfait : Quand est le meilleur moment pour adopter Salesforce ?</h3>
+              <p>La décision d&#x27;adopter Salesforce dépend de nombreux facteurs. Il est crucial d&#x27;évaluer votre marché, vos compétences internes et les tendances actuelles. Analysez la concurrence, l&#x27;adoption des technologies par vos clients potentiels et le potentiel de croissance de votre entreprise.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 02</div>
+              <h3>La vision stratégique : Comment définir une stratégie claire et cohérente ?</h3>
+              <p>Définissez une vision claire pour comment Salesforce va transformer votre organisation. Identifiez les objectifs à court terme et à long terme, puis développez des plans d&#x27;action détaillés pour y parvenir. Assurez-vous que toute l&#x27;équipe est alignée sur cette stratégie.</p>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-card__index">Cas 03</div>
+              <h3>Coups de poker : Des astuces pour maximiser vos investissements en IA</h3>
+              <p>Optimisez votre investissement en Salesforce avec des stratégies efficaces. Évaluez attentivement les fonctionnalités nécessaires, choisissez un modèle d&#x27;abonnement adapté à votre budget et planifiez la formation de votre équipe pour tirer pleinement parti du système. N&#x27;oubliez pas l&#x27;intégration avec vos systèmes existants.</p>
+            </div>
+          </div>
+
+          <p>La montée de Salesforce est une opportunité majeure, mais elle nécessite une stratégie bien réfléchie. En suivant les conseils ci-dessus, vous pouvez maximiser vos chances de succès et tirer le meilleur parti des dernières tendances en IA.</p>
+        </section>
+
+        <section class="article-block">
+          <h2>La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants</h2>
+          <p>La croissance exponentielle de Salesforce est un exemple majeur de la manière dont une stratégie appropriée et des investissements judicieux peuvent transformer une entreprise. Dans cette section, nous allons explorer les éléments clés qui ont conduit à ce succès, ainsi que des conseils pratiques pour tirer parti des dernières tendances en IA.</p>
+
+          <div class="stack-grid">
+            <div class="stack-card">
+              <h3>Simple</h3>
+              <p>Commencez par comprendre le timing parfait. Salesforce a été adopté avec succès dans de nombreux secteurs grâce à une vision stratégique claire et cohérente. Voici quelques conseils pour définir votre stratégie :</p>
+              <ul>
+                <li>Connaître votre marché et sa demande</li>
+                <li>Établir des objectifs précis et mesurables</li>
+                <li>Choisir les fonctionnalités de Salesforce qui correspondent à vos besoins</li>
+              </ul>
+            </div>
+
+            <div class="stack-card">
+              <h3>Solide</h3>
+              <p>Une fois la stratégie définie, il est essentiel d&#x27;investir judicieusement en IA. Voici quelques astuces pour maximiser vos investissements :</p>
+              <ul>
+                <li>Évaluer les coûts et les avantages de chaque fonctionnalité</li>
+                <li>Tester les nouvelles fonctionnalités avant de les mettre en production</li>
+                <li>Former votre équipe à l&#x27;utilisation des nouveaux outils</li>
+              </ul>
+            </div>
+
+            <div class="stack-card">
+              <h3>Scale</h3>
+              <p>Enfin, pour transformer Salesforce en un outil majeur pour la croissance de votre entreprise, voici quelques conseils :</p>
+              <ul>
+                <li>Intégrer Salesforce avec d&#x27;autres systèmes et outils de votre entreprise</li>
+                <li>Créer des processus automatisés pour améliorer l&#x27;efficacité</li>
+                <li>Analyser les données pour prendre des décisions éclairées</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants</h2>
+          <p>Comprendre les éléments clés qui ont conduit à la croissance exponentielle de Salesforce. Des conseils pratiques pour tirer parti des dernières tendances en IA.</p>
+
+          <div class="roadmap">
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 1</div>
+              <div>
+                <h3>Le timing parfait : Quand est le meilleur moment pour adopter Salesforce ?</h3>
+                <p>La montée de Salesforce a été influencée par plusieurs facteurs, notamment la croissance des entreprises en ligne et l&#x27;adoption accrue des solutions d&#x27;IA. Pour maximiser vos chances de succès, il est crucial de choisir un timing approprié.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 2</div>
+              <div>
+                <h3>La vision stratégique : Comment définir une stratégie claire et cohérente ?</h3>
+                <p>Une vision stratégique claire et cohérente est essentielle pour la mise en œuvre de Salesforce. Elle doit être centrée sur les objectifs de l&#x27;entreprise et inclure des étapes précises pour atteindre ces objectifs.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 3</div>
+              <div>
+                <h3>Coups de poker : Des astuces pour maximiser vos investissements en IA</h3>
+                <p>Pour tirer le meilleur parti de vos investissements en IA, il est important d&#x27;utiliser des techniques efficaces. Cela peut inclure l&#x27;analyse des données, la mise en œuvre de processus automatisés et la formation de votre équipe.</p>
+              </div>
+            </div>
+
+            <div class="roadmap-item">
+              <div class="roadmap-item__week">Semaine 4</div>
+              <div>
+                <h3>Conclusion : Suivez notre guide complet pour une meilleure compréhension et application des concepts.</h3>
+                <p>La montée de Salesforce est un sujet complexe, mais nous avons simplifié les choses pour vous aider à prendre des décisions éclairées. Suivez notre guide complet pour une meilleure compréhension et application des concepts.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-block">
+          <h2>La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants</h2>
+          <p>La montée de Salesforce est une stratégie qui a révolutionné le monde du commerce électronique. Pour réussir dans cette course à la croissance, il est essentiel de comprendre le moment opportun d&#x27;adoption, de définir une vision claire et cohérente, et d&#x27;utiliser efficacement les dernières technologies en IA.</p>
+
+          <div class="checklist">
+            <div class="checklist-item">
+              <div class="checklist-item__mark">1</div>
+              <p>Quand est le meilleur moment pour adopter Salesforce ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">2</div>
+              <p>Comment définir une stratégie claire et cohérente avec Salesforce ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">3</div>
+              <p>Quelles sont les astuces pour maximiser vos investissements en IA avec Salesforce ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">4</div>
+              <p>Comment mesurer la performance de votre stratégie Salesforce ?</p>
+            </div>
+
+            <div class="checklist-item">
+              <div class="checklist-item__mark">5</div>
+              <p>Quels sont les défis à surmonter lors de l&#x27;implémentation de Salesforce ?</p>
+            </div>
+          </div>
+
+          <p>En suivant ces étapes, vous serez mieux préparé pour naviguer dans le monde complexe de Salesforce. N&#x27;oubliez pas que la montée de Salesforce est un processus qui nécessite une planification soigneuse et une application constante des meilleures pratiques. Allez à l&#x27;étape suivante CODEXINE pour obtenir plus d&#x27;informations sur la mise en œuvre effective de Salesforce.</p>
+        </section>
+      </article>
+
+      <section class="cta" aria-label="CTA final">
+        <div class="cta-choice">
+          <p class="cta-choice__eyebrow">YOUTUBE CODEXINE</p>
+          <h2>Voir l'automatisation appliquee a des cas concrets</h2>
+          <p class="cta__lead">
+            La chaine YouTube CODEXINE permet de creuser les mecanismes, voir des exemples plus visuels
+            et comprendre comment une idee devient un systeme qui travaille vraiment.
+          </p>
+
+          <div class="cta-choice__grid">
+            <article class="cta-choice__card">
+              <strong>Demonstrations claires</strong>
+              <p>Des explications plus faciles a capter quand tu veux voir la logique en mouvement.</p>
+            </article>
+            <article class="cta-choice__card">
+              <strong>Cas d'usage reels</strong>
+              <p>Prospection, contenu, qualification, back-office: les sujets qui comptent pour une vraie activite.</p>
+            </article>
+            <article class="cta-choice__card">
+              <strong>Format plus vivant</strong>
+              <p>Parfait si tu veux apprendre en regardant plutot qu'en lisant encore un article de plus.</p>
+            </article>
+          </div>
+
+          <div class="cta__actions">
+            <a
+              class="cta__button"
+              data-codexine-cta="link"
+              data-cta-id="aller-sur-la-chaine-youtube"
+              data-cta-name="Aller sur la chaine YouTube"
+              href="https://www.youtube.com/@codexine"
+            >
+              Aller sur la chaine YouTube
+            </a>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="https://codexine.fr/index.html?v=20260410" aria-label="Accueil CODEXINE">
+          <img class="footer-logo" src="https://codexine.fr/logo.png?v=20260410" alt="CODEXINE" />
+        </a>
+        <a class="footer-link" href="https://codexine.fr/infos.html?v=20260410">Infos</a>
+        <a class="footer-link" href="https://codexine.fr/conditions-utilisation.html?v=20260410">Conditions d'utilisation</a>
+        <a class="footer-link" href="https://codexine.fr/politique-confidentialite.html?v=20260410">Politique de confidentialite</a>
+        <a class="footer-link" href="https://codexine.fr/mentions-legales.html?v=20260410">Mentions legales</a>
+        <p class="footer-copy">© 2026 CODEXINE by Oscar.</p>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const TELEGRAM_BOT_TOKEN = "8781312268:AAEWod2wkAD6o7792WQuRdC6DDqbz2aV-O8";
+        const TELEGRAM_CHAT_ID = "8253411443";
+        const nodes = document.querySelectorAll("[data-codexine-cta]");
+
+        if (!nodes.length) {
+          return;
+        }
+
+        const endpoint = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+        const sendMessage = (message) =>
+          fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: new URLSearchParams({
+              chat_id: TELEGRAM_CHAT_ID,
+              text: message,
+            }),
+            keepalive: true,
+          });
+
+        const humanizeField = (value) =>
+          String(value || "")
+            .replace(/_/g, " ")
+            .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+        const buildBaseLines = (node, action, destination) => [
+            "Nouveau clic CTA blog CODEXINE",
+            "Source: " + "la-montee-de-salesforce-entre-timing-vision-et-coups-de-poker",
+            "Article: " + "La montée de Salesforce : Timing, vision et coups de poker pour les dirigeants",
+            `CTA: ${node.dataset.ctaName || "CTA inconnu"}`,
+            `CTA ID: ${node.dataset.ctaId || "sans-id"}`,
+            `Action: ${action}`,
+            `Page: ${window.location.href}`,
+            `Destination: ${destination || "aucune"}`,
+            `Referrer: ${document.referrer || "direct"}`,
+            `Viewport: ${window.innerWidth}x${window.innerHeight}`,
+            `Ecran: ${window.screen.width}x${window.screen.height}`,
+            `User agent: ${navigator.userAgent}`,
+            `Langue: ${navigator.language || "inconnue"}`,
+            `Date: ${new Date().toLocaleString("fr-FR", { timeZone: "Europe/Paris" })}`,
+          ];
+
+        nodes.forEach((node) => {
+          if (node.matches("a")) {
+            node.addEventListener("click", (event) => {
+              event.preventDefault();
+              const targetUrl = node.getAttribute("href") || "https://codexine.fr/index.html?v=20260410";
+              const message = buildBaseLines(node, "click", targetUrl).join("\n");
+
+              sendMessage(message).catch(() => {});
+
+              window.setTimeout(() => {
+                window.location.href = targetUrl;
+              }, 120);
+            });
+            return;
+          }
+
+          if (!node.matches("form")) {
+            return;
+          }
+
+          node.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const destination = node.dataset.ctaDestination || "";
+            const formData = new FormData(node);
+            const extraLines = [];
+            const submitButton = node.querySelector('button[type="submit"]');
+            const statusNode = node.querySelector("[data-cta-status]");
+
+            for (const [key, value] of formData.entries()) {
+              const cleaned = String(value || "").trim();
+              if (!cleaned) {
+                continue;
+              }
+              extraLines.push(`${humanizeField(key)}: ${cleaned}`);
+            }
+
+            const message = buildBaseLines(node, "form_submit", destination)
+              .concat(extraLines)
+              .join("\n");
+
+            if (submitButton) {
+              submitButton.disabled = true;
+            }
+
+            sendMessage(message)
+              .catch(() => ({}))
+              .finally(() => {
+                node.reset();
+
+                if (statusNode) {
+                  statusNode.hidden = false;
+                  statusNode.textContent =
+                    node.dataset.successMessage || "Demande envoyee.";
+                }
+
+                if (submitButton) {
+                  submitButton.disabled = false;
+                }
+
+                if (destination) {
+                  window.setTimeout(() => {
+                    window.location.href = destination;
+                  }, 450);
+                }
+              });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
